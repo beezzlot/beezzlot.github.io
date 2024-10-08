@@ -239,7 +239,7 @@
   
   <meta property="og:site_name" content="Основы операционных систем">
   <meta property="og:url" content="/courses/example/">
-  <meta property="og:title" content="Overview | Основы операционных систем">
+  <meta property="og:title" content="Введение | Основы операционных систем">
   <meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
@@ -260,7 +260,7 @@
 
 
 
-  <title>Overview | Основы операционных систем</title>
+  <title>Введение | Основы операционных систем</title>
 
 </head>
 
@@ -412,7 +412,7 @@
   
   
   <div class="docs-toc-item active">
-    <a class="docs-toc-link" href="/courses/example/">Overview</a>
+    <a class="docs-toc-link" href="/courses/example/">Введение</a>
 
   </div>
   
@@ -446,8 +446,8 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#flexibility">Flexibility</a></li>
-    <li><a href="#delete-tutorials">Delete tutorials</a></li>
+    <li><a href="#flexibility">Определение термина</a></li>
+    <li><a href="#functions">функции</a></li>
     <li><a href="#update-site-menu">Update site menu</a></li>
     <li><a href="#update-the-docs-menu">Update the docs menu</a></li>
   </ul>
@@ -462,19 +462,41 @@
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Overview</h1>
+          <h1>Введение</h1>
 
           <div class="article-style">
-            <h2 id="flexibility">Flexibility</h2>
-<p>This feature can be used for publishing content such as:</p>
+            <h2 id="flexibility">Определение термина</h2>
+<p>Операционная система — комплекс программ, обеспечивающий управление аппаратными средствами компьютера, организующий работу с файлами и выполнение прикладных программ, осуществляющий ввод и вывод данных.
+
+  Общими словами, операционная система — это первый и основной набор программ, загружающийся в компьютер. Помимо вышеуказанных функций ОС может осуществлять и другие, например предоставление общего пользовательского интерфейса и т.п.
+  
+  Сегодня наиболее известными операционными системами являются ОС семейства Microsoft Windows и UNIX-подобные системы.</p>
+
+  <p>Операционные системы можно разделить на несколько основных типов:</p>
 <ul>
-<li><strong>Online courses</strong></li>
-<li><strong>Project or software documentation</strong></li>
-<li><strong>Tutorials</strong></li>
+  <li><strong>1. Настольные\десктопные\пользовательские операционные системы:</strong></li>
+  <li>Примеры: Microsoft Windows, macOS (ранее Mac OS X), Linux (различные дистрибутивы).</li>
+  <li>Рассчитаны на персональные компьютеры и ноутбуки.</li>
+  <li>Предназначены для использования конечными пользователями и обеспечивают интерфейс для запуска прикладных программ..</li>
+</ul>
+<li><strong>2. Мобильные операционные системы:</strong></li>
+<ul>
+  <li>Примеры: Android, iOS (Apple), HarmonyOS (Huawei), KaiOS и др.</li>
+  <li>Разработаны специально для мобильных устройств, таких как смартфоны и планшеты..</li>
+  <li>Обладают оптимизированным пользовательским интерфейсом и функциями, связанными с мобильными приложениями.</li>
 </ul>
 <p>The <code>courses</code> folder may be renamed. For example, we can rename it to <code>docs</code> for software/project documentation or <code>tutorials</code> for creating an online course.</p>
-<h2 id="delete-tutorials">Delete tutorials</h2>
-<p><strong>To remove these pages, delete the <code>courses</code> folder and see below to delete the associated menu link.</strong></p>
+<h2 id="delete-tutorials">Функции</h2>
+<p>Интерфейсные функции:</p>
+<li><strong>Управление аппаратными средствами, устройствами ввода- вывода</strong></li>
+<li><strong>Файловая система</strong></li>
+<li><strong>Поддержка многозадачности (разделение использования памяти, времени выполнения)</strong></li>
+<li><strong>Ограничение доступа, многопользовательский режим работы</strong></li>
+<p>Внутренние функции:</p>
+<li><strong>Обработка прерываний</strong></li>
+<li><strong>Виртуальная память</strong></li>
+<li><strong>Планировщик задач</strong></li>
+<li><strong>Ограничение доступа, многопользовательский режим работы</strong></li>
 <h2 id="update-site-menu">Update site menu</h2>
 <p>After renaming or deleting the <code>courses</code> folder, you may wish to update any <code>[[main]]</code> menu links to it by editing your menu configuration at <code>config/_default/menus.toml</code>.</p>
 <p>For example, if you delete this folder, you can remove the following from your menu configuration:</p>
