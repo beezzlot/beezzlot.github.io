@@ -507,20 +507,33 @@
 <div id="terminal"></div>
 <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css"/>
+       <script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+       <script src="/socket.io/socket.io.js"></script>
+       <div id="terminal" style="width: 100%; height: 100vh;"></div>
 <script>
+  const socket = io('http://89.169.150.163:3000');
+
   const term = new Terminal();
-  const socket = new WebSocket('http://89.169.150.163:3000');
 
   term.open(document.getElementById('terminal'));
 
   term.onData(data => {
-    socket.send(data);
+      socket.emit('input', data);
   });
 
-  socket.onmessage = event => {
-    term.write(event.data);
-  };
+  socket.on('output', data => {
+      term.write(data);
+  });
+
+  window.addEventListener('resize', () => {
+      socket.emit('resize', {
+          cols: term.cols,
+          rows: term.rows
+      });
+  });
 </script>
+
 
 
 <p>The <code>courses</code> folder may be renamed. For example, we can rename it to <code>docs</code> for software/project documentation or <code>tutorials</code> for creating an online course.</p>
