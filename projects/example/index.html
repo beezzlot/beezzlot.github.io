@@ -239,7 +239,7 @@
   
   <meta property="og:site_name" content="Основы операционных систем">
   <meta property="og:url" content="/projects/example/">
-  <meta property="og:title" content="Overview | Основы операционных систем">
+  <meta property="og:title" content="Лабораторная работа #1 | Основы операционных систем">
   <meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
@@ -418,26 +418,11 @@
   
   
   <div class="docs-toc-item active">
-    <a class="docs-toc-link" href="/projects/example/">Overview</a>
+    <a class="docs-toc-link" href="/projects/example/">Начало работы</a>
 
   </div>
   
-  <div class="docs-toc-item">
-    <a class="docs-toc-link" href="/projects/example/example1/">Example Topic</a>
-    <ul class="nav docs-sidenav">
-      
-      <li >
-        <a href="/projects/example/example1/">Tips 1-2</a>
-      </li>
-      
-      <li >
-        <a href="/projects/example/example2/">Tips 3-4</a>
-      </li>
-      
-    </ul>
-    
 
-  </div>
   
   
 </nav>
@@ -454,8 +439,7 @@
   <ul>
     <li><a href="#flexibility">Контейнеризация</a></li>
     <li><a href="#first-step">Запуск одной задачи в контейнере Alpine Linux</a></li>
-    <li><a href="#update-site-menu">Update site menu</a></li>
-    <li><a href="#update-the-docs-menu">Update the docs menu</a></li>
+    <li><a href="#finish">Заполнение отчета</a></li>
   </ul>
 </nav>
 
@@ -525,18 +509,18 @@ style="border:0px; width:100%; height:500px;">
 
 <code>docker container run alpine hostname</code>
 
-<p>Вывод ниже показывает, что alpine:latestобраз не может быть найден локально. Когда это происходит, Docker автоматически извлекает его из Docker Hub.
+<p>Вывод ниже показывает, что alpine:latest образ не может быть найден локально. Когда это происходит, Docker автоматически извлекает его из Docker Hub.
 
   После загрузки изображения отображается имя хоста контейнера ( 888e89a3b36bв примере ниже).
 </p>
 
-<code> Unable to find image 'alpine:latest' locally
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Unable to find image 'alpine:latest' locally
   latest: Pulling from library/alpine
   88286f41530e: Pull complete
   Digest: sha256:f006ecbb824d87947d0b51ab8488634bf69fe4094959d935c0c103f4820a417d
   Status: Downloaded newer image for alpine:latest
-  888e89a3b36b 
-</code>
+  888e89a3b36b
+ </code></pre></div></div>
 
 <p>Docker поддерживает контейнер запущенным до тех пор, пока процесс, который он запустил внутри контейнера, все еще запущен. В этом случае hostnameпроцесс завершается, как только вывод записывается. Это означает, что контейнер останавливается. Однако Docker не удаляет ресурсы по умолчанию, поэтому контейнер все еще существует в Exitedсостоянии.
 
@@ -546,15 +530,40 @@ style="border:0px; width:100%; height:500px;">
 
 <p>Обратите внимание, что ваш контейнер Alpine Linux находится в Exited состоянии</p>
 
-<code>
-  CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS            PORTS               NAMES
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS            PORTS               NAMES
   888e89a3b36b        alpine              "hostname"          50 seconds ago      Exited (0) 49 seconds ago                       awesome_elion
-
-</code>
+ </code></pre></div>    </div>
 
 <p>Контейнеры, которые выполняют одну задачу, а затем выходят, могут быть очень полезны. Вы можете создать образ Docker, который выполняет скрипт для настройки чего-либо. Любой может выполнить эту задачу, просто запустив контейнер — ему не нужны реальные скрипты или информация о конфигурации.</p>
 
-  <p class="powered-by">
+  
+
+<h2 id="finish">Заполнение отчета</h2>
+
+<p>Для того, чтобы сдать лабораторную работу отправьте отчет. Пример его размещен ниже</p>
+
+<table>
+  <thead>
+      <tr>
+          <th>Имя контейнера</th>
+          <th>Наименование машины (NAMES)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>abcdef123456</td>
+          <td>my_container</td>
+      </tr>
+      <tr>
+          <td>ghijk7891011</td>
+          <td>another_container</td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+<p class="powered-by">
     
   </p>
 
