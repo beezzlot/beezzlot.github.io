@@ -509,7 +509,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
 <script>
   const term = new Terminal();
-  const socket = new WebSocket('ws://89.169.150.163:3000');
+  const socket = new WebSocket('http://89.169.150.163:3000');
 
   term.open(document.getElementById('terminal'));
 
@@ -521,6 +521,7 @@
     term.write(event.data);
   };
 </script>
+
 
 <p>The <code>courses</code> folder may be renamed. For example, we can rename it to <code>docs</code> for software/project documentation or <code>tutorials</code> for creating an online course.</p>
 <h2 id="delete-tutorials">Delete tutorials</h2>
