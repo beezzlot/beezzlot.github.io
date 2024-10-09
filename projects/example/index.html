@@ -260,7 +260,7 @@
 
 
 
-  <title>Overview | Основы операционных систем</title>
+  <title>Лабораторные работы | Основы операционных систем</title>
 
 </head>
 
@@ -468,16 +468,53 @@
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>Overview</h1>
+          <h1>Лабораторная работа №1</h1>
 
           <div class="article-style">
-            <h2 id="flexibility">Flexibility</h2>
-<p>This feature can be used for publishing content such as:</p>
+            <h2 id="flexibility">Контейниризация</h2>
+<p>Тема лабораторной работы: "Изучение и применение технологий контейниризации для развёртывания и управления приложениями"</p>
+<p>Цель лабораторной работы: "Научиться применять технологии контейнеризации для упаковки, развёртывания и управления приложениями в различных средах, а также ознакомиться с основными инструментами и принципами работы контейнеров."</p>
+
+<p>Задачи лабораторной работы:</p>
+<li><strong>Изучить основы контейнеризации и её преимущества перед традиционными методами развёртывания приложений.</strong></li>
+<li><strong>Ознакомиться с популярными инструментами для контейнеризации, такими как Docker, Podman и другие.</strong></li>
+<li><strong>Изучить процесс установки и конфигурации Docker на локальной машине или в виртуальной среде.</strong></li>
+<li><strong>Научиться создавать и управлять Docker-образами и контейнерами.</strong></li>
+<li><strong>Разработать и контейнеризировать простое приложение, используя Docker.</strong></li>
+<li><strong>Ознакомиться с основами написания Dockerfile для автоматизации сборки контейнеров.</strong></li>
+<li><strong>Изучить методы управления контейнерами: запуск, остановка, просмотр состояния и удаление</strong></li>
+
+
+<p>Общие теоретические сведения</p>
+
+<p>Контейнеризация — это технология, которая помогает запускать приложения изолированно от основной операционной системы. Программа упаковывается в специальную оболочку-контейнер, внутри которой — среда, необходимая для работы. Технология нужна для:</p>
 <ul>
-<li><strong>Online courses</strong></li>
-<li><strong>Project or software documentation</strong></li>
-<li><strong>Tutorials</strong></li>
+<li><strong>для изолированного запуска приложений и рабочих сред вне зависимости от системы и ПО, установленных на конкретной машине;</strong></li>
+<li><strong>контроля ресурсов и снижения нагрузки на систему;</strong></li>
+<li><strong>разрешения конфликтов, которые могут возникнуть из-за того, что разные приложения нуждаются в различных версиях ПО или библиотек;</strong></li>
+<li><strong>быстрого перемещения настроенных приложений и сред с одной машины на другую;</strong></li>
+<li><strong>создания удобной рабочей инфраструктуры;</strong></li>
+<li><strong>ускорения процесса разработки и снижения риска ошибок;</strong></li>
+<li><strong>масштабирования готовых решений;</strong></li>
+<li><strong>легкого управления сложными приложениями, средами и системами. </strong></li>
 </ul>
+<div id="terminal"></div>
+<script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.js"></script>
+<script>
+  const term = new Terminal();
+  const socket = new WebSocket('ws://localhost:3000');
+
+  term.open(document.getElementById('terminal'));
+
+  term.onData(data => {
+    socket.send(data);
+  });
+
+  socket.onmessage = event => {
+    term.write(event.data);
+  };
+</script>
+
 <p>The <code>courses</code> folder may be renamed. For example, we can rename it to <code>docs</code> for software/project documentation or <code>tutorials</code> for creating an online course.</p>
 <h2 id="delete-tutorials">Delete tutorials</h2>
 <p><strong>To remove these pages, delete the <code>courses</code> folder and see below to delete the associated menu link.</strong></p>
