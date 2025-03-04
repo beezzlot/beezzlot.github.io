@@ -501,11 +501,57 @@
 
 <p>Современные операционные системы для персональных компьютеров, как правило, распространяются в виде специальных файлов с расширением ISO. Этот файл – так называемый «образ диска» – содержит программу-установщик операционной системы и для установки его следует записать на диск или флешку и загрузить компьютер с этого устройства. Несмотря на то, что возможно установить несколько операционных систем на один компьютер, ошибка при установке может привести к потере данных, поэтому к процессу установки следует отнестись с особой ответственностью. Мы рассмотрим основные шаги по установки операционной системы в отдельной части.</p>
 
+<body>
+  <h1>Тест</h1>
+  <form id="quizForm">
+      <!-- Пример вопроса 1 -->
+      <div class="question">
+          <h3>Вопрос 1: Какой ответ правильный?</h3>
+          <input type="radio" name="q1" value="A"> Ответ 1<br>
+          <input type="radio" name="q1" value="B"> Ответ 2<br>
+          <input type="radio" name="q1" value="C"> Ответ 3<br>
+          <input type="radio" name="q1" value="D"> Ответ 4<br>
+      </div>
+      <!-- Добавьте еще 9 вопросов аналогично -->
+
+      <button type="button" onclick="calculateScore()">Завершить тест</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+      const correctAnswers = {
+          q1: 'A',
+          // Добавьте правильные ответы для остальных вопросов
+      };
+
+      function calculateScore() {
+          let score = 0;
+          const answers = new FormData(document.getElementById('quizForm'));
+
+          for (const [question, answer] of answers.entries()) {
+              if (correctAnswers[question] === answer) {
+                  score++;
+              }
+          }
+
+          const resultDiv = document.getElementById('result');
+          if (score < 5) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/video">Перейти к видео</a></p>';
+          } else if (score == 10) {
+              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
+          } else if (score >= 8) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/next">Перейти на следующий этап</a></p>';
+          } else {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
+          }
+      }
+  </script>
+</body>
 
         <div class="body-footer">
           <p>Last updated on Jan 9, 2025</p>
-
-          
+      
 
 
           
