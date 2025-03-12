@@ -663,53 +663,53 @@
   <h1>Тест</h1>
   <form id="quizForm">
       <div class="question">
-          <h3>Вопрос 1:  Что такое FHS?</h3>
-          <input type="radio" name="q1" value="A">Стандарт, определяющий структуру каталогов в Linux.<br>
-          <input type="radio" name="q1" value="B"> Тип файловой системы, используемой в Linux.<br>
-          <input type="radio" name="q1" value="C">Программа для управления файлами в Linux.<br>
-          <input type="radio" name="q1" value="D">Язык программирования для работы с файлами.<br>
+          <h3>Вопрос 1: Какая основная цель мандатной модели управления доступом (MAC) в Astra Linux Special Edition?</h3>
+          <input type="radio" name="q1" value="A">Обеспечение защиты информации от несанкционированного доступа.<br>
+          <input type="radio" name="q1" value="B">Ускорение работы операционной системы.<br>
+          <input type="radio" name="q1" value="C">Упрощение администрирования для пользователей.<br>
+          <input type="radio" name="q1" value="D">Увеличение производительности системы.<br>
       </div>
       <div class="question1">
-        <h3>Вопрос 2: Какой каталог содержит конфигурационные файлы системы?</h3>
-        <input type="radio" name="q2" value="A">/bin<br>
-        <input type="radio" name="q2" value="B">/etc/<br>
-        <input type="radio" name="q2" value="C">/home<br>
-        <input type="radio" name="q2" value="D">/var<br>
+        <h3>Вопрос 2: Как работает механизм наследования меток безопасности в мандатной модели?</h3>
+        <input type="radio" name="q2" value="A">Созданный процесс получает случайную метку безопасности.<br>
+        <input type="radio" name="q2" value="B">Созданный процесс наследует метку безопасности от родительского процесса.<br>
+        <input type="radio" name="q2" value="C">Созданный процесс не имеет метки безопасности<br>
+        <input type="radio" name="q2" value="D">Созданный процесс получает метку безопасности от администратора.<br>
     </div>
     <div class="question2">
-      <h3>Вопрос 3: Зависит ли FHS от типа файловой системы?</h3>
-      <input type="radio" name="q3" value="A">Да, FHS работает только с файловой системой ext4.<br>
-      <input type="radio" name="q3" value="B">Нет, FHS не зависит от типа файловой системы.<br>
-      <input type="radio" name="q3" value="C">Да, FHS требует использования Btrfs.<br>
-      <input type="radio" name="q3" value="D">Нет, но только если используется FAT32.<br>
+      <h3>Вопрос 3: Какие уровни конфиденциальности используются в мандатной модели Astra Linux?</h3>
+      <input type="radio" name="q3" value="A">Низкий, Средний, Высокий, Максимальный.<br>
+      <input type="radio" name="q3" value="B">Ограниченный, Конфиденциальный, Секретный, Совершенно секретный.<br>
+      <input type="radio" name="q3" value="C">Публичный, Частный, Скрытый, Защищенный.<br>
+      <input type="radio" name="q3" value="D">Базовый, Продвинутый, Экспертный, Административный.<br>
   </div>
   <div class="question3">
-    <h3>Вопрос 4: Какой каталог используется для хранения временных файлов?</h3>
-    <input type="radio" name="q4" value="A">/usr<br>
-    <input type="radio" name="q4" value="B">/var<br>
-    <input type="radio" name="q4" value="C">/tmp<br>
-    <input type="radio" name="q4" value="D">/etc<br>
+    <h3>Вопрос 4: Что указывает атрибут ccnr в мандатной модели?</h3>
+    <input type="radio" name="q4" value="A">Что файл может быть удален без ограничений.<br>
+    <input type="radio" name="q4" value="B">Что каталог может содержать файлы с различными метками, но не выше своей.<br>
+    <input type="radio" name="q4" value="C">Что файл доступен для записи только администраторам.<br>
+    <input type="radio" name="q4" value="D">Что файл не может быть изменен.<br>
 </div>
 <div class="question4">
-  <h3>Вопрос 5: Какой каталог содержит домашние каталоги пользователей?</h3>
-  <input type="radio" name="q5" value="A">/root<br>
-  <input type="radio" name="q5" value="B">/home<br>
-  <input type="radio" name="q5" value="C">/var<br>
-  <input type="radio" name="q5" value="D">/usr<br>
+  <h3>Вопрос 5: Какие сложности возникают при использовании мандатной модели управления доступом?</h3>
+  <input type="radio" name="q5" value="A">Увеличение производительности системы.<br>
+  <input type="radio" name="q5" value="B">Упрощение администрирования.<br>
+  <input type="radio" name="q5" value="C">Сложность управления и дополнительные финансовые затраты.<br>
+  <input type="radio" name="q5" value="D">Уменьшение уровня защищенности данных.<br>
 </div>
 <div class="question5">
-  <h3>Вопрос 6:   Может ли каталог /home находиться на файловой системе, отличной от корневого каталога (/)?</h3>
-  <input type="radio" name="q6" value="A">Нет, все каталоги должны находиться на одной файловой системе.<br>
-  <input type="radio" name="q6" value="B">Да, разные каталоги могут находиться на разных файловых системах.<br>
-  <input type="radio" name="q6" value="C">Да, но только если используется NTFS.<br>
-  <input type="radio" name="q6" value="D">Нет, это нарушит структуру FHS.<br>
+  <h3>Вопрос 6:   Где находятся мандатные атрибуты, устанавливаемые по умолчанию в Astra Linux?</h3>
+  <input type="radio" name="q6" value="A">В файле /etc/passwd.<br>
+  <input type="radio" name="q6" value="B">В каталоге /var/log.<br>
+  <input type="radio" name="q6" value="C">В сценарии /usr/sbin/pdp‑init‑fs.<br>
+  <input type="radio" name="q6" value="D">В файле /boot/grub/grub.cfg..<br>
 </div>
 <div class="question6">
-  <h3>Вопрос 7:  Какой каталог содержит логи и другие изменяемые данные?</h3>
-  <input type="radio" name="q7" value="A">/bin<br>
-  <input type="radio" name="q7" value="B">/etc<br>
-  <input type="radio" name="q7" value="C">/var<br>
-  <input type="radio" name="q7" value="D">/tmp<br>
+  <h3>Вопрос 7: Какие преимущества имеет использование мандатной модели в Astra Linux Special Edition?</h3>
+  <input type="radio" name="q7" value="A">Упрощение администрирования для больших систем.<br>
+  <input type="radio" name="q7" value="B">Увеличение уровня защищенности данных и выполнение требований регуляторов.<br>
+  <input type="radio" name="q7" value="C">Уменьшение затрат на сопровождение.<br>
+  <input type="radio" name="q7" value="D">Отсутствие необходимости настройки доступа.<br>
 </div>
 
 
@@ -723,10 +723,10 @@
           q1: 'A',
           q2: 'B',
           q3: 'B',
-          q4: 'C',
-          q5: 'B',
-          q6: 'B',
-          q7: 'C',
+          q4: 'B',
+          q5: 'C',
+          q6: 'C',
+          q7: 'B',
           // Добавьте правильные ответы для остальных вопросов
       };
 
