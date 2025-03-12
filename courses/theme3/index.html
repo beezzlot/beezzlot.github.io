@@ -466,24 +466,29 @@
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <title>Разделитель между текстом</title>
               <style>
-                  body {
-                      font-family: Arial, sans-serif;
-                      line-height: 1.6;
-                      margin: 20px;
-                  }
-                  .divider {
-                      background-color: #f0f0f0; /* Серый фон */
-                      padding: 15px;
-                      text-align: center;
-                      margin: 20px 0;
-                      border-radius: 5px;
-                      font-weight: bold;
-                      color: #333; /* Цвет текста */
-                  }
-                  p {
-                      margin-bottom: 20px;
-                  }
-              </style>
+                body {
+                    font-family: Arial, sans-serif;
+                    line-height: 1.6;
+                    margin: 20px;
+                }
+                .divider {
+                    background-color: #f0f0f0; /* Серый фон */
+                    padding: 15px;
+                    text-align: center;
+                    margin: 20px 0;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    color: #333; /* Цвет текста */
+                    display: block; /* Чтобы ссылка занимала всю ширину */
+                    text-decoration: none; /* Убираем подчеркивание */
+                }
+                .divider:hover {
+                    background-color: #e0e0e0; /* Изменение фона при наведении */
+                }
+                p {
+                    margin-bottom: 20px;
+                }
+            </style>
           </head>
           <body>
               <p>
