@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+<div class="link-container">
+  <h2>
+
+    Консоль сервера
+
+  </h2>
+  <iframe 
+    src="https://rsvpu.hackatom.ru:3000/" 
+    style="border:0px; width:100%; height:100%;">
+  </iframe>
+</div>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №10. Тема: "Мандатный контроль целостности в Astra Linux Special Edition"</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <ul>
+              <li>Изучить инструмент централизованного управления хостами Ansible.</li>
+          </ul>
+      
+          <h2>Оборудование, ПО:</h2>
+          <p>Виртуальная машина или компьютер под управлением ОС AstraLinux 1.7 в режиме защищенности "Воронеж" или выше.</p>
+      
+          <h2>Ход работы:</h2>
+      
+          <h3>Что будем делать сейчас?</h3>
+          <p>В данной лабораторной работе мы обсудим, как управлять компьютерами под управлением ОС Astra Linux централизованно.</p>
+          <p>Конечно, для обсуждения функционала Ansible потребовалось бы несколько виртуальных машин, но в рамках нашей лабораторной работы все настройки мы будем выполнять на одной единственной машине - она будет играть роль как сервера, так и клиента.</p>
+      
+          <h3>Разбираемся, как вообще можно управлять парком машин на Astra Linux.</h3>
+          <p>Даже если в вашей зоне ответственности всего 5 компьютеров, каждый раз пробегать вокруг них для обновления или установки нового ПО может очень скоро надоесть.</p>
+          <p>На помощь приходят инструменты централизованного управления. Можно выделить два типа таких систем:</p>
+          <ol>
+              <li><strong>PUSH-системы.</strong> В этом случае, команды отправляются с сервера по команде администратора. Клиенты не опрашивают сервер по какому-либо таймеру. Примеры таких систем: Ansible, SaltStack.</li>
+              <li><strong>PULL-системы.</strong> Здесь все наоборот, клиенты сами обращаются к серверу по таймеру, например, как в случае с Puppet - раз в 30 минут. Примеры таких систем - Puppet, CHEF.</li>
+          </ol>
+          <p>Безусловно, стоит уточнить, что сейчас любая указанная система может быть настроена как PULL или PUSH, просто это может быть не совсем удобно, так как тот же Puppet изначально был задуман как PULL и имеет ряд особенностей из-за этого.</p>
+      
+          <h3>Ansible - что за зверь такой?</h3>
+          <p>Ansible - это инструмент для управления конфигурациями компьютеров, с помощью него можно автоматизировать процесс установки ПО, редактирования конфигурационных файлов, да и все что вам только может быть нужно сделать на большом количестве устройств.</p>
+          <p>Ansible использует язык описания конфигурации YAML (YAML Ain't Markup Language) для определения необходимых состояний системы. Он работает по принципу "Infrastructure as Code" (IaC), что позволяет описывать инфраструктуру как код, что облегчает ее управление и поддержку.</p>
+          <p>Основные возможности Ansible включают в себя управление серверами под Linux, но также с использованием различных модулей расширения можно управлять сетевым оборудованием (например, Cisco или Eltex), базами данных, межсетевыми экранами и т.д.</p>
+          <p>Доступные модули расширения хранятся на сайте Ansible Galaxy <a href="https://galaxy.ansible.com/ui/">Ссылка</a></p>
+          <p>Используя Ansible, системные администраторы и разработчики могут значительно упростить процессы управления и настройки инфраструктуры, уменьшить рутинные задачи и сократить время, затрачиваемое на эти процессы. В итоге, это позволяет повысить производительность и надежность компьютерных систем.</p>
+      
+          <h3>Приступаем к работе!</h3>
+          <p>Установим Ansible на сервере.</p>
+          <pre><code>apt install ansible</code></pre>
+          <p>Для работы Ansible никаких клиентов не нужно, ведь по своей архитектуре, это набор Python-скриптов, которые подключаются по SSH к подчиненным устройствам и выполняют прописанные команды и задачи.</p>
+          <p>Теперь для работы нам доступна директория <code>/etc/ansible</code>. В этой директории хранятся файлы:</p>
+          <ul>
+              <li><code>ansible.cfg</code></li>
+              <li><code>hosts</code></li>
+          </ul>
+          <p>Это стандартные файлы для Ansible.</p>
+          <p>Настройки Ansible могут присутствовать в нескольких различных расположениях, причём именно первый найденный файл будет применяться. Порядок поиска таков:</p>
+          <ul>
+              <li><strong>ANSIBLE_CFG:</strong> эта переменная окружения применяется, когда она установлена, по-умолчанию, её нет;</li>
+              <li><strong>ansible.cfg:</strong> находящийся в текущем каталоге, откуда вы запускаете плейбук;</li>
+              <li><strong>~/ansible.cfg:</strong> расположено в домашнем каталоге пользователя;</li>
+              <li><strong>~/.ansible.cfg:</strong> это местоположение в домашнем каталоге пользователя;</li>
+              <li><strong>/etc/ansible/ansible.cfg</strong> - основная директория Ansible-сервиса.</li>
+          </ul>
+          <p>Как правило, многие используют либо отдельную директорию в удобном для работы месте или используют стандартный каталог <code>/etc/ansible</code>.</p>
+      
+          <h3>А что в самих каталогах то?</h3>
+          <p>Перейдем в каталог <code>/etc/ansible</code>.</p>
+          <p>Файл <code>ansible.cfg</code> уже имеет ряд настроек, можете ознакомиться с ним, на данный момент самая интересная для нас строка - <code>inventory</code>.</p>
+          <img src="./Screen1.png" alt="Картинка">
+          <p>Эта строка определяет, к какому списку хостов для управления обращается Ansible во время выполнения плейбука.</p>
+          <p>Посмотрим теперь, что внутри файла <code>hosts</code>.</p>
+          <img src="./Screen2.png" alt="Картинка">
+          <p>А в этом файле тут можно узнать, что добавлять хосты можно по доменным именам (при условии, что у вас работает DNS или настроен файл с локальным сопоставлением доменного имени с IP-адресом - <code>/etc/hosts</code>).</p>
+          <p>Использование групп в инвентарном файле позволяет группировать удаленные хосты по регионам размещения или по ролям серверов — это чрезвычайно удобно при работе с сотнями и тысячами серверов.</p>
+          <p>Также в inventory файле можно использовать регулярные выражения, например запись:</p>
+          <pre><code>[test]
+      test-[01:99]</code></pre>
+          <p>будет соответствовать группе хостов <code>test</code>, в которую входят хосты <code>test-01</code>, <code>test-02</code>, <code>test-03</code>, … <code>test-99</code>.</p>
+          <p>Для конкретного хоста или группы хостов из инвентарного файла можно установить специфические переменные при необходимости. Например, хосту <code>test-1</code> можно назначить ssh порт таким образом:</p>
+          <pre><code>[test]
+      test-1 ssh_port=5555
+      test-2</code></pre>
+          <p>Изменить ssh порт для всей группы хостов можно так:</p>
+          <pre><code>[test]
+      test-1
+      test-2
+      
+      [test:vars]
+      ssh_port=5555</code></pre>
+          <p>Такие настройки позволяют группировать клиенты по группам для каких-нибудь специфических настроек, например, ARM - группа для рабочих мест пользователей или SERVERS - группа для настройки серверов.</p>
+      
+          <h3>Отправимся уже создавать первые плейбуки!</h3>
+          <p>Начнем с чего-нибудь простого. Как на счет установки ПО?</p>
+          <p>Создайте файл - <code>/etc/ansible/install_soft.yml</code>.</p>
+          <h4>А затем, необходимо в YML формате написать ваш Ansible-код.</h4>
+          <p>И перед тем как мы это сделаем, стоит рассказать, что YAML, не смотря на то что задумывался как очень простой язык разметки, по факту же имеет ряд особенностей и сложностей, которые могут сильно отпугнуть начинающих пользователей Ansible.</p>
+          <p>Рассмотрим формат YAML, в сравнении с другими языками.</p>
+          <img src="Screen3.png" alt="Картинка">
+          <p>Как можно заметить, в целом YAML довольно удобочитаемый файловый формат, состоящий из пар «ключ-значение» и делающий акцент на отступы и перенос строк. YAML активно используется в файлах конфигурации многих хорошо известных инструментов/технологий, по типу docker-compose, Kubernetes, Ansible и т.д.</p>
+          <p>Будьте внимательны к количеству пробелов, когда будете переписывать код в свой лабораторный стенд.</p>
+          <p>Наш первый плейбук на установку ПО <code>tree</code> на компьютер:</p>
+          <pre><code>---
+      - hosts: localhost
+        tasks:
+          - name: Install Software
+            apt:
+              name: tree
+              state: present</code></pre>
+          <p>Объясним строки указанные выше.</p>
+          <p><strong>hosts:</strong> <code>localhost</code> - означает, что подключение будет происходить к компьютеру по имени <code>localhost</code> - это мы сами!</p>
+          <p>Тут стоит сказать, что в Ansible есть два константных значения:</p>
+          <ul>
+              <li><strong>all</strong> - в этом случае все устройства описанные в файле <code>hosts</code> будут подключены к запускаемому плейбуку.</li>
+              <li><strong>localhost</strong> - в этом случае, подключение будет проходить только к вашему локальному компьютеру, такое удобно использовать для поиска неисправностей и тестирования плейбука перед релизом.</li>
+          </ul>
+          <p>Далее мы описываем выполняемые задачи - <strong>tasks</strong>.</p>
+          <p>Параметром <strong>name</strong> мы указываем имя задачи, в целом её указывать необязательно, но это повышает удобство чтения плейбука, а также в логах легче искать что делали Ansible'ом.</p>
+          <p><strong>apt</strong> - используем встроенный в Ansible модуль <code>apt</code>, для установки пакетов в системах, которые использует именно этот пакетный менеджер.</p>
+          <p>Далее через отступы мы формируем "преемственность", то есть описываем, что внутри модуля <code>apt</code> планируем делать (устанавливаем ПО, или наоборот удаляем и т.п.).</p>
+          <p><strong>name</strong> (внутри <code>apt</code>) - имя устанавливаемого ПО.</p>
+          <p><strong>state</strong> - означает, в каком состоянии должен быть данный пакет на подчиненных устройств, в этом случае <code>state: present</code>, означает что пакет должен быть установлен.</p>
+      
+          <h4>Запускаем!</h4>
+          <p>Введите команду:</p>
+          <pre><code>ansible-playbook /etc/ansible/install_soft.yml</code></pre>
+          <img src="Screen4.png" alt="Картинка">
+          <p>И скрипт отработал, пакет <strong>tree</strong> установлен!</p>
+          <p>А что мы увидели в процессе запуска Ansible-плейбука?</p>
+          <ol>
+              <li><strong>PLAY [localhost]</strong> - определяет на какую группу хостов работает плейбук.</li>
+              <li><strong>TASK [Gathering Facts]</strong> - этот таск запускается автоматически, он нужен для Ansible, с целью сбора информации о клиенте (в этом случае Ansible собирает информацию о операционной системе, доступной ОЗУ, установленном ПО и многое другое о подчиненном компьютере).</li>
+              <li><strong>TASK [Install Software]</strong> - это уже наш таск, узнаете имя? Тут мы просто устанавливаем.</li>
+              <li><strong>PLAY RECAP</strong> - тут мы видим подытог, что наш плейбук наделал и на каких устройствах побывал. Здесь все кратко и понятно.</li>
+          </ol>
+      
+          <h3>А как так это все легко заработало?</h3>
+          <p>Действительно, если бы мы работали не локально, а пытались подключиться к удаленным машинам нам необходимо предварительно настроить:</p>
+          <ol>
+              <li>SSH на сервере.</li>
+              <li>SSH на клиенте.</li>
+              <li>Обменяться ключами между клиентом и сервером или подключаться через связку логин\пароль.</li>
+          </ol>
+          <p>Попробуем реализовать архитектуру, как если бы было несколько разных устройств.</p>
+          <p>Для этого в файле <code>/etc/ansible/hosts</code> напишите ваш IP-адрес лабораторного стенда.</p>
+          <p>Заодно проверим работу групп.</p>
+          <p>В начале файла, над всеми комментариями просто добавьте конструкцию:</p>
+          <pre><code>[vms]
+      X.X.X.X</code></pre>
+          <p>Файл по итогу выглядит так -</p>
+          <img src="Screen5.png" alt="Картинка">
+          <p>И попробуем создать плейбук, например, по копированию файлов с основного сервера на подчиненное устройство.</p>
+      
+          <h4>Важная команда!</h4>
+          <p>Есть возможность проверить работает или нет ваше подключение к клиентам:</p>
+          <pre><code>ansible all -m ping</code></pre>
+          <p>Где <code>all</code>, это константа, помните такую?</p>
+          <p>Если не хотите проверять все перечисленные в <code>/etc/ansible/hosts</code> сервера, то допустимо указать конкретную группу или адрес, например:</p>
+          <pre><code>ansible vms -m ping</code></pre>
+          <img src="Screen6.png" alt="Картинка">
+          <p>Видим ошибку! И в данный момент вполне ожидаемую.</p>
+          <p>Ведь нам необходимо настроить SSH-соединение между этим адресом (да, и пускай что в нашем примере это наш локальный адрес).</p>
+          <p>Если бы вы внедряли Ansible в реальную среду, вам пришлось бы делать также на всех устройствах которые планируется централизованного настраивать.</p>
+      
+          <h3>Настройка SSH для Ansible</h3>
+          <p>Варианты настройки подключений у нас всего два:</p>
+          <ol>
+              <li>Реализовать сервисную учетную запись и подключаться к ней через логин и пароль;</li>
+              <li>Реализовать такую же сервисную учетную запись, но отключить вход по паролю, только по ключу.</li>
+          </ol>
+          <p>Попробуем оба варианта.</p>
+          <ul>
+              <li>Для первого варианта создайте учетную запись "ansible" с паролем "P@ssw0rd", настройте данной УЗ возможность вводить команды sudo без использования пароля.</li>
+          </ul>
+          <p>Вспомним какие команды нам для этого пригодятся -</p>
+          <pre><code>adduser ansible</code></pre>
+          <p>А добавить пользователя в sudoers можно так -</p>
+          <pre><code>usermod -a ansible -G astra-admin</code></pre>
+          <p>Затем, нам потребуется установить две программы:</p>
+          <ol>
+              <li>SSHPASS, чтобы подключить возможность использовать логин и пароль для соединения с подчиненными устройствами через Ansible.</li>
+              <li>OPENSSH-SERVER, если вдруг у вас на хостовой машине не установлен SSH-сервер.</li>
+          </ol>
+          <pre><code>apt install sshpass openssh-server -y</code></pre>
+          <p>Если, кстати, позабыть установить sshpass, то при попытке подключиться через Ansible по логину и паролю ошибка будет вот такой -</p>
+          <img src="Screen7.png" alt="Картинка">
+      
+          <h4>А что надо настроить в Ansible, для подключения по логину и паролю?</h4>
+          <p>Для начала обратимся к файлу <code>/etc/ansible/hosts</code> и приведем его к следующему виду -</p>
+          <pre><code>[vms]
+      
+      [vms:vars]
+      ansible_ssh_user = ansible
+      ansible_ssh_pass = P@ssw0rd</code></pre>
+          <p>В этом случае мы объявили переменные для группы хостов <code>vms</code>, если такие переменные указаны, Ansible, по-умолчанию, воспользуется ими для подключения к устройствам.</p>
+          <p>P.S. Вероятно, вас засмущал открытый логин и пароль в текстовом файле, далее мы разберем как это исправить.</p>
+          <p>После необходимо отключить проверку ключей на хостах (ведь ключей у нас нет, авторизация по паролю).</p>
+          <p>Идем в <code>/etc/ansible/ansible.cfg</code>.</p>
+          <p>И расскоментируем там строку -</p>
+          <pre><code>host_key_checking = False</code></pre>
+          <p>Проверяем!</p>
+          <pre><code>ansible vms -m ping</code></pre>
+          <img src="Screen8.png" alt="Картинка">
+          <p>Веселая "зеленая" надпись сигнализирует нам, что все работает! Отправляемся создавать наш плейбук.</p>
+          <pre><code>---
+      - hosts: vms
+        tasks:
+          - name: Copying File
+            copy:
+              src: /etc/ansible/test.txt
+              dest: /opt/test.txt
+              owner: ansible
+              group: ansible
+              mode: u=rw,g=r,o=r</code></pre>
+          <p>Используем модуль "Copy", он в целом, интуитивно понятен по описанию с официальной документации <a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html">Ссылка на документацию</a>.</p>
+          <p>Перед запуском создадим <code>/etc/ansible/test.txt</code> с произвольным содержимым.</p>
+          <pre><code>echo "Privet" > /etc/ansible/test.txt</code></pre>
+          <p>Запускаем!</p>
+          <pre><code>ansible-playbook copy.yml</code></pre>
+          <img src="Screen9.png" alt="Картинка">
+      
+          <h4>Ошибка! Но почему?</h4>
+          <p>А все ведь просто, мы пытаемся подключиться к машине через пользователя ansible, но "Ansible" не пытался использовать свои права sudoers. Необходимо доработать плейбук, а также выдать пользователю Ansible высокий уровень целостности.</p>
+          <p>Плейбук доработать можно так -</p>
+          <pre><code>---
+      - hosts: vms
+        become: true
+        become_method: sudo
+        tasks:
+          - name: Copying File
+            copy:
+              src: /etc/ansible/test.txt
+              dest: /opt/test.txt
+              owner: ansible
+              group: ansible
+              mode: u=rw,g=r,o=r</code></pre>
+          <p>Таким образом, при подключении через Ansible мы будем получать доступ до команды sudo через пароль.</p>
+          <p>Установить пользователю ansible высокий уровень целостности можно в "Политике безопасности".</p>
+          <img src="Screen10.png" alt="Картинка">
+          <p>Статус <strong>changed</strong> в логах работы плейбука намекает нам, что файл был создан, проверим это.</p>
+          <pre><code>cat /opt/test.txt</code></pre>
+          <img src="Screen11.png" alt="Картинка">
+      
+          <h3>Окееей, а как работать по ключам?</h3>
+          <p>Для подключения по ключам не будем создавать отдельную УЗ, воспользуемся user.</p>
+          <p>Поменяем в <code>/etc/ansible/hosts</code> УЗ для подключения и уберем информацию о паролях.</p>
+          <pre><code>[vms]
+      10.0.10.109
+      
+      [vms:vars]
+      ansible_ssh_user = user</code></pre>
+          <p>Затем, нам необходимо передать SSH-ключ. SSH передается под тем пользователем, который будет запускать плейбук, для пользователя, который будет выполнять команды на подчиненном устройстве.</p>
+          <p>Для начала SSH-ключ надо создать -</p>
+          <pre><code>ssh-keygen</code></pre>
+          <img src="Screen12.png" alt="Картинка">
+          <p>А затем передать -</p>
+          <pre><code>ssh-copy-id user@10.0.10.109</code></pre>
+          <p>И в качестве проверки работы, напишем еще один плейбук?</p>
+          <p>Допустим, это будет плейбук на добавление строки в конфигурационный файл.</p>
+          <p>Согласитесь, иногда менять целый файл с настройками может привести к плачевным последствиям.</p>
+          <p>Создайте плейбук - <code>/etc/ansible/line.yml</code>.</p>
+          <pre><code>---
+      - hosts: vms
+        become: true
+        tasks:
+                - name: Configure packet forwarding
+                  lineinfile:
+                          path: /etc/sysctl.conf
+                          line: net.ipv4.ip_forward=1
+                          insertafter: EOF</code></pre>
+          <p>В этом плейбуке мы добавляем строку для включения IPv4-маршрутизации на Linux.</p>
+          <p>Проверяем!</p>
+          <pre><code>ansible-playbook line.yml</code></pre>
+          <img src="Screen13.png" alt="Картинка">
+          <p>Работает!</p>
+      
+          <h3>Так-так, а что же там с открытыми паролями?</h3>
+          <p>В зависимости от задач, пароли вам придется как-то хранить и использовать. Тут на помощь могут прийти переменные и <strong>Ansible Vault</strong>.</p>
+          <p>Ansible Vault - это инструмент, предоставляемый инструментом управления конфигурацией Ansible, который позволяет шифровать конфиденциальные данные, такие как пароли, ключи SSH, API токены и другие секреты. Это помогает обеспечить безопасность и защиту конфиденциальной информации в файлах инвентаризации и плейбуков Ansible. Таким образом, Ansible Vault позволяет безопасно хранить и использовать секретные данные в автоматизированных процессах управления конфигурацией.</p>
+          <p>Первым делом, давайте создадим такой файл, с помощью команды -</p>
+          <pre><code>ansible-vault create secret_pass.yml</code></pre>
+          <p>Система потребует защитить данный файл паролем, обязательно запомните его, он пригодится для запуска нашего плейбука.</p>
+          <p>После ввода пароля появится временный файл, где вы смело в открытом виде пишите следующие значения:</p>
+          <pre><code>[vms:vars]
+      ansible_ssh_user: "ansible"
+      ansible_ssh_pass: "P@ssw0rd"</code></pre>
+          <p>Закончив работу с этим файлом, сохраните его.</p>
+      
+          <h4>Ага, и как теперь убедиться что это точно зашифровано?</h4>
+          <p>А давайте взглянем что внутри нашего <code>secret_pass.yml</code>.</p>
+          <img src="Screen14.png" alt="Картинки">
+          <p>Зашифровано! Теперь осталось применить это в работе.</p>
+      
+          <h3>Рассмотрим очередной плейбук</h3>
+          <p>Например, на перезапуск сервиса CUPS.</p>
+          <p>Для этого, создадим файл <code>/etc/ansible/service.yml</code>.</p>
+          <pre><code>---
+      - hosts: vms
+        vars_files:
+          - /etc/ansible/secret_pass.yml
+        become: true
+        tasks:
+                - name: Cups Restart
+                  service:
+                    name: cups
+                    state: restarted</code></pre>
+          <p>И запустим вот такой командой -</p>
+          <pre><code>ansible-playbook service.yml --ask-vault-pass</code></pre>
+          <p>Далее система запросит пароль от Ansible Vault и выполнит команды плейбука.</p>
+      
+          <h3>А как можно еще поработать с Ansible Vault?</h3>
+          <p>Создать файл можно -</p>
+          <pre><code>ansible-vault create user.yml</code></pre>
+          <p>Отредактировать файл можно -</p>
+          <pre><code>ansible-vault edit user.yml</code></pre>
+          <p>Посмотреть, что в файле внутри, но не редактировать его -</p>
+          <pre><code>ansible-vault view user.yml</code></pre>
+          <p>Зашифровать файл, который уже был когда-то создан -</p>
+          <pre><code>ansible-vault encrypt user.yml secret_user.yml</code></pre>
+          <p>Расшифровать файл -</p>
+          <pre><code>ansible-vault decrypt secret_user.yml user.yml</code></pre>
+      
+          <h2>Заключение</h2>
+          <p>В результате прохождения данного курса вы приобрели необходимые навыки для эффективного управления конфигурациями хостов с помощью Ansible. Мы освоили основные концепции и инструменты Ansible, освоили методы автоматизации управления конфигурациями, научились создавать playbooks и роли, а также выполнять управление хостами. Данная лабораторная работа позволила участникам углубить свои знания и навыки в области управления конфигурациями, что будет полезно для их дальнейшей профессиональной деятельности.</p>
+          <p>Безусловно, мы бы не смогли в полной мере обсудить данный инструмент - он имеет широкое применение и инструментарий, но сформировать базовое представление об инструменте точно смогли!</p>
+          <p>В следующем материале вы познакомитесь с темой - Мандатный контроль целостности в Astra Linux Special Edition.</p>
+          <p>Благодарю за чтение и успехов вам в обучении!</p>
+      
+          <h2>Практическая работа</h2>
+          <ol>
+              <li>Создайте плейбук, выполняющий следующие задачи:
+                  <ul>
+                      <li>Плейбук разместите по пути - <code>/etc/ansible/task.yml</code>.</li>
+                      <li>Установка пакета htop.</li>
+                      <li>Создание пользователя - devops_user с паролем <strong>Qwerty!</strong>. Пароль не должен храниться в плейбуке в открытом виде.</li>
+                  </ul>
+              </li>
+          </ol>
+      
+          <h2>Дополнительная информация:</h2>
+          <ol>
+              <li>Руководство по YAML <a href="https://wiki.merionet.ru/articles/rukovodstvo-po-yaml-vse-chto-vam-nuzhno-znat-za-5-minut">Ссылка</a>.</li>
+              <li>YAML - что за зверь? <a href="https://habr.com/ru/articles/710414/">Ссылка</a>.</li>
+              <li>Модуль APT в Ansible. Документация <a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html">Ссылка</a>.</li>
+              <li>Ansible Vault <a href="https://docs.ansible.com/ansible/2.9/user_guide/vault.html">Ссылка</a>.</li>
+              <li>Ansible для начинающих <a href="https://habr.com/ru/companies/slurm/articles/714000/">Ссылка</a>.</li>
+              <li>Ansible. Основы. Видео на русском. <a href="https://www.youtube.com/watch?v=n27bpkAtyf4&ab_channel=Unixway">Ссылка</a>.</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </article>              
+  
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

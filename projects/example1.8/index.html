@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+<div class="link-container">
+  <h2>
+
+    Консоль сервера
+
+  </h2>
+  <iframe 
+    src="https://rsvpu.hackatom.ru:3000/" 
+    style="border:0px; width:100%; height:100%;">
+  </iframe>
+</div>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №9. Тема: "Управление конфигурациями хостов с помощью Ansible"</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <ul>
+              <li>Изучить мандатный контроль целостности в Astra Linux Special Edition.</li>
+          </ul>
+      
+          <h2>Оборудование, ПО:</h2>
+          <p>Виртуальная машина или компьютер под управлением ОС AstraLinux 1.7 в режиме защищенности "Воронеж" или выше.</p>
+          <p>Чтобы выполнять задачи по администрированию в Astra Linux мандатного контроля целостности, ваша учетная запись должна иметь следующие настройки:</p>
+          <ul>
+              <li>Запускать команды и процессы от имени учетной записи суперпользователя root;</li>
+          </ul>
+          <p>Помните, что во время установки ОС Astra Linux создается учетная запись группы astra-admin. Включенным в эту группу учетным записям разрешено выполнять команды от имени суперпользователя root с помощью консольной утилиты <strong>sudo</strong>.</p>
+          <ul>
+              <li>Запускать команды и процессы с уровнем целостности "Высокий".</li>
+          </ul>
+          <p>Для использования команд с уровнем целостности "Высокий" учетной записи должны быть назначен соответствующий уровень целостности. Сделать это можно:</p>
+          <ol>
+              <li>С использованием команды <strong>pdpl-user</strong>. Синтаксис следующий:</li>
+              <pre><code>pdpl-user -i [требуемый уровень целостности] [имя_учетной_записи]</code></pre>
+              <p>Например, для пользователя ansible команда была бы:</p>
+              <pre><code>pdpl-user -i 63 ansible</code></pre>
+              <li>С помощью программы "Политика безопасности" в меню Пуск или по запуску командой:</li>
+              <pre><code>fly-admin-smc</code></pre>
+          </ol>
+          <img src="./Screen1.png" alt="Картинка">
+      
+          <h2>Ход работы:</h2>
+          <h3>Что будем делать сейчас?</h3>
+          <p>В данной лабораторной работе мы обсудим как администрировать МКЦ в Astra Linux.</p>
+          <p>Как его включить?</p>
+          <p>Предположим, что до этой лабораторной работы вы МКЦ не включал, сделать это можно:</p>
+          <ol>
+              <li>Консольной утилитой <strong>set-fs-ilev</strong>. Данная утилита позволяет:</li>
+              <ul>
+                  <li>Узнать текущее состояние защиты файловой системы с использованием МКЦ:</li>
+                  <pre><code>set-fs-ilev status</code></pre>
+                  <li>Включить или выключить МКЦ на файловой системе:</li>
+                  <pre><code>set-fs-ilev enable</code></pre>
+                  <p>Или</p>
+                  <pre><code>set-fs-ilev disable</code></pre>
+                  <li>Получить список каталогов, в которых будет включен МКЦ после работы:</li>
+                  <pre><code>set-fs-ilev defconfig</code></pre>
+              </ul>
+          </ol>
+          <p>Список каталогов, в которых будет включен МКЦ, хранится в конфигурационном файле - <strong>/etc/parsec/fs-ilev.conf</strong>.</p>
+      
+          <h3>Отправляемся трудиться!</h3>
+          <p>Первым делом, создадим УЗ - linuxuser.</p>
+          <pre><code>sudo adduser linuxuser</code></pre>
+          <img src="./Screen2.png" alt="Картинка">
+          <p>Далее добавим его в группу astra-admin</p>
+          <pre><code>sudo usermod -a linuxuser -G astra-admin</code></pre>
+          <p>А проверить можем вот так -</p>
+          <pre><code>id linuxuser</code></pre>
+          <img src="./Screen3.png" alt="Картинка">
+          <p>Затем необходимо назначить максимальный уровень целостности -</p>
+          <pre><code>sudo pdpl-user -i 63 linuxuser</code></pre>
+          <img src="./Screen4.png" alt="Картинка">
+          <h4>Проверить правильность выполнения задания просто - попробуйте зайти под linuxuser в режим высокого уровня целостности.</h4>
+          <p>Теперь, мы получили (или закрепили) навык создания локальных учетных записей администратора.</p>
+      
+          <h3>А что же дальше?</h3>
+          <p>Теперь, пора поработать с файловой системой в рамках МКЦ.</p>
+          <p>Обратимся к терминологии из документации:</p>
+          <blockquote>
+              <p>"В соответствии с правилами МКЦ уровень целостности каталога не может быть ниже уровня целостности содержащихся в нем сущностей (файлов и подкаталогов) файловой системы. При этом даже процессы от имени администратора безопасности Astra Linux на уровне целостности "Высокий" не могут обойти данное ограничение.</p>
+              <p>Создание и\или удаление сущностей файловой системы связано с внесением изменений в структуру и содержание каталога, т.е. соответствует доступу на запись в него. В связи с этим правилами МКЦ осуществление таких действий разрешено только при условии, что уровень целостности субъекта (процесса) не ниже уровня целостности целевого каталога или файла"</p>
+          </blockquote>
+          <p>Для просмотра или изменения уровня целостности файлов или каталогов используется:</p>
+          <ol>
+              <li>Утилита pdpl-file.</li>
+          </ol>
+          <p>Синтаксис использования утилиты следующий:</p>
+          <pre><code>pdpl-file [параметры] [уровень] [:уровень_целостности[:категория[:флаги]]] [сущность]</code></pre>
+          <p>Разберем на реальном примере.</p>
+          <p>Если вы планируете назначить высокий уровень целостности для каталога /tmp, команда будет такой:</p>
+          <pre><code>sudo pdpl-file :63 /tmp</code></pre>
+          <p>А как посмотреть настройки целостности на файл?</p>
+          <pre><code>sudo pdpl-file /tmp</code></pre>
+          <img src="./Screen5.png" alt="Картинка">
+      
+          <h3>Еще немного практики?</h3>
+          <p>Создайте самостоятельно каталоги и укажите им уровень целостности, в соответствии с таблицей:</p>
+          <table border="1">
+              <tr>
+                  <th>Каталог</th>
+                  <th>Уровень целостности</th>
+              </tr>
+              <tr>
+                  <td>/folder_new</td>
+                  <td>Высокий(63)</td>
+              </tr>
+              <tr>
+                  <td>/folder_new/Dir1</td>
+                  <td>Низкий (0)</td>
+              </tr>
+              <tr>
+                  <td>/folder_new/Dir2</td>
+                  <td>Сетевые сервисы (1)</td>
+              </tr>
+              <tr>
+                  <td>/folder_new/Dir3</td>
+                  <td>Высокий(63)</td>
+              </tr>
+          </table>
+          <p>Затем создайте пользователя с низким уровнем целостности, например, liluser.</p>
+          <p>Проверить, что каталогам назначены правильные настройки можно так -</p>
+          <img src="./Screen6.png" alt="Картинка">
+          <p>А теперь, для того чтобы действительно убедиться в работе МКЦ. Введите команду -</p>
+          <pre><code>sudo chmod 777 -R /folder_new</code></pre>
+          <p>С помощью данной команды, мы назначаем дискреционные права доступа ко всем каталогам созданной иерархии для обеспечения полного доступа (rwx) к ним для всех учетных записей пользователей.</p>
+          <p>Затем, давайте зайдем в систему под нашим пользователем liluser и проверим, что он может делать с нашими каталогами.</p>
+          <img src="./Screen7.png" alt="Картинка">
+          <p>Доступа нет, что и требовалось доказать.</p>
+      
+          <h3>Пробуем повысить уровень целостности пользователя liluser до уровня уровня "Сетевые сервисы".</h3>
+          <p>Перейдите в учетную запись администратора и повысьте привилегии командой -</p>
+          <pre><code>sudo pdpl-user -i 1 liluser</code></pre>
+          <img src="./Screen8.png" alt="Картинка">
+          <p>Войти в систему под новым пользователем можно вот так -</p>
+          <img src="./Screen9.png" alt="Картинка">
+          <p>Проверяем, куда мы можем вносить корректировки в нашей файловой иерархии -</p>
+          <img src="./Screen10.png" alt="Картинка">
+          <p>Имея 1 уровень целостности мы можем вносить корректировки в директориях, на одном с нами уровне целостности, а также на нижних. Выше доступа нет, не смотря на максимальные права доступа в дискреционной системе прав Linux.</p>
+      
+          <h2>Заключение</h2>
+          <p>В результате прохождения данного курса вы приобрели необходимые навыки для эффективного управления мандатного управления доступом. Мы освоили основные концепции и инструменты МКЦ, освоили методы управления над файловой системой.</p>
+          <p>В следующем материале вы познакомитесь с темой - Настройка подсистемы аудита в Astra Linux Special Edition.</p>
+          <p>Благодарю за чтение и успехов вам в обучении!</p>
+      
+          <h2>Дополнительная информация:</h2>
+          <ol>
+              <li>Полное включение МКЦ <a href="https://wiki.astralinux.ru/pages/viewpage.action?pageId=144312274">Ссылка</a></li>
+              <li>Основы безопасности операционной системы Astra Linux Special Edition <a href="https://www.techbook.ru/book.php?id_book=1247">Ссылка</a></li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </article>              
+  
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
