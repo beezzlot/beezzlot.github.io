@@ -5,70 +5,73 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 4.8.0">
   <style>
-    body {
-      display: flex;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      overflow: hidden;
-      width: 100%;
-    }
+ body {
+  display: flex;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
 
-    .docs-article-container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      height: 160vh;
-      width: 120%;
-    }
+.docs-article-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 160vh;
+  width: 100%; /* Исправлено: ширина 100% вместо 120% */
+}
 
-    .text-container {
-      flex: 1;
-      padding: 20px;
-      background-color: #f9f9f9;
-      overflow-y: auto;
-      width: 100%;
-    }
+.text-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box; /* Учитываем padding в общей ширине */
+  word-wrap: break-word; /* Перенос длинных слов */
+  overflow-x: hidden; /* Скрываем горизонтальный скролл */
+}
 
-    .link-container {
-      width: 500px;
-      background-color: #e9e9e9;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    }
+.link-container {
+  width: 500px;
+  background-color: #e9e9e9;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
 
-    .link-container h3 {
-      padding: 20px;
-      margin: 0;
-      background-color: #ddd;
-    }
+.link-container h3 {
+  padding: 20px;
+  margin: 0;
+  background-color: #ddd;
+}
 
-    .link-container iframe {
-      flex: 1;
-      border: none;
-    }
+.link-container iframe {
+  flex: 1;
+  border: none;
+}
 
-    h1,
-    h2,
-    h3 {
-      color: #333;
-    }
+h1,
+h2,
+h3 {
+  color: #333;
+}
 
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
+a {
+  color: #007bff;
+  text-decoration: none;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+img {
+  max-width: 100%;
+  height: auto;
+}
   </style>
 <meta name="author" content="Администрирование Astra Linux">
 <meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
