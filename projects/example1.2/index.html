@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №3. Тема: "Дискреционное управление доступом"</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <ul>
+              <li>научиться поиску файлов по правам доступа;</li>
+              <li>получить навык и понимание как менять расширенные дискреционные права доступа;</li>
+              <li>разобраться в терминологии данной настройки;</li>
+              <li>получить навык настройки общих каталогов для групп пользователей, использование SGID, SUID, Sticky-bit;</li>
+              <li>создать общие каталоги для пользователей с использованием файловых списков доступа;</li>
+              <li>познакомиться с атрибутами файлов.</li>
+            </ul>
+  
+            <h2>Оборудование, ПО:</h2>
+            <p>Виртуальная машина или компьютер под управлением ОС AstraLinux 1.7 в режиме защищенности "Воронеж" или выше.</p>
+  
+            <h2>Ход работы:</h2>
+  
+            <h3>Расширенные права доступа (Extended POSIX ACL)</h3>
+            <p>При прохождении базового курса вы уже знакомились с минимальным функционалом настройки прав доступа, или как часто можно встретить в англоязычной терминологии - Minimal POSIX ACL.</p>
+            <p>Напомним, как эти права доступа выглядят:</p>
+            <img src="./Screen1.png" alt="Картинка">
+  
+            <p>Также Minimal ACL имеют числовое представление (Numeric Notation) в виде трех восьмеричных чисел. Эти числа определяют разрешение на доступ к файлу или директории трех субъектов доступа (user, group, other). Каждое из них формируется путем суммирования восьмеричных значений необходимых разрешений:</p>
+            <ul>
+              <li>чтение = 4;</li>
+              <li>запись = 2;</li>
+              <li>выполнение = 1.</li>
+            </ul>
+            <p>Например, полный доступ (rwx) – это: 4+2+1=7.</p>
+  
+            <p>Вполне естественно, что такая простая схема, как в Minimal POSIX ACL, имеет ряд недостатков. Самый явный из них — это отсутствие гибкости при совместном доступе субъектов к объектам. Поэтому была внедрена новая система — Extended POSIX ACL (EA) или иначе говоря расширенный список контроля доступа.</p>
+            <img src="./Screen2.png" alt="Картинка">
+  
+            <p>Команда <code>getfacl</code> позволяет получить информацию о настройках расширенного списка контроля доступа. Давайте проверим её работу:</p>
+            <pre><code>getfacl example1.txt</code></pre>
+            <img src="./Screen3.png" alt="Картинка">
+  
+            <p>В данном примере, стоит уточнить, будет использована машина в доменной инфраструктуре. Например, как видно по данному скриншоту, group имеет значение стандартной группы для Microsoft ActiveDirectory — группа Domain Users.</p>
+  
+            <p>Давайте попробуем установить на файл права. Шаблон применения команды:</p>
+            <pre><code>setfacl [КЛЮЧ] [ПАРАМЕТРЫ] файл_назначения</code></pre>
+  
+            <p>Выполним её, давайте, добавим в наш файл права доступа пользователю adminsrv на чтение и запись, а также группе lpadmin добавим права на чтение и запись. Команда звучит так:</p>
+            <pre><code>setfacl -m u:adminsrv:rw-,g:lpadmin:rw- example1.txt</code></pre>
+            <img src="./Screen4.png" alt="Картинка">
+  
+            <p>Как можно заметить, теперь в поле user и group мы наблюдаем новую информацию о правах на наш файл. Пользователю по имени adminsrv выданы права на чтение и запись, аналогичные права также назначены на группу lpadmin.</p>
+  
+            <p>Стоит заметить, что управление расширенным контролем доступа достаточно простое. Для работы требуется всего две команды:</p>
+            <ul>
+              <li><code>setfacl</code> — используется для назначения, модификации и удаления ACL прав.</li>
+              <li><code>getfacl</code> — используется для просмотра установленных ACL.</li>
+            </ul>
+  
+            <p>Для <code>getfacl</code> можно применять все изученные ранее метасимволы. Например, если вам необходимо получить список расширенного контроля доступа во всей директории, можно написать:</p>
+            <pre><code>getfacl *</code></pre>
+            <p>Или вывести все файлы с именем super* в шаблоне имени:</p>
+            <pre><code>getfacl super*</code></pre>
+  
+            <p>Также стоит оповестить. Команда <code>ls</code> также отображает, что на файле расширенный список контроля доступа. Для этого введите <code>ls -la</code>:</p>
+            <img src="./Screen5.png" alt="Картинка">
+  
+            <p>Как можно заметить, теперь около стандартного набора символов, которые указывают на права доступа к файлу, есть символ "+", который и указывает на применение расширенного списка контроля доступа.</p>
+  
+            <p>Закрепим результат, создайте нового пользователя linuxuser, настройте ему максимальные права доступа. Для группы video права только на чтение:</p>
+            <pre><code>setfacl -m u:linuxuser:rw-,g:video:rw- example1.txt</code></pre>
+            <p>Помните, что любой пользователь может назначать права доступа на свой файл, как ему захочется!</p>
+            <img src="./Screen6.png" alt="Картинка">
+  
+            <p>Как можно заметить, теперь в сочетании с политиками для пользователя adminsrv, права доступа также появились у пользователя linuxuser.</p>
+  
+            <h3>А сохраняются ли расширенные ACL при переносе файлов?</h3>
+            <p>Если файл нужно скопировать в другую директорию с сохранением настроек расширенного правила доступа, введите команду:</p>
+            <pre><code>cp -p example1.txt ./</code></pre>
+            <p>А команда <code>mv</code> отработает корректно в классическом исполнении:</p>
+            <pre><code>mv example1.txt /data/</code></pre>
+  
+            <p>Напоследок, давайте закрепим в памяти основные пользовательские разрешения:</p>
+            <img src="./Screen7.jpeg" alt="Картинка">
+  
+            <p>Отлично, разобравшись с применением основных прав доступа через расширенные и минимальные дискреционные права, мы можем перейти к особым битам управления (SUID, SGID, Sticky-bit).</p>
+  
+            <h2>Понимание расширенных прав SUID, GUID и sticky bit</h2>
+            <p>Есть три расширенных разрешения на ваши файлы. Первое из них — это разрешение на установку идентификатора пользователя (SUID). В некоторых особых случаях вы можете применить это разрешение к исполняемым файлам. По умолчанию пользователь, запускающий исполняемый файл, запускает этот файл со своими собственными разрешениями и правами доступа.</p>
+  
+            <p>Для обычных пользователей это SUID обычно означает, что использование программы ограничено из-за недостаточных привилегий. Рассмотрим ситуацию, когда пользователю необходимо сменить пароль. Для этого пользователь должен записать свой новый пароль в файл <code>/etc/shadow</code>. Однако этот файл недоступен для записи пользователям, не имеющим прав доступа root:</p>
+            <img src="./Screen7.png" alt="Картинка">
+  
+            <p><strong>Разрешение SUID</strong> предлагает решение этой проблемы. В утилите <code>/usr/bin/passwd</code> SUID настроен во всей красе! Это означает, что при смене пароля пользователь временно получает права root, что позволяет ему записывать в файл <code>/etc/shadow</code>. Вы можете сами увидеть разрешение SUID с <code>ls -l</code> в каталог <code>/usr/bin/passwd</code> букву <strong>s</strong> в позиции, где обычно вы ожидаете увидеть <strong>x</strong> для пользовательских разрешений:</p>
+            <img src="./Screen8.png" alt="Картинка">
+  
+            <p>Большинству администраторов никогда не придется его использовать; вы увидите его только в некоторых файлах, где операционная система должна установить его по умолчанию. При неправильном применении вы можете случайно раздать права доступа root, то есть администратора системы. Поэтому, подумайте заранее, стоит ли вам применять такую настройку.</p>
+  
+            <p>Второе специальное разрешение — это <strong>идентификатор группы (SGID)</strong>. Это разрешение имеет два эффекта:</p>
+            <ul>
+              <li>При применении к исполняемому файлу, он дает пользователю, который исполняет файл, разрешения владельца группы этого файла. Таким образом, SGID может выполнить примерно то же самое, что SUID, только подменять группу с её правами и возможностями. Однако для этой цели SGID практически не используется.</li>
+              <li>При применении к каталогу, SGID может быть полезен, потому что для всех созданных подкаталогов и файлов, владелец группы будет установлен тот же, что и в "родительском" каталоге. По умолчанию, когда пользователь создает файл, его основная группа устанавливается как владелец группы для этого файла.</li>
+            </ul>
+  
+            <p>(узнать основную группу можно с помощью команды <code>groups</code>, если групп несколько, то основная будет самой первой в списке).</p>
+  
+            <p>Попробуем на простом примере объяснить возможности SGID. Предположим, у нас есть сотрудники отдела менеджмента — Николай и Лариса. В Linux, как вы помните из базового курса, все свежесозданные пользователи попадают в одноименную с логином группу. Также, оба они добавлены в общую группу — manager.</p>
+  
+            <p>Когда пользователь создает файл, владельцем файла является сам пользователь и первичная для него группа (то есть одноименная с ним). В таком случае, файлы, которые создает Николай, будут недоступны для Ларисы — и наоборот!</p>
+  
+            <p>Однако, если мы сделаем папку — <code>/opt/manager</code>, применим SGID на группу manager, то получится, что все созданные внутри каталога <code>/opt/manager</code> файлы будут иметь группу по умолчанию manager. А значит будут доступны Николаю и Ларисе одновременно!</p>
+  
+            <p>Разрешение SGID показывается в выводе <code>ls -la</code> как <strong>s</strong> в позиции, где вы обычно находите разрешение на выполнение группы:</p>
+            <img src="./Screen9.png" alt="Картинка">
+  
+            <p>И третье из расширений — <strong>Sticky-bit</strong>. Это разрешение полезно для защиты файлов от случайного удаления в ситуации, где несколько пользователей имеют права на запись в один и тот же каталог. Если применяется sticky bit, пользователь может удалить файл, только если он является владельцем файла или каталога.</p>
+  
+            <p>По этой причине он применяется в качестве разрешения по умолчанию для каталога <code>/tmp</code> и может быть полезен также для каталогов общих групп.</p>
+  
+            <p>Когда вы применяете sticky bit, пользователь может удалять файлы, только если выполняется одно из следующих условий:</p>
+            <ul>
+              <li>Пользователь является владельцем файла;</li>
+              <li>Пользователь является владельцем каталога, в котором находится файл.</li>
+            </ul>
+  
+            <p>При использовании <code>ls -la</code>, вы можете видеть sticky bit как <strong>t</strong> в позиции, где вы обычно видите разрешение на выполнение для других:</p>
+            <img src="./Screen10.png" alt="Картинка">
+  
+            <h2>Применение SUID, SGID и Sticky Bit</h2>
+            <p>Для начала структурируем изученную информацию:</p>
+            <img src="./Screen11.png" alt="Картинка">
+  
+            <p>А теперь определимся, как пользоваться. <strong>В приведенных ниже примерах применяются только права 755 для пользователей, групп и всех остальных. Данное значение выбрано как примерное! Применять на практике вы можете с абсолютно различным сочетанием правил доступа.</strong></p>
+  
+            <p>Если необходимо установить SUID, выполните команду:</p>
+            <pre><code>chmod 4755 example1.txt</code></pre>
+  
+            <p>Если необходимо установить SGID, выполните команду:</p>
+            <pre><code>chmod 2755 example1.txt</code></pre>
+  
+            <p>Если необходимо установить Sticky-bit, выполните команду:</p>
+            <pre><code>chmod 1755 example1.txt</code></pre>
+  
+            <p>Проверьте с помощью <code>ls -la</code>, что вы действительно назначили данные настройки на объекты вашей файловой системы.</p>
+  
+            <h2>А как в Linux по умолчанию на каждый файл уже назначаются какие-то права?</h2>
+            <p>Вы наверняка задавали себе такой вопрос в голове. Почему, когда вы создаете файл или каталог, то он автоматически имеет какие-то права доступа? Проверим какие:</p>
+            <pre><code>mkdir super_test</code></pre>
+            <p>А затем через <code>ls -ld</code> изучим права доступа:</p>
+            <pre><code>ls -ld super_test</code></pre>
+            <img src="./Screen12.png" alt="Картинка">
+  
+            <p>Получается, что на директорию были назначены права:</p>
+            <ol>
+              <li>Чтение, запись и возможность входить в папку (права Execute на каталог отвечают именно за возможность входа в директорию) для владельца файла;</li>
+              <li>Чтение и возможность входить в папку для группы-владельца;</li>
+              <li>Чтение и вход в папку для всех остальных пользователей.</li>
+            </ol>
+  
+            <p>А что будет, если мы создадим файл? Например, в этом же каталоге:</p>
+            <pre><code>touch super_test/file1.txt</code></pre>
+            <img src="./Screen13.png" alt="Картинка">
+  
+            <p>На файл права совершенно другие:</p>
+            <ol>
+              <li>Владельцу файла позволено читать и писать;</li>
+              <li>Все остальные пользователи имеют право только на чтение документа.</li>
+            </ol>
+  
+            <p><strong>Это разрешения определяются настройкой под названием — umask.</strong></p>
+  
+            <p>В операционной системе специального назначения Astra Linux Special Edition за изменение маски прав доступа отвечает модуль <code>pam_umask</code>.</p>
+  
+            <p>Модуль <code>pam_umask</code> пытается получить значение маски из следующих мест:</p>
+            <ul>
+              <li>значение <code>umask=</code>, переданное как аргумент самому <code>pam_umask.so</code>;</li>
+              <li><code>umask=</code> из поля GECOS пользователя;</li>
+              <li>значение <code>UMASK=</code> в <code>/etc/default/login</code>;</li>
+              <li>значение <code>UMASK</code> в <code>/etc/login.defs</code>.</li>
+            </ul>
+  
+            <p>Для активации модуля необходимо внести в конец файла <code>/etc/pam.d/common-session</code> строку:</p>
+            <pre><code>session optional pam_umask.so</code></pre>
+  
+            <p>Для установки глобальной маски прав доступа, можно передать параметр <code>pam_umask.so</code>, в том же файле <code>/etc/pam.d/common-session</code>:</p>
+            <pre><code>session optional pam_umask.so umask=0022</code></pre>
+  
+            <p>Или указать значение в <code>/etc/default/login</code>:</p>
+            <pre><code>UMASK=0002</code></pre>
+  
+            <h3>Как UMASK работает?</h3>
+            <p>Цифры, указанные в UMASK, аналогичны правам доступа в Linux: первая — владелец, вторая — группа и третья — все остальные. Эта маска используется для расчета прав файла. Рассчитывается всё довольно просто, от максимальных прав отнимается маска и получаются права для файла.</p>
+  
+            <p>Фактически, получается, что маска содержит права, которые не будут установлены для файла. Поэтому права по умолчанию для файла будут 666 - 002 = 664, а для каталога — 777 - 002 = 775.</p>
+  
+            <p>Вывести текущий показатель настроенной UMASK для вашей учетной записи можно с помощью команды:</p>
+            <pre><code>umask -p</code></pre>
+            <img src="./Screen14.png" alt="Картинка">
+  
+            <p>Если вам неудобно получать данное значение в битовой маске, то с помощью команды:</p>
+            <pre><code>umask -S</code></pre>
+            <p>Можно получить другое значение, в так называемых, "категориях":</p>
+            <img src="./Screen15.png" alt="Картинка">
+  
+            <h2>Как найти файл, исходя из настроенных правил доступа?</h2>
+            <p>Перед тем, как ответить на данный вопрос, давайте разберемся, а зачем это нужно? Вы помните, что права 777 на файл в операционной системе позволят не только каждому пользователю обращаться к данному файлу и менять его как угодно, но и запускать этот файл как исполняемую программу. А это уже может быть крайне опасно для информационной безопасности вашей системы.</p>
+  
+            <p>Стоит уточнить, что иногда операционная система самостоятельно выставляет права 777 на файлы и директории. Например, директории сбора логов или документация в <code>/usr/share/doc</code> зачастую имеет данные привилегии. Это необходимо, чтобы к этим файлам могли получить доступ пользователи с самым разным уровнем "дозволенности".</p>
+  
+            <p>Но в большинстве случаев права 777 нам не требуются! Воспользуемся командой:</p>
+            <pre><code>find /opt -perm 777</code></pre>
+            <p>Для наглядности, большая часть вывода команды будет опущена, вы и сами можете заметить, насколько в директории <code>/opt</code> много файлов с правами 777:</p>
+            <img src="./Screen16.png" alt="Картинка">
+  
+            <p>Обратите внимание, что не во все директории со стандартными пользовательскими правами вас допустят! А также, посмотрите, что за файлы нам показывают! Это исполняемые библиотеки клиента для видеосвязи. То есть, помимо множества обычных файлов и каталогов встречаются и прикладные программы, которым необходимо иметь такие права.</p>
+  
+            <p>Формат команды <code>find</code> для поиска достаточно прост:</p>
+            <pre><code>find [искомая директория] -perm [запрашиваемые права доступа]</code></pre>
+  
+            <p>Также поиск возможен по "категориям":</p>
+            <pre><code>find /opt -perm ugo+rwx</code></pre>
+  
+            <p>Поиск по ACL через команду <code>find</code> невозможен, помните, мы говорили, что не все программы в Linux поддерживают работу с расширенными программами доступа. В этом случае воспользуемся объединением конструкции команды <code>getfacl</code> и <code>sed</code>:</p>
+            <pre><code>getfacl -R -s -p /opt | sed -n 's/^# file: //p'</code></pre>
+            <img src="./Screen17.png" alt="Картинка">
+  
+            <p>Разберемся с данной конструкцией:</p>
+            <ul>
+              <li><code>-R</code> — данный ключ описывает рекурсивный поиск по каталогу (и подкаталогам);</li>
+              <li><code>-s</code> — данный ключ позволяет команде <code>getfacl</code> пропустить все файлы, не имеющие расширенных <code>getfacl</code>;</li>
+              <li><code>-p</code> — данный ключ выводит полный путь до файла, имеющий расширенные ACL. Давайте наглядно сравним вывод команд, чтобы разобраться в особенностях данного ключа:</li>
+            </ul>
+            <img src="./Screen18.png" alt="Картинка">
+  
+            <p>Отлично, с <code>setfacl</code> разобрались, теперь приступаем к анализу <code>sed</code>:</p>
+            <ul>
+              <li><code>-n</code> — уже хорошо знакомый нам ключ, указывающий на автоматическое удаление пробелов между строками. В нашем случае, если бы файлов с ACL было много, то так вывод команды получится аккуратнее.</li>
+              <li><code>s</code> — используем для поиска по шаблону, а с помощью символа <code>^</code> указываем на поиск в начале строки шаблона <code>#file: //p'</code>.</li>
+              <li>Флаг <code>/p</code> в данном случае является закрывающим символом для шаблона.</li>
+            </ul>
+  
+            <h2>Атрибуты файлов</h2>
+            <p>Предположим, вы хотите защитить некоторые важные файлы в Linux. Причем они должны быть защищены не только от перезаписи, но и от случайного или преднамеренного удаления и перемещения. Предотвратить перезапись или изменение битов доступа к файлам можно с помощью стандартных утилит <code>chmod</code> и <code>chown</code>, но это не идеальное решение, так как у суперпользователя по-прежнему остается полный доступ. Но есть еще одно решение. Это команда <code>chattr</code>.</p>
+  
+            <p>Эта утилита позволяет устанавливать и отключать атрибуты файлов на уровне файловой системы, независимо от стандартных (чтение, запись, выполнение). Для просмотра текущих атрибутов можно использовать <code>lsattr</code>.</p>
+  
+            <p>Для начала, давайте посмотрим, какие атрибуты есть в нашей операционной системе, начнем с <code>/etc/passwd</code>:</p>
+            <pre><code>lsattr /etc/passwd</code></pre>
+            <img src="./Screen19.png" alt="Картинка">
+  
+            <p>Как можно заметить, на файл назначен только один атрибут — <code>e</code>. Атрибут <code>e</code>, проще говоря, отвечает за то, что данный объект сохранен в операционной системе — ему выделили пространство на диске, и система понимает, где и как обращаться к данному файлу. На самом деле, данный параметр вы встретите на любом файле, который был создан на компьютере, его нельзя удалить или поставить на файл.</p>
+  
+            <p>Попробуйте проверить файл <code>example1.txt</code>, который мы активно использовали сегодня для демонстрации ACL.</p>
+  
+            <p>А какие еще атрибуты есть?</p>
+  
+            <table>
+              <thead>
+                <tr>
+                  <th>Атрибут</th>
+                  <th>Значение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>a</code></td>
+                  <td>Файл с установленным атрибутом "a" может быть открыт только в режиме добавления новых строк. Удалять ничего не получится. Установить или удалить данный атрибут может только администратор системы или процесс, который поставил данный атрибут на файл. Такой атрибут иногда можно встретить в лог-файлах системы.</td>
+                </tr>
+                <tr>
+                  <td><code>A</code></td>
+                  <td>При обращении к файлу с атрибутом A, его "atime" запись не будет изменена. Это означает, что невозможно будет отследить, в какое время последний раз обращались к этому файлу.</td>
+                </tr>
+                <tr>
+                  <td><code>c</code></td>
+                  <td>Файл с установленным атрибутом 'c' автоматически сжимается ОС для экономии дискового пространства.</td>
+                </tr>
+                <tr>
+                  <td><code>d</code></td>
+                  <td>Означает, что файл с таким атрибутом не будет кандидатом на сохранение в случае резервирования операционной системы.</td>
+                </tr>
+                <tr>
+                  <td><code>e</code></td>
+                  <td>Атрибут по умолчанию, указывает, что для файла выделено место на диске.</td>
+                </tr>
+                <tr>
+                  <td><code>E</code></td>
+                  <td>Означает, что файл шифруется файловой системой. Данный атрибут нельзя установить или удалить через <code>chattr</code>, ведь параметры шифрования настраиваются на стороне файловой системы.</td>
+                </tr>
+                <tr>
+                  <td><code>F</code></td>
+                  <td>Атрибут F устанавливается на директорию и означает, что при выполнении поиска в каталоге, он будет нерегистрозависимым. Данный атрибут имеет смысл только в файловых системах, где включена привязка к регистру, а также только в тех каталогах, где на момент установки атрибута нет ни одного файла.</td>
+                </tr>
+                <tr>
+                  <td><code>i</code></td>
+                  <td>Файл с атрибутом 'i' не может быть изменен: его нельзя удалить или переименовать, на этот файл нельзя создать ссылку, большая часть метаданных файла не может быть изменена, и файл нельзя открыть в режиме записи.</td>
+                </tr>
+                <tr>
+                  <td><code>m</code></td>
+                  <td>Означает, что файл не нужно сжимать, при условии, если файловая система настроена на постоянное сжатие всех объектов в ОС.</td>
+                </tr>
+                <tr>
+                  <td><code>u</code></td>
+                  <td>Содержимое файлов с этим атрибутом не будет удалено, а при удалении файла может быть восстановлено с помощью специальных программ, подробнее об этом <a href="https://www.geeksforgeeks.org/how-to-recover-a-deleted-file-in-linux/">кликните тут</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <p>Стоит сразу предупредить, что не все атрибуты представлены в таблице сверху — лишь только самые распространенные. Если интересно ознакомиться со всеми, <a href="https://man7.org/linux/man-pages/man1/chattr.1.html">кликните здесь</a>.</p>
+  
+            <p>Обратите внимание, что установить или снять атрибут можно только с правами 'root'! Для установки атрибута используйте ключ <code>+</code>, например:</p>
+            <pre><code>chattr +i /etc/passwd</code></pre>
+            <pre><code>chattr +c /etc/passwd</code></pre>
+  
+            <p>А для удаления <code>-</code>, например:</p>
+            <pre><code>chattr -i /etc/passwd</code></pre>
+            <pre><code>chattr -c /etc/passwd</code></pre>
+  
+            <h3>Установим собственный атрибут!</h3>
+            <p>Например, на файл <code>/etc/passwd</code>:</p>
+            <pre><code>chattr +i /etc/passwd</code></pre>
+            <img src="./Screen20.png" alt="Картинка">
+  
+            <p>Как можно заметить, атрибут <code>i</code> есть, проверим на практике? Попробуем от пользователя 'root' — который имеет неограниченный и максимальный доступ к системе, открыть данный файл через текстовый редактор "vim":</p>
+            <pre><code>vim /etc/passwd</code></pre>
+            <img src="./Screen21.png" alt="Картинка">
+  
+            <p>Если вы хотите назначить рекурсивно атрибуты, то не забывайте про ключ <code>-R</code>:</p>
+            <pre><code>chattr -R +i /etc/</code></pre>
+            <h2>Проверим, как работает атрибут "a"?</h2>
+            <pre><code>chattr +a example1.txt</code></pre>
+            <img src="./Screen22.png" alt="Картинка">
+  
+            <p>А теперь, попробуем записать в него что-нибудь:</p>
+            <pre><code>echo "Test" > example1.txt</code></pre>
+            <img src="./Screen23.png" alt="Картинка">
+  
+            <p>Как можно заметить, теперь на файл даже пользователь root не может писать.</p>
+  
+            <p>Но, подождите, вероятно, вы заметили, что мы использовали ключ <code>></code> — напомню, он указывает, что содержимое файла удаляется, а вместо него записывается то значение, что генерирует команда <strong>echo</strong>.</p>
+  
+            <p>А если воспользоваться <code>>></code> для добавления новой записи?</p>
+            <img src="./Screen24.png" alt="Картинка">
+  
+            <p>Успех! Все получилось! Атрибут "a" не запрещает добавлять новые значения в файл, он запрещает удаление прошлого содержимого.</p>
+  
+            <p>Стоит уточнить, что многие текстовые редакторы не позволяют вам открыть данный файл даже для редактирования. Только добавлять через <code>echo</code>, <code>grep</code>, <code>head</code>, <code>tail</code> или прочие инструменты, изученные в Лабораторной работе №2.</p>
+  
+            <p>В следующем материале вы познакомитесь с Мандатным управлением доступа!</p>
+  
+            <p>Благодарю за чтение и успехов вам в обучении!</p>
+  
+            <h2>Практическая работа</h2>
+            <ol>
+              <li>
+                <p>Создайте файл <code>/opt/supersecret.txt</code>. Назначьте следующие права доступа, в соответствии с таблицей. <strong>Обратите внимание, что пользователи не должны быть членом группы, указанные в таблице.</strong></p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Пользователь</th>
+                      <th>Группа</th>
+                      <th>Значение</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ivanov</td>
+                      <td>IT</td>
+                      <td>Пользователь файл читает и записывает, группа не имеет никаких прав на файл.</td>
+                    </tr>
+                    <tr>
+                      <td>Petrov</td>
+                      <td>Director</td>
+                      <td>Пользователь имеет права только на выполнение, группа имеет права на чтение и запись.</td>
+                    </tr>
+                    <tr>
+                      <td>Sazonov</td>
+                      <td>Journalist</td>
+                      <td>Пользователь имеет максимальные права на файл, группе доступ запрещен.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                <p>Создайте файл <code>/opt/Doc.txt</code>. Назначьте атрибут, чтобы было невозможно отследить, в какое время последний раз обращались к этому файлу.</p>
+              </li>
+              <li>
+                <p>Создайте файл <code>/opt/Doc2.txt</code>. Назначьте атрибут, чтобы в файл можно было добавлять только новые строки, не удаляя старые.</p>
+              </li>
+            </ol>
+  
+            <h2>Дополнительная информация:</h2>
+            <ul>
+              <li><a href="https://ruvds.com/ru/helpcenter/suid-sgid-sticky-bit-linux/">Немного про SUID, SGID и Sticky-Bit</a></li>
+              <li><a href="https://wiki.archlinux.org/title/Access_Control_Lists_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)">Немного про ACL в Linux</a></li>
+              <li><a href="https://www.opennet.ru/man.shtml?topic=chattr&category=1&russian=0">Документация на chattr</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
