@@ -471,7 +471,7 @@
 
           <div class="article-style">
             <h2 id="flexibility">Текущая ситуация на рынке ОС</h2>
-            <img src="/courses/images/image14.png" alt="Описание изображения" style="width:900px;height:auto;">
+
 
 <p>Текущая ситуация на рынке ОС</p>
 
@@ -622,11 +622,11 @@
           }
 
           const resultDiv = document.getElementById('result');
-          if (score < 5) {
+          if (score < 3) {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended">Перейти к дополнительным материалам для усвоения материала.</a></p>';
-          } else if (score == 6) {
+          } else if (score == 7) {
               resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
-          } else if (score >= 7) {
+          } else if (score >= 4) {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example4">Перейти на следующий этап</a></p>';
           } else {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
