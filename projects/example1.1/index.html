@@ -15,34 +15,32 @@
     }
 
     .docs-article-container {
-      flex: 1;
       display: flex;
+      width: 100%;
       height: 100vh;
     }
 
     .text-container {
-      flex: 2; /* Увеличиваем, чтобы текст растягивался */
-      padding: 20px;
-      background-color: #f9f9f9;
+      flex: 1; /* Занимает оставшуюся часть экрана */
       overflow-y: auto;
-      overflow-x: hidden;
-      word-wrap: break-word;
+      padding: 1rem;
+      background-color: #f9f9f9;
       box-sizing: border-box;
     }
 
     .link-container {
-      flex: 1;
+      flex: 0 0 50%; /* Занимает ровно половину экрана */
       background-color: #e9e9e9;
-      height: 100vh;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     }
 
-    .link-container h3 {
+    .link-container h2 {
       padding: 20px;
       margin: 0;
       background-color: #ddd;
+      text-align: center;
     }
 
     .link-container iframe {
