@@ -15,25 +15,27 @@
     }
 
     .docs-article-container {
+      flex: 1;
       display: flex;
-      width: 100%;
-    }
-
-    .text-container, .link-container {
-      flex: 1; /* Делим экран поровну между контейнерами */
-      overflow-y: auto;
+      height: 100vh;
     }
 
     .text-container {
+      flex: 2; /* Увеличиваем, чтобы текст растягивался */
       padding: 20px;
       background-color: #f9f9f9;
+      overflow-y: auto;
       overflow-x: hidden;
       word-wrap: break-word;
       box-sizing: border-box;
     }
 
     .link-container {
+      flex: 1;
       background-color: #e9e9e9;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     }
 
@@ -44,8 +46,7 @@
     }
 
     .link-container iframe {
-      width: 100%;
-      height: 100%;
+      flex: 1;
       border: none;
     }
 
