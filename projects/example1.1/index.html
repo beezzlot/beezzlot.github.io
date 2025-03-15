@@ -1,262 +1,97 @@
 <!DOCTYPE html><html lang="en-us" >
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 4.8.0">
-
-  
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Администрирование Astra Linux">
-
-  
-  
-  
-    
-  
-  <meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
-
-  
-  <link rel="alternate" hreflang="en-us" href="/projects/example/">
-
-  
-
-
-  
-  
-  
-  <meta name="theme-color" content="#2962ff">
-  
-
-  
-  
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-
-    
-    
-    
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
-    
-
-    
-
-    
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-        
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
-  
-
-  
-  
-  
-  
-  <link rel="stylesheet" href="/css/academic.css">
-
-  
-
-
-
-
-  
-
-
-  
-  
-
-  
-  <link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
-  
-
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
-
-  <link rel="canonical" href="/projects/example/">
-
-  
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  <meta property="twitter:card" content="summary">
-  
-  <meta property="twitter:site" content="@timofeysamsonov">
-  <meta property="twitter:creator" content="@timofeysamsonov">
-  
-  <meta property="og:site_name" content="Администрирование Astra Linux">
-  <meta property="og:url" content="/projects/example/">
-  <meta property="og:title" content="Лабораторная работа #1 | Администрирование Astra Linux">
-  <meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
-  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
-  
-    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00">
-  
-
-  
-
-
-
-
-  
-
-
-  
-
-
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .docs-article-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 120vh;
+      width: 120%;
+    }
+
+    .text-container {
+      flex: 1;
+      padding: 20px;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+      width: 100%;
+    }
+
+    .link-container {
+      width: 500px;
+      background-color: #e9e9e9;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .link-container h3 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
 
 
 
@@ -296,73 +131,62 @@
     </section>
   </div>
 </aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
 
+<title>Лабораторные работы | Администрирование Astra Linux</title>
 
-  
+</head>
 
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
 
-
-
-
-
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
-
-    
     <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
     </div>
-    
-
-    
     <button type="button" class="navbar-toggler" data-toggle="collapse"
             data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fas fa-bars"></i></span>
     </button>
-    
-
-    
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
       <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
     </div>
-    
-
-    
-    
     <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-
-      
       <ul class="navbar-nav d-md-inline-flex">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-         
         <li class="nav-item">
           <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
         </li>
-
-
-
         <li class="nav-item">
           <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
         </li>
@@ -372,218 +196,632 @@
         <li class="nav-item">
           <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
         </li>
-        
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
       </ul>
     </div>
-
-  
-
   </div>
 </nav>
 
-
-  
-
-<div class="container-fluid docs">
-  <div class="row flex-xl-nowrap">
-    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-      
-
-
-
-
-
-  
-    
-  
-
-
-
-
-<form class="docs-search d-flex align-items-center">
-  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    <span><i class="fas fa-bars"></i></span>
-  </button>
-
-  
-  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  
-</form>
-
-<nav class="collapse docs-links" id="docs-nav">
-  
-
-  
-  
-  
-  
-  <div class="docs-toc-item active">
-    <a class="docs-toc-link" href="/projects/example/">Начало работы</a>
-
-  </div>
-  
-
-  
+ 
+   
   
 </nav>
 
     </div>
+    <div class="link-container">
+      <h2>
 
-    
-    <div class="d-none d-xl-block col-xl-2 docs-toc">
-      <ul class="nav toc-top">
-        <li><a href="#" id="back_to_top" class="docs-toc-title">Оглавление</a></li>
-      </ul>
 
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#flexibility">Контейнеризация</a></li>
-    <li><a href="#first-step">Запуск одной задачи в контейнере Alpine Linux</a></li>
-    <li><a href="#finish">Заполнение отчета</a></li>
-  </ul>
-</nav>
 
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
     </div>
-    
 
-    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+    </script>
 
-      <article class="article">
 
-        <div class="docs-article-container">
-          <h1>Лабораторная работа №2</h1>
+    <article class="article">
+      <div class="docs-article-container" style="margin-left: auto; width: 250%"> <!-- Ширина может быть скорректирована -->
+        <h1>
+          
+     
 
+
+
+
+
+
+
+        </h1>
+        <div class="text-container" style="width: 175%">
           <div class="article-style">
-            <h2 id="flexibility">Изучение механизма создания групп и пользователей, разграничение прав доступа и работа с файловыми ресурсами</h2>
-            <img src="/projects/images/image1.png" alt="Описание изображения" style="width:900px;height:auto;">
-<p>Тема лабораторной работы: "Изучение механизма создания групп и пользователей, разграничение прав доступа и работа с файловыми ресурсами"</p>
-<p>Цель лабораторной работы: "Изучить принципы и механизмы  управления доступом в информационных системах"</p>
+            <h2 id="flexibility">Лабораторная работа №2. Тема: "Работа с текстовой информацией в ОС Astra Linux".</h2>
 
-<p>Задачи лабораторной работы:</p>
-<li><strong>Изучить основы контейнеризации и её преимущества перед традиционными методами развёртывания приложений.</strong></li>
-<li><strong>Ознакомиться с популярными инструментами для контейнеризации, такими как Docker, Podman и другие.</strong></li>
-<li><strong>Изучить процесс установки и конфигурации Docker на локальной машине или в виртуальной среде.</strong></li>
-<li><strong>Научиться создавать и управлять Docker-образами и контейнерами.</strong></li>
-<li><strong>Разработать и контейнеризировать простое приложение, используя Docker.</strong></li>
-<li><strong>Ознакомиться с основами написания Dockerfile для автоматизации сборки контейнеров.</strong></li>
-<li><strong>Изучить методы управления контейнерами: запуск, остановка, просмотр состояния и удаление</strong></li>
+            <img src="./Rules1.png" alt="Описание изображения" style="width:100%;height:auto;">
 
-
-<p>Общие теоретические сведения</p>
-
-<p>Контейнеризация — это технология, которая помогает запускать приложения изолированно от основной операционной системы. Программа упаковывается в специальную оболочку-контейнер, внутри которой — среда, необходимая для работы. Технология нужна для:</p>
-<ul>
-<li><strong>для изолированного запуска приложений и рабочих сред вне зависимости от системы и ПО, установленных на конкретной машине;</strong></li>
-<li><strong>контроля ресурсов и снижения нагрузки на систему;</strong></li>
-<li><strong>разрешения конфликтов, которые могут возникнуть из-за того, что разные приложения нуждаются в различных версиях ПО или библиотек;</strong></li>
-<li><strong>быстрого перемещения настроенных приложений и сред с одной машины на другую;</strong></li>
-<li><strong>создания удобной рабочей инфраструктуры;</strong></li>
-<li><strong>ускорения процесса разработки и снижения риска ошибок;</strong></li>
-<li><strong>масштабирования готовых решений;</strong></li>
-<li><strong>легкого управления сложными приложениями, средами и системами. </strong></li>
-</ul>
-
-<img src="/projects/images/image2.png" alt="Описание изображения" style="width:900px;height:auto;">
-
-
-<p>Порядок выполнения работы</p>
-
-<p>
-  Основное назначение докер - контейнеризация приложений
-
-  Виртуальная машина в отличии от докера потребляет больше ресурсов, занимает больше места, дольше грузится,
-  
-  Docker-образ это пакет или шаблон аналогичной шаблону виртуальной машины
-  
-  Контейнер - запущенный образ, который вы заполнили и развернули. Вот он и работает
-</p>
-
-<h2 id="first-step">Запуск одной задачи в контейнере Alpine Linux</h2>
-
-<p>Для выполнения работы воспользуйтесь виртуальным сервером, который вы можете наблюдать внизу:</p>
-
-<iframe 
-src="https://rsvpu.hackatom.ru:3000/" 
-style="border:0px; width:100%; height:500px;"> 
-</iframe>
-
-<li><strong>1. Выполните следующую команду в консоли Linux.;</strong></li>
-
-<code>docker container run alpine hostname</code>
-
-<p>Вывод ниже показывает, что alpine:latest образ не может быть найден локально. Когда это происходит, Docker автоматически извлекает его из Docker Hub.
-
-  После загрузки изображения отображается имя хоста контейнера ( 888e89a3b36bв примере ниже).
-</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Unable to find image 'alpine:latest' locally
-  latest: Pulling from library/alpine
-  88286f41530e: Pull complete
-  Digest: sha256:f006ecbb824d87947d0b51ab8488634bf69fe4094959d935c0c103f4820a417d
-  Status: Downloaded newer image for alpine:latest
-  888e89a3b36b
- </code></pre></div></div>
-
-<p>Docker поддерживает контейнер запущенным до тех пор, пока процесс, который он запустил внутри контейнера, все еще запущен. В этом случае hostnameпроцесс завершается, как только вывод записывается. Это означает, что контейнер останавливается. Однако Docker не удаляет ресурсы по умолчанию, поэтому контейнер все еще существует в Exitedсостоянии.
-
-  Перечислите все контейнеры. </p>
-
-<code> docker container ls --all</code>
-
-<p>Обратите внимание, что ваш контейнер Alpine Linux находится в Exited состоянии</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS            PORTS               NAMES
-  888e89a3b36b        alpine              "hostname"          50 seconds ago      Exited (0) 49 seconds ago                       awesome_elion
- </code></pre></div>    </div>
-
-<p>Контейнеры, которые выполняют одну задачу, а затем выходят, могут быть очень полезны. Вы можете создать образ Docker, который выполняет скрипт для настройки чего-либо. Любой может выполнить эту задачу, просто запустив контейнер — ему не нужны реальные скрипты или информация о конфигурации.</p>
-
-  
-
-<h2 id="finish">Заполнение отчета</h2>
-
-<p>Для того, чтобы сдать лабораторную работу отправьте отчет. Пример его размещен ниже</p>
-
-<table>
-  <thead>
-      <tr>
-          <th>Имя контейнера</th>
-          <th>Наименование машины (NAMES)</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>abcdef123456</td>
-          <td>my_container</td>
-      </tr>
-      <tr>
-          <td>ghijk7891011</td>
-          <td>another_container</td>
-      </tr>
-  </tbody>
-</table>
-
-
-
-<p class="powered-by">
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
     
-  </p>
-
-  
-  
-
-
-
-
-
-
-  <p class="powered-by">
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
+            <h2 id="flexibility">Цель работы</h2>
+            <ul>
+              <li>познакомиться с функционалом регулярных выражений в утилите grep;</li>
+              <li>познакомиться с редактированием текстовых потоков с помощью sed;</li>
+              <li>познакомиться с инструментом awk для составления командных строк.</li>
+          </ul>
     
+          <h2>Оборудование, ПО:</h2>
+          <p>Виртуальная машина или компьютер под управлением ОС AstraLinux 1.7 в режиме защищенности "Воронеж" или выше.</p>
+      
+    
+            <h2 id="first-step">Ход работы</h2>
+            <p>Умение пользоваться инструментами фильтрации и поиска текста в Linux - крайне полезный и нужный навык для инженера, который работает с данной ОС. Не стоит полагать, что этот навык нужен только для специалистов, которые много работают с документами. Поиск логов, создание скриптов для автоматизации, быстрые административные задачи по смене ярлыков, поиск зависшего процесса и многое другое возможно с применением этих инструментов!</p>
+
+            <h3>Введем новый термин - <strong>Регулярные выражения</strong></h3>
+            <h4>Это нужно знать!</h4>
+            <p>Регулярные выражения - это шаблон, который соответствует сразу нескольким наборам строк. Шаблон состоит из операторов, используя символы и метасимволы (о метасимволах поговорим подробнее позднее).</p>
+        
+            <h3>Начнем с первого инструмента работы с текстом - утилита Grep</h3>
+            <p><strong>grep - утилита командной строки, которая находит строку из файлов</strong></p>
+            <p>Формат работы с grep следующий:</p>
+            <pre><code>grep [ПАРАМЕТР] искомая строка [ФАЙЛ]</code></pre>
+        
+            <p>Начнем с простого:</p>
+            <pre><code>$ grep processor /proc/cpuinfo</code></pre>
+            <p>В ответ, вам вернётся номера процессоров (каждого ядра отдельно). Например:</p>
+            <pre><code>processor : 0
+        processor : 1</code></pre>
+        
+            <p>По умолчанию, grep регистрозависимый, если запрос сформирован с прописных букв, то записи со строчными буквами отображены не будут.</p>
+        
+            <p>Проверим, что будет если мы введем не полностью слово "processor", а например лишь его часть - слово "proc":</p>
+            <pre><code>$ grep proc /proc/cpuinfo</code></pre>
+            <p>Результат тот же, значит делаем вывод - grep, при стандартном использовании без ключей, ищет строку в составе текста и слова.</p>
+        
+            <p>А что, если нам нужно найти именно слово "proc"? Как избежать "однокоренные" значения? Воспользуемся параметром "-w":</p>
+            <pre><code>$ grep -w "proc" /proc/cpuinfo</code></pre>
+            <p>Как можно заметить, ответа не поступило! В файле /proc/cpuinfo нет строк "proc".</p>
+        
+            <p>Давайте проверим на другом примере, выполним 'grep' на /proc/cpuinfo. Поищем слово "cpu":</p>
+            <pre><code>$ grep cpu /proc/cpuinfo</code></pre>
+            <p>Как можно заметить, в этом случае, мы получили много строк, где слово "cpu" встречается отдельно, а также в составе других слов.</p>
+        
+            <img src="./Screen1.png" alt="Картинка">
+        
+            <p>Проверим с ключом -w:</p>
+            <img src="./Screen2.png" alt="Картинка">
+        
+            <p>Теперь, множество строк пропали, указав вам только значения конкретных слов "cpu".</p>
+        
+            <p>А что, например, если нам нужно найти строку, которая начинается на шаблонное слово, но продолжается и оканчивается на различные символы? Попробуем найти все строчки, которые начинаются на слово "cpu". Обратите внимание, мы применили метасимволы. К ним относятся: ".", "\", "$", "*", "[", "]", "^", "&".</p>
+            <pre><code>$ grep 'cpu\>' /proc/cpuinfo</code></pre>
+            <img src="./Screen3.png" alt="Картинка">
+        
+            <p>А теперь, все строчки которые оканчиваются на слово "cpu":</p>
+            <pre><code>$ grep '\<cpu' /proc/cpuinfo</code></pre>
+            <img src="./Screen4.png" alt="Картинка">
+        
+            <p>А если нужное нам слово располагается в начале или конце строки? Попробуем прописать:</p>
+            <pre><code>$ grep '^cpu' /proc/cpuinfo</code></pre>
+            <p>В ответ получим строки, которые начинаются на "cpu":</p>
+            <img src="./Screen5.png" alt="Картинка">
+        
+            <p>Проверим теперь другую конструкцию:</p>
+            <pre><code>$ grep 'cpu$' /proc/cpuinfo</code></pre>
+            <p>В нашем примере файла строк, которые заканчивались на слово "cpu" - нет. Попробуем сформировать другой запрос:</p>
+            <pre><code>$ grep 'yes$' /proc/cpuinfo</code></pre>
+            <img src="./Screen6.png" alt="Картинка">
+        
+            <p>Теперь получилось, в ответе команды получили только строки, где в конце есть слово "yes".</p>
+        
+            <p>А если, например, задача увидеть строки рядом с искомой? Для этого нам потребуется ключ -C. Данным ключом задается количество строк, которые нужно напечатать. Обратите внимание, что будут показаны строки, расположенные ниже искомого значения.</p>
+        
+            <p>Например, найдем строку расположенную ниже слова "processor":</p>
+            <pre><code>$ grep -C 1 processor /proc/cpuinfo</code></pre>
+            <img src="./Screen7.png" alt="Картинка">
+        
+            <p>Для удобства "grep" разделил найденные значения пробелом, чтобы было удобнее читать результат.</p>
+        
+            <p>Попробуем задать значение строк побольше:</p>
+            <pre><code>$ grep -C 4 processor /proc/cpuinfo</code></pre>
+            <img src="./Screen8.png" alt="Картинка">
+        
+            <p>Стоит дополнить, что в некоторых дистрибутивах вместо ключа -C используют -A (after, после). Результат работы команды:</p>
+            <pre><code>$ grep -C 4 processor /proc/cpuinfo</code></pre>
+            <p>и</p>
+            <pre><code>$ grep -A 4 processor /proc/cpuinfo</code></pre>
+            <p>Одинаковый.</p>
+        
+            <p>Конечно, с помощью ключа -B (before, до) можно вывести строки выше искомого значения:</p>
+            <pre><code>$ grep -B 4 processor /proc/cpuinfo</code></pre>
+            <img src="./Screen9.png" alt="Картинка">
+        
+            <p>Будьте внимательны - в нашем примере, строка processor = 0 является первой записью в файле /proc/cpuinfo. А значит "before" ничего не покажет.</p>
+        
+            <h3>Перейдем к серьезным регулярным выражениям.</h3>
+            <p>Сделаем текстовый файл со следующим содержимым:</p>
+            <pre><code>client 10.10.10.1
+        server 192.168.1.1
+        computer 127.78.245.1
+        router 88.11.22.33
+        router2 99.22.33.44
+        linux1 111.111.22.33
+        linux2 173.65.234.1
+        linux3 243.1.1.1
+        linux4 109.105.110.115</code></pre>
+        
+            <p>Первым делом, сделаем выборку по слову linux, при условии что после искомого слова есть значения от 1 до 3:</p>
+            <pre><code>$ grep "linux[1-3]" test.txt</code></pre>
+            <img src="./Screen10.png" alt="Картинка">
+        
+            <p>А если наоборот, исключая эти записи:</p>
+            <pre><code>$ grep "linux[^1-3]" test.txt</code></pre>
+            <img src="./Screen11.png" alt="Картинка">
+        
+            <p>Для понимания, определим какие метасимволы мы использовали в вышеуказанных примерах. Метасимволы "[]" позволяют определить подмножество символов, которые необходимо распознавать при выполнении операции поиска или подстановки. Запись группы символов, заключенных в квадратные скобки, означает: "любой одиночный символ из указанных". Метасимвол ^ (отрицание). Позволяет выполнять инверсию запроса, который вы сформировали.</p>
+        
+            <p>Давайте дополним наш текст дополнительными строчками:</p>
+            <pre><code>client 10.10.10.1
+        server 192.168.1.1
+        computer 127.78.245.1
+        router 88.11.22.33
+        router2 99.22.33.44
+        linux1 111.111.22.33
+        linux2 173.65.234.1
+        linux3 243.1.1.1
+        linux4 109.105.110.115
+        New Word
+        Another Word
+        Privet</code></pre>
+        
+            <p>И выполним выборку только строк с IP-адресами. Для этого воспользуемся метасимволами в сочетании с опцией -E. Данная опция отвечает за поддержку расширенного регулярного выражения:</p>
+            <pre><code>$ grep -E '\b[0-9]{1,3}(\.[0-9]{1,3}){3}\b' test.txt</code></pre>
+            <img src="./Screen12.png" alt="Картинка">
+        
+            <p>Мы получили результат выборки строк, в которых у нас есть IP-адрес из 4 цифр разделенных точками (октетами). Прочие строчки, которые не имеют чисел в строке или состоят не из 4-ых значений.</p>
+        
+            <p>Теперь, поговорим о метасимволах, которые мы применили в данном запросе. Метасимвол \b указывает на границы искомой строки, считайте, это как способ обособления. Метасимволы "[]" позволяют определить подмножество символов, которые необходимо распознавать при выполнении операции поиска или подстановки. Запись группы символов, заключенных в квадратные скобки, означает: "любой одиночный символ из указанных". Например, если "[0123456789]", это будет означать: "любая цифра". Можно записать и короче: "[0-9]". Метасимвол {} позволяет определить подмножество символов, расположенных в произвольном порядке. Понять как он работает можно на простом примере:</p>
+            <pre><code>$ touch test{1,2,3,4}</code></pre>
+            <p>В ответ получим:</p>
+            <img src="./Screen13.png" alt="Картинка">
+        
+            <p>При этом, если мы выполним аналогичную команду, но например с метасимволом []:</p>
+            <pre><code>$ touch test[1-4]</code></pre>
+            <img src="./Screen14.png" alt="Картинка">
+        
+            <p>Как видим, в этом случае [] не отрабатывает. Применяемые далее () выполняют группировку элементов, для поиска всех совпадений по группе. Например, можно применить так:</p>
+            <pre><code>$ grep rosatom.(lab | net | ru | com)</code></pre>
+            <p>В таком случае найдено будет любое совпадение, совпадающее по запросу. Дальнейшая конструкция позволит выполнить выбору 4 раза, для того чтобы сформировать поиск именно по 4-ых значной строке, разделенная точкой:</p>
+            <pre><code>\.[0-9]{1,3}){3}</code></pre>
+            <p>\. - указывает на общий разделитель. [0-9]{1,3} - уже знакомая нам конструкция, указывает что число состоит из 3 символов. {3} - повторяет запрос 4 раза. Потому что нумерация идет с нуля. \b - закрывает запрос. Таким хитрым образом, получаем выборку по IP-адресам из файла.</p>
+        
+            <p>Следующая конструкция выполняет ту же самую процедуру, но пишется сложнее, так как не применяется такое большое множество метасимволов. В этом примере мы явно видим разделение значений через \., а также описание искомых параметров:</p>
+            <pre><code>$ grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" test.txt</code></pre>
+            <img src="./Screen15.png" alt="Картинка">
+        
+            <p>А что, если есть задача вывести только адреса? Без слов рядом. На помощь приходит ключ -o (от англ. only-matching) в этом случае, выборка будет произведена по строгому соответствию шаблону:</p>
+            <pre><code>$ grep -oE "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" test.txt</code></pre>
+            <img src="./Screen16.png" alt="Картинка">
+        
+            <p>Давайте попробуем отредактировать наш test.txt, закомментируем несколько параметров:</p>
+            <pre><code>client 10.10.10.1
+        server 192.168.1.1
+        computer 127.78.245.1
+        router 88.11.22.33
+        router2 99.22.33.44
+        linux1 111.111.22.33
+        linux2 173.65.234.1
+        #linux3 243.1.1.1
+        #linux4 109.105.110.115</code></pre>
+        
+            <p><strong>Напомним, что в Linux символ # - является комментарием, операционная система, скрипты и различные программы игнорируют строки, которые начинаются на #. Это позволяет непосредственно в коде программы оставлять заметки или подсказки для пользователя.</strong></p>
+            <pre><code>$ grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" test.txt</code></pre>
+            <p>Как мы видим, при вводе уже знакомой нам команды по выборке IP-адреса из текста. Она показывает нам строки, которые имеют символ #. Предположим, что нам, как администраторам совершенно неинтересно посмотреть закомментированные (считайте неактивные) параметры. С помощью ключа -v у команды grep можно установить инверсию запроса, то есть показать, наоборот, не подходящие строки под запрос. А с помощью символа | (читается как - вертикальная черта, или на профессиональном жаргоне - "пайп" от англ. pipe ) Команда выглядит вот так:</p>
+            <pre><code>$ grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" test.txt | grep -v '#'</code></pre>
+            <img src="./Screen17.png" alt="Картинка">
+            <p>Наблюдаем результат, все строки, которые не имеют комментариев исключены из выдачи. Это крайне удобная функция, например, если нужно вывести все измененные значения в конфигурационном файле. Помните, /etc/ssh/sshd_config - основной конфигурационный файл сервера SSH на вашем компьютере. Данный файл определяет настройки для подключения внешних клиентов. В этом файле, все закомментированные строки являются значениями по умолчанию, а значит что при их изменении символ комментария '#' нужно удалять. Команда выглядит так:</p>
+            <pre><code>$ cat /etc/ssh/sshd_config | grep -v '#'</code></pre>
+            <img src="./Screen18.png" alt="Картинка">
+        
+            <p>Попробуйте данный же файл посмотреть без grep:</p>
+            <pre><code>$ cat /etc/ssh/sshd_config</code></pre>
+            <p>Очевидно, что для быстрого просмотра намного удобнее анализировать файл без - '#'.</p>
+        
+            <h2>Перед тем, как перейти к теме работы с sed (потоковый текстовый редактор) стоит обратиться к тому, что так часто откладывали по ходу данной лабораторной работы. Нам пора познакомиться с метасимволами.</h2>
+        
+            <h3>Метасимвол . (точка)</h3>
+            <p>Применение достаточно широкое, например: При конструкции: "символ" "." "символ" означает, что между двумя искомыми символами может быть какой-то регулярный элемент. Для эксперимента создадим файл test1.txt со следующим наполнением:</p>
+            <pre><code>rea
+        r+a
+        r0a
+        rXa
+        reea
+        rosa
+        reka</code></pre>
+            <p>А затем, попробуем ввести команду:</p>
+            <pre><code>$ grep r.a test1.txt</code></pre>
+            <p>Наблюдаем следующий вывод:</p>
+            <pre><code>rea
+        r+a
+        r0a
+        rXa</code></pre>
+        
+            <p>Как можно заметить, мы получили все строки, где есть слова начинающиеся на "r" и заканчивавшиеся на "a". Попробуем поставить два символа точки, ведь у нас есть строки, которые состоят из 4-ых букв:</p>
+            <pre><code>$ grep r..a test1.txt</code></pre>
+            <p>Наблюдаем следующий вывод:</p>
+            <pre><code>reea
+        rosa
+        reka</code></pre>
+        
+            <p>А что будет если написать только первый символ и точку? Например так:</p>
+            <pre><code>$ grep r. test1.txt</code></pre>
+            <p>В ответ получим все строчки из файла, ведь все слова начинаются на букву "r". Дополним файл еще строками:</p>
+            <pre><code>rosenergoatom
+        TestWord
+        Linux</code></pre>
+            <p>Повторим команду:</p>
+            <pre><code>$ grep r. test1.txt</code></pre>
+            <p>В итоге, получаем все слова которые не только начинаются на букву "r", но и содержат данную букву в своей конструкции:</p>
+            <pre><code>rea
+        r+a
+        r0a
+        rXa
+        reea
+        rosa
+        reka
+        rosenergoatom
+        TestWord</code></pre>
+            <p>Слово Linux в выводе команды отсутствует, так как не содержит букву "r". Обратите внимание, что grep в стандартном режиме работы регистрозависимый.</p>
+        
+            <h3>Метасимвол \ (обратная дробная черта)</h3>
+            <p>Обратная дробная черта (или обратный слэш) отменяет специальное значение, которое может иметь следующий за ней символ, в частности, "\." означает действительно точку, а не специсимвол - "любой символ". Свойства обратной черты мы уже наблюдали в этой команде:</p>
+            <pre><code>$ grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" test.txt | grep -v '#'</code></pre>
+        
+            <h3>Метасимвол $ (знак доллара)</h3>
+            <p>В зависимости от того, как используется знак денежной единицы ('$'), он может обозначать конец файла или конец строки. Когда указывается диапазон (от строки 1 до строки '$'), речь идет о конце файла. Для утилиты Grep данный символ неактуальный, в отличии, например от sed. Создадим файл example.txt со следующим содержимым, к тому же проверим как работает sed с русским языком:</p>
+            <pre><code>Это текст
+        Это новая строка в тестовом файле
+        Это третья строка в тестовом файле
+        Это четвертая строка в текстовом файле
+        Это пятая строка в текстовом файле</code></pre>
+            <p>А затем выполним команду:</p>
+            <pre><code>$ sed '2,$s/тестовом/текстовом' example.txt</code></pre>
+            <p>Без применения ключа '-i' изменения в файл не будут внесены, а результат корректировки файла будет выведен в консоль.</p>
+            <img src="./Screen19.png" alt="Картинка">
+        
+            <p>Разберемся подробнее в том, что сейчас произошло. Конструкция:</p>
+            <pre><code>$ sed '2,$s/тестовом/текстовом' example.txt</code></pre>
+            <p>Означает, что начиная со <strong>2</strong> строки и до конца файла <strong>$</strong> выполняем замену (буква <strong>s</strong> сокращение от switch или substitute, то есть сменить или заменить) слово "тестовом" на "текстовом". Проверьте, изменилось ли содержимое вашего файла с применением ключа -i.</p>
+        
+            <h3>Метасимвол ^ (возврат каретки)</h3>
+            <p>На самом деле, символ "возврат каретки" напрямую относится к историческому прошлому пишущих машинок. Он использовался после ввода строки и заставлял узел, держащий бумагу (каретку), вернуться вправо, так что машинка была готова печатать дальше на левой стороне бумаги. В современных компьютерных системах метасимвол "^" указывает начало строки. Например, давайте в начало нашей строки вставим пробел:</p>
+            <pre><code>$ sed 's/^/ /' example.txt</code></pre>
+            <img src="./Screen20.png" alt="Картинка">
+            <p>В примере выше указано несколько пробелов, для наглядности.</p>
+
+            <h2>Метасимвол * (звездочка)</h2>
+            <p>В утилитах sed или grep данный метасимвол используется редко. Но, например, пользоваться конструкцией копирования всех файлов по имени *.txt из директории:</p>
+            <pre><code>$ cp *.txt /opt</code></pre>
+            <p>Или удаление всех файлов, например, с именем *.txt:</p>
+            <pre><code>$ rm *.txt</code></pre>
+        
+            <h2>Метасимволы [] (квадратные скобки)</h2>
+            <p>В ходе выполнения данной работы, мы уже обращались к данному метасимволу. Напомним, что он позволяет определить подмножество символов. Как целостный массив данных.</p>
+        
+            <h2>Метасимвол & (амперсанд)</h2>
+            <p>Символ &, если мы говорим про утилиты grep, sed, awk, выполняет сокращение видимого текста. Предположим, имеется строка:</p>
+            <pre><code>В ЭТО ВРЕМЯ</code></pre>
+            <p>и требуется преобразовать ее в строку:</p>
+            <pre><code>В ЭТО ВРЕМЯ СУТОК</code></pre>
+            <p>конечно, для этого можно воспользоваться командой:</p>
+            <pre><code>s/ВРЕМЯ/ВРЕМЯ СУТОК/</code></pre>
+            <p>однако требование повторно указывать слово "ВРЕМЯ" кажется неразумным. Для того, чтобы избежать этого повторения, используется символ "&". В правой части команды подстановки амперсенд означает "найденный текст", так что можно ввести команду:</p>
+            <pre><code>s/ВРЕМЯ/& СУТОК/</code></pre>
+            <p>Конечно, в данном примере экономия будет незначительной, однако если количество символов велико, экономится много вводимых символов. Снижается также вероятность совершения ошибки при вводе заменяющего текста. Например, для того, чтобы заключить в скобки строку, независимо от ее длины, можно использовать команду:</p>
+            <pre><code>s/.*/(&)/</code></pre>
+            <p>Амперсенд может встречаться в правой части команды несколько раз. Команда:</p>
+            <pre><code>s/ВРЕМЯ/& СУТОК И & ГОДА/</code></pre>
+            <p>построит строку:</p>
+            <pre><code>ВРЕМЯ СУТОК И ВРЕМЯ ГОДА</code></pre>
+            <p>а команда:</p>
+            <pre><code>s/В ЭТО ВРЕМЯ/&? &!!!/</code></pre>
+            <p>преобразует исходную строку в:</p>
+            <pre><code>В ЭТО ВРЕМЯ?
+        
+        В ЭТО ВРЕМЯ!!!</code></pre>
+            <p>Перейдем к практике, приведем файл example.txt к следующему формату:</p>
+            <pre><code>ВРЕМЯ</code></pre>
+            <p>А затем протестируем указанные выше примеры:</p>
+            <pre><code>$ sed 's/ВРЕМЯ/& СУТОК' example.txt</code></pre>
+            <img src="./Screen21.png" alt="Картинка">
+        
+            <p>Стоит уточнить, что в Bash в терминале Linux - & используется для составления больших взаимосвязанных команд, например:</p>
+            <pre><code>$ mkdir ./privet && touch ./privet/hello</code></pre>
+            <p>В этом случае команда последовательно создаст директорию, а затем файл внутри неё. Но! Если первая команда отработает с ошибкой, то вся строка будет отменена. Удачно должны завершиться все последовательные команды.</p>
+        
+            <h2>Что такое SED? Знакомимся подробнее.</h2>
+            <p>SED – это потоковый редактор текста (от англ. stream editor), c помощью которого можно выполнять с файлами множество операций вроде поиска и замены, вставки или удаления. При этом чаще всего он используется именно для поиска и замены. Перейдем сразу к примерам. Подготовим файл example1.txt со следующим наполнением:</p>
+            <pre><code>Кошка - друг человека. Кошка с давних времен помогала людям в хозяйстве. Кошка была источником вдохновения для многих произведений искусства.</code></pre>
+            <p>В нашем новом тексте много повторений слова "Кошка", давайте заменим, например, на "Собака". Воспользуемся командой:</p>
+            <pre><code>$ sed 's/Кошка/Собака/' example1.txt</code></pre>
+            <p>Как можно заметить, теперь в первом предложении вместо слова "Кошка" мы видим слово "Собака".</p>
+            <img src="./Screen22.png" alt="Картинка">
+        
+            <p>По умолчанию, sed затрагивает только первое вхождение слова из шаблона в каждой строке. Проверим это утверждение, давайте пополним example1.txt новой строкой:</p>
+            <pre><code>Кошка - друг человека. Кошка с давних времен помогала людям в хозяйстве. Кошка была источником вдохновения для многих произведений искусства.
+        
+        Кошка - это млекопитающее</code></pre>
+            <p>Результат ниже, только первое вхождение слова изменилось в каждой строке.</p>
+            <img src="./Screen23.png" alt="Картинка">
+        
+            <p>Хорошо, а если нам нужно изменить только второе значение из строки? Легко:</p>
+            <pre><code>$ sed 's/Кошка/Собака/2' example1.txt</code></pre>
+            <img src="./Screen24.png" alt="Картинка">
+        
+            <p>А если третье?</p>
+            <pre><code>$ sed 's/Кошка/Собака/3' example1.txt</code></pre>
+            <img src="./Screen25.png" alt="Картинка">
+        
+            <p>Для замены всех вхождений заданного шаблона нужно воспользоваться ключом g (от англ. global - глобальный):</p>
+            <pre><code>$ sed 's/Кошка/Собака/g' example1.txt</code></pre>
+            <img src="./Screen26.png" alt="Картинка">
+        
+            <p>Следующая команда заменит в каждой строке второе, третье, четвёртое и т.д. вхождения слова "кошка" на слово "собака":</p>
+            <pre><code>$ sed 's/Кошка/Собака/2g' example1.txt</code></pre>
+            <img src="./Screen27.png" alt="Картинка">
+        
+            <p>Обратите внимание, что первое значение в каждой строке не изменилось. А можно ли внести корректировки только в нужную нам строку?</p>
+            <pre><code>$ sed '3 s/Кошка/Собака/' example1.txt</code></pre>
+            <p>Например, мы сменили значение только в третьей строке.</p>
+            <img src="./Screen28.png" alt="Картинка">
+        
+            <p>А если у нас текст с разным регистром? Можно ли sed настроить в игнорирование регистра? Конечно, с помощью ключа /i:</p>
+            <pre><code>$ sed 's/Кошка/Собака/i' example1.txt</code></pre>
+            <p>В этом случае неважно как написано слово "Кошка", оно будет заменено на слово "Собака".</p>
+        
+            <p>Как вы можете заметить, sed по умолчанию, выводит весь правленный текст. Включая те строки, которые не были тронуты. Предположим, что текст, с которым мы работаем крайне большой, и читать его каждый раз - затруднительный процесс. С помощью команды:</p>
+            <pre><code>$ sed 's/Кошка/Собака/p' example1.txt</code></pre>
+            <p>Вы обнаружите только те строки, в которых были внесены изменения.</p>
+            <img src="./Screen29.png" alt="Картинка">
+        
+            <p>Помните особенность sed? Он меняет только первое вхождение в строке. Если нужно заменить везде, то добавьте ключ g:</p>
+            <pre><code>$ sed 's/Кошка/Собака/pg' example1.txt</code></pre>
+            <img src="./Screen30.png" alt="Картинка">
+        
+            <p>Наверное, у вас появился вопрос, а в чем же смысл ключа p, ведь получается что мы видим дубликаты строк? И текста на экране становится еще больше. Исправим это, добавив новый ключ '-n':</p>
+            <pre><code>$ sed -n 's/Кошка/Собака/pg' example1.txt</code></pre>
+            <img src="./Screen31.png" alt="Картинка">
+        
+            <p>Теперь видны только строки, где действительно изменяются значения.</p>
+        
+            <p>Хорошо, мы отработали механизм замены, поговорим об удалении строк в файле? Например, выполним удаление 1-ой строки из текста:</p>
+            <pre><code>$ sed '1d' example1.txt</code></pre>
+            <img src="./Screen32.png" alt="Картинка">
+        
+            <p>А как выполнить удаление самой последней строки?</p>
+            <pre><code>$ sed '$d' example1.txt</code></pre>
+        
+            <p>А можно ли указать диапазон удаляемых строк?</p>
+            <pre><code>$ sed '3,6d' example1.txt</code></pre>
+            <p>В этом случае будет выполнено удаление с 3 по 6 строку в вашем файле.</p>
+        
+            <p>А удалить начиная с N-ой строки до конца?</p>
+            <pre><code>$ sed '12,$d' example1.txt</code></pre>
+        
+            <p>А если нужно удалить не целые строки, а только те, где есть слово из шаблона?</p>
+            <pre><code>$ sed '/Кошка/d' example1.txt</code></pre>
+        
+            <p>Попробуйте попрактиковаться самостоятельно!</p>
+        
+            <p>Также, sed умеет вставлять пустые строки. Вероятно, задача редкая, но попробуйте в текст между каждой строкой вставить текст с помощью команды:</p>
+            <pre><code>$ sed G example1.txt</code></pre>
+        
+            <p>А вот вставить две пустых строки можно следующей командой:</p>
+            <pre><code>$ sed 'G;G' example1.txt</code></pre>
+        
+            <p>Или вставить пустую строку над каждой, где например есть искомое слово:</p>
+            <pre><code>$ sed '/Кошка/{x;p;x;}' example1.txt</code></pre>
+            <img src="./Screen33.png" alt="Картинка">
+        
+            <p>А как, например, вставить пустую строку под каждой, где есть искомое слово?</p>
+            <pre><code>$ sed '/Кошка/G' example1.txt</code></pre>
+            <img src="./Screen34.png" alt="Картинка">
+        
+            <p>Изучая сегодняшний материал, а также первый курс по Astra Linux, вы наверняка помните такие команды как cat, head, tail:</p>
+            <img src="./Cat.webp" alt="Картинка">
+        
+            <p>Легко вспомнить, что команда cat выводит вам весь файл, а head и tail либо его начало или конец соответственно. SED может вам помочь в просмотре документов с конкретных строк, например, с 1 по 5 строку:</p>
+            <pre><code>$ sed -n '1,5y' example1.txt</code></pre>
+        
+            <p>Или с 13 по 18:</p>
+            <pre><code>$ sed -n '13,18y' example1.txt</code></pre>
+        
+            <p>Или наоборот, вывести весь файл кроме строк, указанных в команде sed:</p>
+            <pre><code>$ sed -n '1,4d' example1.txt</code></pre>
+        
+            <h2>AWK или как быстро посмотреть таблицу любого размера</h2>
+            <p>AWK - это си-подобный язык обработки входного потока данных по заданным шаблонам. По сути, это не просто команда, а настоящий язык программирования. С помощью него можно выполнять сложные операции поиска, парсинга и замены, а можно просто приручить его для использования в задачах по работе с текстом.</p>
+        
+            <p>При использовании awk вы можете выбирать данные на основе заданного критерия. Это может быть поиск значений в табличных файлах, в структурированных файлах (например, в xml или html) или просто в тексте.</p>
+        
+            <p>Базовая форма утилиты awk подразумевает описание основного действия в одинарных кавычках и фигурных скобках с указанием после него целевого файла:</p>
+            <pre><code>$ awk '{действие}' example1.txt</code></pre>
+        
+            <p>Давайте подготовим такой структурированный файл:</p>
+            <img src="./Screen35.png" alt="Картинка">
+        
+            <p>Простой файл, столбцы в нём разделены табуляцией (нажмите Tab, при работе в текстовом редакторе). Файл представляет собой таблицу со сведениями о сотрудниках.</p>
+        
+            <p>Начнем с первой простой задачи, например, пронумеруем строки в файле:</p>
+            <pre><code>awk '{print NR,$0}' example1.txt</code></pre>
+            <img src="./Screen36.png" alt="Картинка">
+        
+            <p>Давайте проверим, как через awk вызвать первый столбец файла:</p>
+            <pre><code>awk '{print $1}' example1.txt</code></pre>
+            <img src="./Screen37.png" alt="Картинка">
+        
+            <p>Получается, что $1 - переменная, которая указывает на первое значение в строках нашего файла. В тоже время $0 указывает на скрытое пространство в файле, в которое, как правило, записывается номер строки.</p>
+        
+            <p>А что же делать, если нужно вывести второй столбец? Конечно, с помощью $2!</p>
+            <pre><code>awk '{print $2}' example1.txt</code></pre>
+            <img src="./Screen38.png" alt="Картинка">
+        
+            <p>По умолчанию, awk начало и конец каждого столбца определяет именно по пробелу.</p>
+        
+            <p>А можно ли вывести сразу два столбца?</p>
+            <pre><code>awk '{print $1, $2}' example1.txt</code></pre>
+            <img src="./Screen39.png" alt="Картинка">
+        
+            <p>А как вывести последний столбец, при условии, что мы не знаем сколько всего столбцов в нашем файле?</p>
+            <pre><code>awk '{print $NF}' example1.txt</code></pre>
+            <img src="./Screen40.png" alt="Картинка">
+        
+            <p>А можно ли вывести не весь столбец, а лишь первые три его строки? Вот мы и столкнулись с несовершенством awk, самостоятельно данная утилита сделать такое не сможет, но в сочетании с утилитой head, например, ситуация кардинально изменяется!</p>
+            <pre><code>awk '{print $1}' example1.txt | head -n 2</code></pre>
+            <img src="./Screen41.png" alt="Картинка">
+        
+            <p>А можно ли вывести строку, которая бы начиналась с заданной буквы?</p>
+            <pre><code>awk '/^Е/' example1.txt</code></pre>
+            <img src="./Screen42.png" alt="Картинка">
+        
+            <p>Действие команды начинается с символа ^, который указывает на начало строки. После этого прописывается буква, с которой нужная вам строка должна начинаться.</p>
+        
+            <p>По аналогичному принципу можно выводить строку, завершающуюся конкретным шаблоном:</p>
+            <pre><code>awk '/к$/' example1.txt</code></pre>
+            <img src="./Screen43.png" alt="Картинка">
+        
+            <p>Давайте, попробуем применить и прочие спецсимволы, которые мы сегодня изучили:</p>
+            <pre><code>awk '! /^Е/' example1.txt</code></pre>
+            <img src="./Screen44.png" alt="Картинка">
+        
+            <p>Как можно заметить, символ ! добавил в инверсию в указанную команду.</p>
+        
+            <p>Для вывода слов, содержащих определённые буквы, а также слов, соответствующих указанному шаблону, мы снова используем прямые слэши. Например, если надо найти слова, содержащие "ов", мы напишем:</p>
+            <pre><code>awk '/^ов/{print $0}' example1.txt</code></pre>
+            <img src="./Screen45.png" alt="Картинка">
+        
+            <p>Давайте дополним наш файл example1.txt:</p>
+            <img src="./Screen46.png" alt="Картинка">
+        
+            <p>Теперь появился столбец, который хранит должность наших сотрудников. А теперь, сделаем выборку только по должности - Программист:</p>
+            <pre><code>awk '/Программист/' example1.txt</code></pre>
+            <img src="./Screen47.png" alt="Картинка">
+        
+            <p>А что если нам надо узнать только имена наших программистов?</p>
+            <pre><code>awk '/Программист/{print $1,$2}' example1.txt</code></pre>
+            <img src="./Screen48.png" alt="Картинка">
+        
+            <p>Предположим, что вы хотите найти информацию о сотрудниках разных возрастов:</p>
+            <pre><code>awk '$3 < 30 {print $0}' example1.txt</code></pre>
+            <img src="./Screen49.png" alt="Картинка">
+        
+            <p>Разберем данную команду подробнее: через $3 - вы указываете номер столбца, чьи значения планируете сравнивать. В нашем случае, мы ищем числа, которые будут меньше значения 30 из искомого столбца. print $0 - указывает, что вывести нужно первый символ строки - а это её номер! Вот и получается, что в данном случае будет произведен вывод этой самой строки.</p>
+        
+            <p>Далее, приведем примеры, которые вероятно пригодятся вам в рабочей практике:</p>
+        
+            <p>Большинство файлов вряд ли будут разделены пробелами, вероятно, вы уже встречались с файлами .csv формата, где разделителем является запятая. С помощью ключа -F awk можно сообщить о разделителе в искомом файле. Например, перед нами csv файл с именами пользователей и их компьютерами:</p>
+            <img src="./Screen50.png" alt="Картинка">
+        
+            <p>Выведем только первый и второй столбец этого файла:</p>
+            <pre><code>awk -F ',' '{print $1,$2}' example1.txt</code></pre>
+            <img src="./Screen50.png" alt="Картинка">
+        
+            <p>И вот уже перед нами файл аккуратно показывает два столбца искомого файла, ничего лишнего!</p>
+        
+            <p>А если мы хотим посмотреть содержимое предпоследнего столбца?</p>
+            <pre><code>awk -F ',' '{print $NF-1}' example1.txt</code></pre>
+            <img src="./Screen51.png" alt="Картинка">
+        
+            <p>И тоже работает!</p>
+        
+            <h2>Практическая работа</h2>
+            <ol>
+                <li>На полученной виртуальной машине, найдите файл "/opt/lab2.txt". С помощью утилиты awk, выведите в файл "/opt/users.txt" информацию о всех программистах из файла. Убедитесь, что в файле содержится информация о имени, фамилии, возрасте, городе проживания и должности человека.</li>
+                <li>На полученной виртуальной машине, найдите файл "/opt/lab3.txt". Файл представляет собой снимок процессов, который был снят с реального компьютера. С помощью утилит grep или awk выведите информацию о PID процесса и потребляемом CPU. Вывести информацию нужно в файл "/opt/process.txt". Формат файла должен быть: 1400 (как PID) и 1.0 (как загрузка CPU).</li>
+                <li>На полученной виртуальной машине, найдите файл "/opt/lab3.txt". Файл представляет собой снимок процессов, который был снят с реального компьютера. С помощью утилит grep или awk выведите информацию о PID процесса и потребляемом CPU всех процессов, которые запущены от пользователя, чьё имя начинается на ^u. Вывести информацию нужно в файл "/opt/process2.txt". Формат файла должен быть:</li>
+            </ol>
+        
+            <p>Вот и всё. Теперь у вас есть необходимая основа для начала работы с grep, awk и sed для управления текстовыми данными. В следующем материале вы познакомитесь с Дискреционным управлением доступа!</p>
+        
+            <p>Благодарю за чтение и успехов вам в обучении!</p>
+        
+            <h2>Дополнительная информация:</h2>
+            <ul>
+                <li><a href="https://likegeeks.com/awk-command/">Шпаргалки как работать с awk</a></li>
+                <li><a href="https://digitology.tech/posts/shpargalka-po-gnu-grep/">Шпаргалки как работать с grep</a></li>
+                <li><a href="https://soft-setup.ru/shpargalka-po-sed-v-linux-s-primerami/">Шпаргалки как работать с sed</a></li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
   </p>
 </footer>
 
