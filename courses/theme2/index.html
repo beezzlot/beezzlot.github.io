@@ -718,22 +718,14 @@
   Эта независимость позволяет администраторам гибко настраивать системы, выбирая подходящие файловые системы для разных каталогов, не нарушая при этом стандартную структуру FHS. Таким образом, FHS и файловые системы дополняют друг друга, обеспечивая порядок, совместимость и эффективность работы с данными в Linux.
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
-  <h1>Тест</h1>
-  <form id="quizForm">
+  <!-- Кнопка для запуска теста -->
+  <button id="startTestButton">Запустить тестирование</button>
+
+  <!-- Контейнер для теста, скрытый по умолчанию -->
+  <div id="quizContainer" style="display: none;">
+    <h1>Тест</h1>
+    <form id="quizForm">
       <div class="question">
           <h3>Вопрос 1:  Что такое FHS?</h3>
           <input type="radio" name="q1" value="A">Стандарт, определяющий структуру каталогов в Linux.<br>
@@ -789,9 +781,17 @@
   </form>
 
   <div id="result"></div>
+</div>
 
-  <script>
-      const correctAnswers = {
+<script>
+  // Показываем тест при нажатии на кнопку "Запустить тестирование"
+  document.getElementById('startTestButton').addEventListener('click', function() {
+    document.getElementById('quizContainer').style.display = 'block'; // Показываем тест
+    this.style.display = 'none'; // Скрываем кнопку запуска
+  });
+
+  // Функция для подсчета баллов
+  const correctAnswers = {
           q1: 'A',
           q2: 'B',
           q3: 'B',
@@ -813,16 +813,16 @@
           }
 
           const resultDiv = document.getElementById('result');
-          if (score < 5) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended">Перейти к дополнительным материалам для усвоения материала.</a></p>';
+          if (score <= 3) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended/extended4">Перейти к дополнительным материалам для усвоения материала.</a></p>';
           } else if (score == 7) {
-              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
-          } else if (score >= 8) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example3">Перейти на следующий этап</a></p>';
+              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced/advanced4">Усложнить материал</a></p>';
+          } else if (score >= 4) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/projects/example1.4">Перейти на следующий этап</a></p>';
           } else {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
           }
-      }
+        }
       </script>
 
 
