@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Дополнительные лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №3. Усложнённый материал по итогам видеурока №3.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <p>Познакомиться с настройкой веб-серверов на базе Apache2 и Nginx.</p>
+    
+            <h2>Оборудование, ПО:</h2>
+            <p>Виртуальная машина под управлением ОС Astra Linux 1.7 в режиме защищенности "Воронеж".</p>
+            
+            <h2>Ход работы:</h2>
+            <p>Целью данной лабораторной работы является ознакомление с настройкой веб-серверов на основе Apache2 и Nginx. В ходе работы мы узнаем, как устанавливать и настраивать эти два популярных веб-сервера на базе ОС Astra Linux.</p>
+            
+            <h2>Общий обзор</h2>
+            <p><a href="https://habr.com/ru/articles/267721/">Источник</a></p>
+            <p>Прежде чем погрузиться в различия между Apache и Nginx, давайте бегло взглянем на предысторию каждого из этих проектов.</p>
+            
+            <h3>Apache</h3>
+            <p>Apache HTTP Server был разработан Робертом Маккулом в 1995 году, а с 1999 года разрабатывается под управлением Apache Software Foundation — фонда развития программного обеспечения Apache. Так как HTTP сервер это первый и самый популярный проект фонда, его обычно называют просто Apache.</p>
+            <p>Веб-сервер Apache был самым популярным веб-сервером в интернете с 1996 года. Благодаря его популярности у Apache сильная документация и интеграция со сторонним софтом.</p>
+            <p>Администраторы часто выбирают Apache из-за его гибкости, мощности и широкой распространенности. Он может быть расширен с помощью системы динамически загружаемых модулей и исполнять программы на большом количестве интерпретируемых языков программирования без использования внешнего программного обеспечения.</p>
+            
+            <h3>Nginx</h3>
+            <p>В 2002 году Игорь Сысоев начал работу над Nginx для того чтобы решить проблему C10K — требование к ПО работать с 10 тысячами одновременных соединений. Первый публичный релиз был выпущен в 2004 году, поставленная цель была достигнута благодаря асинхронной event-driven архитектуре.</p>
+            <p>Nginx начал набирать популярность с момента релиза благодаря своей легковесности (light-weight resource utilization) и возможности легко масштабироваться на минимальном железе. Nginx превосходен при отдаче статического контента и спроектирован так, чтобы передавать динамические запросы другому ПО, предназначенному для их обработки.</p>
+            <p>Администраторы часто выбирают Nginx из-за его эффективного потребления ресурсов и отзывчивости под нагрузкой, а также из-за возможности использовать его и как веб-сервер, и как прокси.</p>
+            
+            <h2>А что есть в Astra Linux, и зачем это сетевому администратору?</h2>
+            <p>В Astra Linux есть как Nginx, так и Apache2. Для работы можно выбрать любой инструмент.</p>
+            <p>А умение работать с веб-сервером поможет вам при внедрении различных веб-приложений, например, Zabbix из темы прошлой лабораторной работы или множество других прикладных приложений, которые могут быть полезны - NextCloud, GrayLog и другие.</p>
+            
+            <h2>Приступим к Apache2</h2>
+            <ol>
+                <li>Установим веб-сервер Apache2:
+                    <pre><code>apt install apache2</code></pre>
+                </li>
+                <li>После установки Apache2 перейдем в первый конфигурационный файл - <strong>/etc/apache2/apache2.conf</strong>. Это файл с основными опциями Apache2, для начала работы нам потребуется отредактировать единственный, но критический параметр:
+                    <img src="Screen1.png" alt="Картинка">
+                    Это AstraMode, и его нужно выключить.
+                </li>
+                <li>После отключения AstraMode, перезагрузить веб-сервер:
+                    <pre><code>systemctl restart apache2</code></pre>
+                </li>
+                <li>Откроем файл <strong>/etc/apache2/site-enabled/000-default.conf</strong>. Удалим его содержимое и заменим своими:
+                    <img src="Screen2.png" alt="Картинка">
+                </li>
+            </ol>
+            
+            <h3>Что мы наделали?</h3>
+            <p>Сделали VirtualHost (виртуальный хостинг нашего сервера) на стандартном для протокола HTTP порту 80.</p>
+            <p>DocumentRoot - информация для администраторов, ровно как и ServerName. Можно не указывать, но в большинстве примеров и форумов такие строчки требуются.</p>
+            <p>Directory - уже не просто так. Явно указали директорию, где будут опубликованы файлы нашего веб-сервера.</p>
+            
+            <h4>Немного отойдем от темы</h4>
+            <p>Стоит сказать, что между веб-сервером и файловым проводником довольно много общего.</p>
+            <ol>
+                <li>Оба веб-сервер и файловый проводник предоставляют доступ к файлам и ресурсам.</li>
+                <li>Как и файловый проводник, веб-сервер позволяет пользователям просматривать и управлять файлами и папками.</li>
+                <li>И веб-сервер, и файловый проводник имеют пользовательский интерфейс, позволяющий пользователям взаимодействовать с файлами и данными.</li>
+                <li>Подобно тому, как файловый проводник показывает иерархическую структуру файлов и папок на компьютере, веб-сервер отображает иерархию веб-страниц и других ресурсов.</li>
+                <li>Оба инструмента позволяют пользователям выполнять различные действия с файлами, такие как загрузка, удаление, обновление и просмотр (в случае веб-сервера, конечно, если исполняемый код веб-приложения это способен).</li>
+            </ol>
+            
+            <h4>А что там под Directory еще написано?</h4>
+            <ol>
+                <li><strong>Options Indexes</strong> - это директива конфигурации веб-сервера Apache, которая позволяет отображать список файлов и папок, если в запрашиваемой директории отсутствует индексный файл (например, index.html). Если эта опция включена, то пользователь увидит список файлов и папок, находящихся в запрашиваемой директории, что может быть полезно при просмотре содержимого папки через браузер.</li>
+                <li><strong>MultiViews</strong> - эта директива конфигурации Apache позволяет веб-серверу автоматически выбирать правильный документ на основе имени запрашиваемого файла и типа содержимого. Например, если запрос делается на file.php, а такого файла нет, но есть file.html и file.txt, то MultiViews позволит веб-серверу выбрать наиболее подходящий файл для отображения.</li>
+                <li><strong>FollowSymlinks</strong> - эта директива позволяет веб-серверу следовать символическим ссылкам (symbolic links), что позволяет создавать ссылки на файлы и папки, находящиеся в других местах файловой системы, и при этом сохранять доступ к ним через веб-сервер.</li>
+            </ol>
+            
+            <p><strong>Require all granted</strong></p>
+            <p>Директива "Require all granted" в Apache2 используется для указания, что доступ к ресурсу или директории должен быть разрешен для всех пользователей без каких-либо дополнительных ограничений. По сути, это директива, которая позволяет разрешить доступ ко всему контенту в указанной части конфигурации Apache2 для всех пользователей без каких-либо дополнительных ограничений на авторизацию.</p>
+            
+            <h3>После настроек, проверим конфигурацию</h3>
+            <pre><code>apache2ctl -t</code></pre>
+            <p>Команда выше проверит конфигурационные файлы Apache2 на синтаксис и укажет на ошибки, если они будут.</p>
+            <img src="Screen3.png" alt="Картинка">
+            <p>Перезапустите Apache2.</p>
+            <pre><code>systemctl restart apache2</code></pre>
+            <p>Затем, перейдите каталог <strong>/var/www/html</strong>, оттуда потребуется удалить файл <strong>index.html</strong>, и наполнить директорию различными каталогами, файлами и т.п.</p>
+            <img src="Screen4.png" alt="Картинка">
+            
+            <h3>Посмотрим, что получилось?</h3>
+            <img src="Screen5.png" alt="Картинка">
+            <p>Сайт готов! Теперь его можно использовать как сервер-дистрибютор, для организации удобного доступа и хранения файлов с общим доступом.</p>
+            
+            <h2>А как сделать такое же на Nginx?</h2>
+            <p>Для начала, если работаете на сервере, где уже был Apache2, его нужно:</p>
+            <p>Удалить -</p>
+            <pre><code>apt purge apache2</code></pre>
+            <p>Или выключить -</p>
+            <pre><code>systemctl disable --now apache2</code></pre>
+            
+            <ol>
+                <li>Установим Nginx:
+                    <pre><code>apt install nginx -y</code></pre>
+                </li>
+                <li>Проверить, что он работает можно сразу. Даже не потребуется выключать <strong>AstraMode</strong>.
+                    <img src="Screen6.png" alt="Картинка">
+                </li>
+                <li>Конфигурация нашего сервера - <strong>/etc/nginx/sites-enabled/default</strong>.
+                    <img src="Screen7.png" alt="Картинка">
+                </li>
+                <li>Проверить, что конфигурация написана без ошибок -
+                    <pre><code>nginx -t</code></pre>
+                    <img src="Screen8.png" alt="Картинка">
+                </li>
+                <li>Нам остается только перезагрузить Nginx и отправиться проверять:
+                    <pre><code>systemctl restart nginx</code></pre>
+                    <img src="Screen9.png" alt="Картинка">
+                </li>
+            </ol>
+            
+            <h2>Практическая работа</h2>
+            <ol>
+                <li>На полученной виртуальной машине установите и настройте веб-сервер (любой, какой будет удобнее):
+                    <ul>
+                        <li>Директория веб-сервера - <strong>/var/www/html/out</strong></li>
+                        <li>Порт работы сервера - 8088</li>
+                        <li>Сайт предоставляет доступ к двум файлами:
+                            <ol>
+                                <li><strong>index.html</strong>, где указано "Privet from server!"</li>
+                                <li><strong>date.php</strong> с содержимым:
+                                    <img src="Screen10.png" alt="Картинка">
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <li>Убедитесь, что сервер корректно показывает содержимое <strong>index.html</strong>, а также текущее время через <strong>date.php</strong>.</li>
+            </ol>
+            
+            <h2>Дополнительная информация:</h2>
+            <ol>
+                <li>Параметр AstraMode в Apache2 <a href="https://wiki.astralinux.ru/pages/viewpage.action?pageId=238749508">Ссылка</a></li>
+                <li>Apache2 vs Nginx <a href="https://habr.com/ru/articles/267721/">Ссылка</a></li>
+                <li>NGINX в Astra Linux <a href="https://wiki.astralinux.ru/pages/viewpage.action?pageId=147162407">Ссылка</a></li>
+            </ol>
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="/projects/example1.3" class="divider">Переход к лабораторной работе основного курса №4</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

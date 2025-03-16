@@ -540,9 +540,13 @@
   За 8 лет доля Windows в Китае упала с 97,1 до 81,6%. Примечательно, что в КНР, как и в России, интерес к импортозамещению проявляет в первую очередь государство. Например, в 2014 году Китай запретил использование Windows 8 на правительственных компьютерах, чем «подстегнул» собственных разработчиков. </p>
 
 
-<body>
-  <h1>Тест</h1>
-  <form id="quizForm">
+  <body>
+    <!-- Кнопка для запуска теста -->
+    <button id="startTestButton">Запустить тестирование</button>
+  <!-- Контейнер для теста, скрытый по умолчанию -->
+  <div id="quizContainer" style="display: none;">
+    <h1>Тест</h1>
+    <form id="quizForm">
       <div class="question">
           <h3>Вопрос 1:  Какая из перечисленных операционных систем разработана в России?</h3>
           <input type="radio" name="q1" value="A"> Windows <br>
@@ -598,9 +602,17 @@
   </form>
 
   <div id="result"></div>
+</div>
 
-  <script>
-      const correctAnswers = {
+<script>
+  // Показываем тест при нажатии на кнопку "Запустить тестирование"
+  document.getElementById('startTestButton').addEventListener('click', function() {
+    document.getElementById('quizContainer').style.display = 'block'; // Показываем тест
+    this.style.display = 'none'; // Скрываем кнопку запуска
+  });
+
+  // Функция для подсчета баллов
+  const correctAnswers = {
           q1: 'C',
           q2: 'B',
           q3: 'A',
@@ -622,12 +634,12 @@
           }
 
           const resultDiv = document.getElementById('result');
-          if (score < 3) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended">Перейти к дополнительным материалам для усвоения материала.</a></p>';
+          if (score <= 3) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended/extended2">Перейти к дополнительным материалам для усвоения материала.</a></p>';
           } else if (score == 7) {
-              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
+              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced/advanced2">Усложнить материал</a></p>';
           } else if (score >= 4) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example4">Перейти на следующий этап</a></p>';
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/projects/example1.3">Перейти на  Лабораторную работу №4</a></p>';
           } else {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
           }
