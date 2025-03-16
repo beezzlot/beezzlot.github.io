@@ -710,7 +710,7 @@ const correctAnswers = {
           }
 
           const resultDiv = document.getElementById('result');
-          if (score < 3) {
+          if (score <= 3) {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended/extended3">Перейти к дополнительным материалам для усвоения материала.</a></p>';
           } else if (score == 7) {
               resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced/advanced3">Усложнить материал</a></p>';
