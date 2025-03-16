@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Дополнительные лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №6. Дополнительный материал по итогам видеурока №6.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <p>Получить начальные практические навыки написания сценариев оболочки.</p>
+
+            <h3>1. Теоретические сведения</h3>
+            <h4>1.1. Группирование команд. Скрипты</h4>
+            <p>Командная оболочка BASH позволяет группировать несколько команд, выполняющих определённое действие, в функции или специальные файлы, называемые скриптами.</p>
+            <p>Скрипт – это обычный текстовый файл, содержащий команды оболочке. Такой файл может быть запущен на исполнение следующим образом:</p>
+            <pre><code>$bash имя_файла</code></pre>
+            <p>Другими словами, для выполнения скрипта необходимо запустить командную оболочку, передав ей в качестве параметра имя соответствующего файла.</p>
+            <p>Другой вариант запуска скрипта – просто указать его имя в командной оболочке (т.е. сделав из него некий вид программы). Для этого надо в параметрах доступа определить файл как исполняемый, и в первых строках этого файла явно указать оболочку, для которой предназначен этот скрипт, следующим образом:</p>
+            <pre><code>#!оболочка</code></pre>
+            <p>В общем случае символ «#» в скрипте означает комментарий, требующий игнорировать строку. Однако если он является первым символом файла и за ним следует символ «!», то это означает «магическую комбинацию», за которой указывается путь к файлу, использующемуся в качестве интерпретатора скрипта (например, /bin/bash, /bin/perl, /bin/sh и т.д). Встретив такую комбинацию символов, командная оболочка запустит соответствующий файл и передаст ему его имя в качестве аргумента.</p>
+            <p>Скрипт, в свою очередь, может содержать все конструкции, описанные ранее (в том числе и функции). Выполнение скрипта происходит построчно. При этом если конструкция включает в себя несколько команд, то они могут располагаться на нескольких строках, и указывать символ «\» в конце неоконченной строки нет необходимости. Например:</p>
+            <pre><code>X=1
+        read –p
+        if [ $X
+        else
+        fi
+        “Введите X = ” X
+        0 ] ;
+        then
+        отрицательное число”
+        положительное число”</code></pre>
+            <p>Любому скрипту, точно так же, как и функции, могут быть переданы аргументы (так, как это делается при запуске любой команды). Передаются аргументы в виде специальных переменных (таблица 1).</p>
+        
+            <h4>Таблица 1. Специальные переменные, используемые в скриптах.</h4>
+            <table border="1">
+                <tr>
+                    <th>Переменная</th>
+                    <th>Описание</th>
+                </tr>
+                <tr>
+                    <td>$0</td>
+                    <td>Имя выполняемой команды. Для скрипта – это путь, указанный при его вызове. Для функции – имя оболочки.</td>
+                </tr>
+                <tr>
+                    <td>$n</td>
+                    <td>Переменные, соответствующие аргументам, заданным при вызове сценария. Здесь n – десятичное число, соответствующее номеру аргумента. (Первый аргумент – $1, второй – $2 и т.д.).</td>
+                </tr>
+                <tr>
+                    <td>$#</td>
+                    <td>Число аргументов, указанных при вызове сценария.</td>
+                </tr>
+                <tr>
+                    <td>$*</td>
+                    <td>Строка аргументов, заключённая в двойные кавычки.</td>
+                </tr>
+                <tr>
+                    <td>$@</td>
+                    <td>Все аргументы, каждый заключён в двойные кавычки.</td>
+                </tr>
+                <tr>
+                    <td>$?</td>
+                    <td>Статус завершения последней выполненной команды.</td>
+                </tr>
+                <tr>
+                    <td>$;</td>
+                    <td>Номер процесса, соответствующего текущей оболочке.</td>
+                </tr>
+                <tr>
+                    <td>$!</td>
+                    <td>Номер процесса, соответствующий команде, запущенной в фоновом режиме.</td>
+                </tr>
+            </table>
+        
+            <p>Последовательно просмотреть аргументы командной строки можно, используя следующую конструкцию:</p>
+            <pre><code>#!/bin/bash
+        while [ -n “$1” ] ; do
+        echo “Имеется аргумент – ”$1
+        shift
+        done</code></pre>
+            <p>Аргументы просматриваются в цикле while, условием выполнения которого является результат команды test с параметрами, требующими, чтобы длина строки в аргументе $1 была отлична от нуля. В строку подставляется значение первого аргумента. Если аргумент не указан, то переменная $1 имеет пустое значение, соответственно строка будет иметь нулевую длину, и цикл сразу же прекратится. Если аргумент указан, то он выводится в теле цикла, и затем выполняется команда shift, которая изменяет переменные $n, сдвигая их на одну влево (т.е. $1=$2, $2=$3 и т.д.). Значение первого аргумента при этом теряется. Когда сдвигается последний аргумент, то переменной $1 присваивается пустое значение (так как следующей за ней переменной не существует). В качестве параметра команды shift можно указать, на сколько позиций требуется сдвинуть строку аргументов. Например, shift 2 приведёт к следующему изменению: $1=$3, $2=$4 и т.п.</p>
+        
+            <h3>2. Переменные</h3>
+            <p>Кроме переменных среды окружения командная оболочка позволяет во время своего выполнения хранить данные в виде собственных переменных и даже массивов. Значения этих переменных используются только самой оболочкой и, в отличие от переменных среды окружения, недоступны запускаемым из неё программам.</p>
+            <p>Значение переменной присваивается следующим образом: переменная=значение (т.е. без процедуры экспортирования). Например, X=1, или X=а, или X=”f” и т.п.</p>
+            <p>Обратите внимание, что до и после знака «=» нет пробелов!!! Если поставить пробелы, например, так x = 1, то командная оболочка будет считать, что введена команда x, и она имеет два параметра: = и 1.</p>
+            <p>Если в командной оболочке создать переменную с тем же именем, что и переменная среды окружения, то в командной оболочке будет использоваться значение этой переменной, а в запускаемых программах – старое значение переменной среды окружения. Получить список всех переменных можно с использованием команды declare.</p>
+            <p>Удалить значение переменной или массива можно также с использованием команды unset.</p>
+        
+            <h3>3. Подстановка переменных, команд и арифметических выражений</h3>
+            <p>Командная оболочка BASH позволяет формировать команды с использованием значений переменных, результатов работы других команд и т.п. Такое формирование называется подстановкой. Т.е. в команду «подставляется» что-либо (переменная, вывод другой команды и т.п.). Для подстановки используется либо символ «$», либо выражение, заключённое в обратные апострофы (`выражение`).</p>
+            <p>Если в тексте команды встречается символ «$», то следующий за ним текст до пробела или конца команды интерпретируется как имя переменной, значение которой подставляется в текст команды. Например:</p>
+            <pre><code>[student@wp1 student]$FRUIT=Апельсин&lt;Enter&gt;
+        [student@wp1 student]$echo “Фрукт ”$FRUIT&lt;Enter&gt;
+        Фрукт Апельсин
+        [student@wp1 student]$</code></pre>
+            <p>В примере создаётся одна переменная командной оболочки (FRUIT), которой присваивается значение «Апельсин». Затем выполняется команда echo, которая должна выдать на экран текст, указанный ей в качестве параметра. В данном случае параметром является строка “Фрукт “$FRUIT, в которой присутствует символ «$». Поэтому прежде чем выполнить команду echo, командная оболочка «подставит» в её аргумент значение переменной FRUIT, сформировав тем самым текст “Фрукт Апельсин”.</p>
+            <p>Обратите внимание, что при присваивании переменной значения её имя указывается без знака доллара. Т.е. если Вы напишите $FRUIT=apple, командная оболочка выдаст ошибку: -bash Апельсин=apple:command not found. Так как прежде чем выполнить команду, командная оболочка подставит в неё значение переменной FRUIT, а затем только попытается её выполнить. И если Вы напишите echo FRUIT, то на экран будет выведено слово FRUIT, а не значение переменной с таким именем.</p>
+            <p>Подстановку можно использовать также и в случае, если требуется в команде использовать то, что некоторая программа помещает в поток вывода. В этом случае программа заключается в обратные апострофы. Прежде чем выполнить команду, командная оболочка выполнит программу, заключённую в обратные апострофы, затем всё, что она поместит в поток вывода, будет подставлено в командную строку, и только затем команда будет выполнена. Например:</p>
+            <pre><code>[student@wp1 student]$DATE=`date`&lt;Enter&gt;
+        [student@wp1 student]$echo $DATE
+        Ср. нояб. 30 13:32:23 NOVT 2011
+        [student@wp1 student]$</code></pre>
+            <p>Переменной DATE присваивается текст, который должна была вывести на экран команда date, т.е. текущую системную дату. Затем на экран выводится значение переменной DATE.</p>
+            <p>Командная оболочка позволяет выполнять арифметические операции. Для этого выражение, которое необходимо интерпретировать как арифметическое, заключается в двойные круглые скобки, и перед ним ставится знак доллара. Например, в результате выполнения команды:</p>
+            <pre><code>[student@wp1 student]$foo=$((((5+3*2)–4)/2))&lt;Enter&gt;
+        [student@wp1 student]$echo $foo
+        3
+        [student@wp1 student]$</code></pre>
+            <p>переменной foo будет присвоено значение, равное 3.</p>
+        
+            <h3>4. Получение информации от пользователя</h3>
+            <p>При необходимости командная оболочка позволяет сформировать значение некоторой переменной, «спросив» его у пользователя. Для этого используется команда read, которой в качестве аргумента передаётся имя требуемой переменной.</p>
+            <pre><code>[student@wp1 student]$read CHOICE
+        Привет !!!&lt;Enter&gt;
+        [student@wp1 student]$echo “Вы ввели ”${CHOICE}
+        Привет !!!
+        [student@wp1 student]$</code></pre>
+            <p>Чтобы указать, какое приглашение должно быть выведено в строке для ввода, можно использовать параметр -p. Например:</p>
+            <pre><code>$ read -p “Введите X” X.</code></pre>
+            <p>Время ожидания (в секундах) ввода задаётся или при помощи переменной TMOUT, или при помощи параметра -t. Если переменная TMOUT не определена или её значение равно 0, и не указан параметр -t, то время ожидания считается бесконечным. Обратите внимание, что значение переменной TMOUT также влияет на время ожидания командной оболочкой очередной команды!!!</p>
+            <p>Используя параметр -s, можно запретить отображение вводимых символов на экране. Это удобно, например, при вводе паролей.</p>
+        
+            <h3>5. Условный оператор if-fi</h3>
+            <p>Выражение if записывается следующим образом:</p>
+            <pre><code>$if выражение1 ; then \
+        >выражение2 ; \
+        >elif выражение3 ; then \
+        >выражение4 ; \
+        >else \
+        >выражение5 ; \
+        >fi&lt;Enter&gt;</code></pre>
+            <p>В приведённой выше команде if сначала выполняется выражение1. Если код завершения выражения1 равен 0 (что интерпретируется как его истинность), то выполняется выражение2, и команда if заканчивается. В противном случае выполняется выражение3, и проверяется код его завершения. Если выражение3 возвращает значение, равное 0, то выполняется выражение4 и команда if. Если выражение3 возвращает ненулевое значение, то выполняется выражение5. Наличие операторов elif и else необязательно. В блоке if-fi может содержаться несколько elif.</p>
+            <p>Часто в блоке if-fi в качестве выражений, результаты которых проверяются, используется команда test, которая имеет две формы записи: test параметры или [ параметры ]. После интерпретации параметров (таблица 2) как логического выражения команда test возвращает значение 0 – истина либо 1 – ложь.</p>
+            <p>Если команда не помещается в командную строку, то её можно продолжить на следующей строке, для чего текущую строку надо завершить символом «\» (обратный слеш) и нажать Enter. Командная оболочка после нажатия Enter определит, что последним символом в команде был символ «обратный слеш», и будет ожидать продолжения команды на новой строке. Точно так же можно завершить вторую, третью и последующие строки.</p>
+        
+            <h4>Таблица 2. Специальные переменные, используемые в скриптах.</h4>
+            <table border="1">
+                <tr>
+                    <th>Выражение</th>
+                    <th>Значение</th>
+                </tr>
+                <tr>
+                    <td>-d файл</td>
+                    <td>существует ли файл и является ли он каталогом?</td>
+                </tr>
+                <tr>
+                    <td>-e файл</td>
+                    <td>существует ли указанный файл?</td>
+                </tr>
+                <tr>
+                    <td>-f файл</td>
+                    <td>существует ли файл и является ли он обычным файлом?</td>
+                </tr>
+                <tr>
+                    <td>-L файл</td>
+                    <td>существует ли файл и символьная ли он ссылка?</td>
+                </tr>
+                <tr>
+                    <td>-r файл</td>
+                    <td>существует ли файл и разрешено ли его чтение?</td>
+                </tr>
+                <tr>
+                    <td>-s файл</td>
+                    <td>существует ли файл и имеет ли он нулевой размер?</td>
+                </tr>
+                <tr>
+                    <td>-w файл</td>
+                    <td>существует ли файл и разрешена ли в него запись?</td>
+                </tr>
+                <tr>
+                    <td>-x файл</td>
+                    <td>существует ли файл и является ли он исполняемым?</td>
+                </tr>
+                <tr>
+                    <td>-O файл</td>
+                    <td>существует ли файл и принадлежит ли он текущему пользователю?</td>
+                </tr>
+                <tr>
+                    <td>файл1 -nt файл2</td>
+                    <td>был ли файл1 последний раз модифицирован позже, чем файл2?</td>
+                </tr>
+                <tr>
+                    <td>-z строка</td>
+                    <td>указанная строка имеет нулевую длину?</td>
+                </tr>
+                <tr>
+                    <td>-n строка</td>
+                    <td>указанная строка имеет ненулевую длину?</td>
+                </tr>
+                <tr>
+                    <td>стр1 == стр2</td>
+                    <td>указанные строки совпадают?</td>
+                </tr>
+                <tr>
+                    <td>! выражение</td>
+                    <td>указанное выражение false?(содержит не нуль)</td>
+                </tr>
+                <tr>
+                    <td>выр1 -a выр2</td>
+                    <td>логическое И двух выражений</td>
+                </tr>
+                <tr>
+                    <td>выр1 -o выр2</td>
+                    <td>логическое ИЛИ двух выражений</td>
+                </tr>
+                <tr>
+                    <td>выр1 -eq выр2</td>
+                    <td>выр1 равно выр2?</td>
+                </tr>
+                <tr>
+                    <td>выр1 -ne выр2</td>
+                    <td>выр1 неравно выр2?</td>
+                </tr>
+                <tr>
+                    <td>выр1 -lt выр2</td>
+                    <td>выр1 меньше (в арифметическом смысле) выр2?</td>
+                </tr>
+                <tr>
+                    <td>выр1 -le выр2</td>
+                    <td>выр1 меньше либо равно выр2?</td>
+                </tr>
+                <tr>
+                    <td>выр1 -gt выр2</td>
+                    <td>выр1 больше выр2?</td>
+                </tr>
+                <tr>
+                    <td>выр1 -ge выр2</td>
+                    <td>выр1 больше либо равно выр2?</td>
+                </tr>
+            </table>
+        
+            <p>В следующем примере проверяется, существует ли каталог $HOME/bin, и, если он существует, то он добавляется к переменной PATH.</p>
+            <pre><code>$if [ -d $HOME/bin ] ; then \
+        >PATH="$PATH:$HOME/bin" ; fi</code></pre>
+        
+            <h3>6. Оператор множественного выбора case-esac</h3>
+            <p>Блок case-esac аналогичен оператору if-fi со множеством elfi и предназначен для проверки одной переменной на несколько возможных значений. Блок case-esac записывается следующим образом:</p>
+            <pre><code>$case значение in \
+        >шаблон1) \
+        >список команд1 ;;
+        >шаблон2) \
+        >список команд2 ;;
+        >esac&lt;Enter&gt;</code></pre>
+            <p>В данном случае значение – это строка символов, сравниваемая с шаблоном до тех пор, пока она не совпадёт с ним. Список команд, следующий за шаблоном, которому удовлетворяет значение, запускается на выполнение. За списком следует команда «;;», которая завершает работу блока case-esac. Если значение не удовлетворяет ни одному из шаблонов, выражение case завершается. Если необходимо выполнить какие-то действия по умолчанию, следует включить в выражение шаблон «*», которому удовлетворяет любое значение.</p>
+            <p>В выражении case-esac должен присутствовать, по крайней мере, один шаблон. Максимальное число шаблонов не ограничено.</p>
+            <p>Шаблон формируется по правилам, аналогичным именам файлов и каталогов (с учётом символов расширения), а также используется оператор дизъюнкции «|» (операция ИЛИ). Ниже приведён пример использования блока case-esac.</p>
+            <pre><code>$case “$TERM” in \
+        >*term) \
+        >TERM = xterm \
+        >;; \
+        >network | dialup | unknown | vt[0-9]*) \
+        >TERM=vt100 \
+        >;; \
+        >esac</code></pre>
+        
+            <h3>7. Цикл for</h3>
+            <p>Цикл for предназначен для выполнения определённых действий над несколькими данными. Формат записи цикла следующий:</p>
+            <pre><code>$for имя_переменной in список_значений ; \
+        >do \
+        >команда1 ; команда2 ...\
+        >done</code></pre>
+            <p>В цикле for переменной с указанным именем последовательно присваиваются все значения из списка_значений, и для каждого из этих значений выполняется список_команд. Значения в списке_значений перечисляются через пробел. Например, следующая команда выдаст на экран десять строк: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10:</p>
+            <pre><code>$for i in 1 2 3 4 5 6 7 8 9 10 ; \
+        >do \
+        >echo $i ; \
+        >done</code></pre>
+        
+            <h3>8. Цикл while</h3>
+            <p>Если необходимо выполнять какие-либо действия до тех пор, пока некоторое выражение истинно, то следует использовать цикл while, который записывается следующим образом:</p>
+            <pre><code>$while выражение ; \
+        >do \
+        >список_команд ; \
+        >done</code></pre>
+            <p>На каждой итерации этого цикла выполняется выражение и до тех пор, пока оно возвращает значение 0, выполняется список_команд. Если в качестве выражения указать команду /bin/true, то цикл будет бесконечным и завершить его можно только, используя оператор break. Пропустить какую-либо часть цикла и перейти на следующую его итерацию можно, используя в списке_команд команду continue.</p>
+            <p>Например, вывод последовательности цифр от 1 до 9 можно организовать следующим образом:</p>
+            <pre><code>$x=1
+        $while [ $x -lt 10 ] ; \
+        >do \
+        >echo $x ; \
+        >x=$(( $x+1 )) ; \
+        >done</code></pre>
+        
+            <h3>3. Порядок выполнения лабораторной работы</h3>
+            <ol>
+                <li>Прочитайте теоретический материал по лабораторной работе.</li>
+                <li>Создайте скрипт, находящий сумму двух переданных ему аргементов. Выведите результат сложения и сообщение о том, меньше ли результат нуля, либо больше, либо равен нулю.</li>
+                <li>Создайте скрипт, принимающий в качестве агрумента строку, и создающий архив, включающий в себя все файлы из домашней директории пользователя с расширением .txt. Имя итогового архива должно состоять из переданного аргумента и отметки времени строка_час_минута_секунда.</li>
+            </ol>
+        
+            <h3>3. Контрольные вопросы</h3>
+            <ol>
+                <li>Что такое скрипт?</li>
+                <li>Что означает символ «\», введённый в командной строке перед нажатием Enter?</li>
+                <li>Команда read.</li>
+                <li>Условный оператор if-fi. Команда test.</li>
+                <li>Циклические конструкции.</li>
+            </ol>
+            <p>Ответы на контрольные вопросы нужно отправить на почту <strong>mokshantsev-ma@rosenergoatom.ru</strong></p>
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="/courses/theme3" class="divider">Назад к тестированию</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

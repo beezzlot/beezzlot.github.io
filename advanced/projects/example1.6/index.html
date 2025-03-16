@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Дополнительные лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №6. Усложнённый материал по итогам видеурока №6.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <p>Изучить требования ФСТЭК РФ по безопасной эксплуатации Linux-систем.</p>
+
+            <h2>Оборудование, ПО:</h2>
+            <p>Виртуальная машина под управлением ОС Astra Linux 1.7 в режиме защищенности "Воронеж".</p>
+        
+            <h2>Ход работы:</h2>
+            <p>Целью данной лабораторной работы является ознакомление с рекомендуемыми настройками ФСТЭК РФ по безопасной эксплуатации несертифицированных Linux-систем на объектах критической инфраструктуры.</p>
+        
+            <h2>Общие сведения о документе</h2>
+            <p>Методический документ от 25 декабря 2022 г. ФСТЭК РФ регулирует настройки и обязательные требования к Linux-дистрибутивам, которые используются в объектах критической инфраструктуры.</p>
+            <p>К сожалению, или к счастью, но это не значит, что вы можете установить любой Linux-дистрибутив в информационную систему такой инфраструктуры.</p>
+            <pre><code>Настоящие Рекомендации подлежат реализации в государственных информационных системах и на объектах критической информационной инфраструктуры Российской Федерации, построенных с использованием операционных систем Linux, несертифицированных по требованиям безопасности информации, до их замены на сертифицированные отечественные операционные системы.</code></pre>
+            <p>При этом</p>
+            <pre><code>Настройка сертифицированных операционных систем на базе ядра Linux осуществляется в соответствии с эксплуатационной документацией разработчиков операционных систем.</code></pre>
+            <p>Это не значит, что инструменты, описанные в данном документе, мы можем не использовать только потому, что работаем на сертифицированной Astra Linux. Знакомиться с этим документом нужно, а также применять его на практике, чтобы по итогу, используя рекомендации как ФСТЭК, так и вендора - получить безопасную и надежную ОС.</p>
+        
+            <h2>Документ разделен на разделы:</h2>
+            <ul>
+                <li>настройка авторизации в операционной системе;</li>
+                <li>ограничение механизмов получения привилегий;</li>
+                <li>настройка прав доступа к объектам файловой системы;</li>
+                <li>настройка механизмов защиты ядра Linux;</li>
+                <li>уменьшение периметра атаки ядра Linux;</li>
+                <li>настройка средств защиты пользовательского пространства со стороны ядра Linux.</li>
+            </ul>
+        
+            <h2>Настройка авторизации в операционных системах Linux</h2>
+        
+            <h3>1. Не допускать использование учетных записей с пустыми паролями.</h3>
+            <p>При установке различных программ - например, Apache2 или Nginx, или SSHD. В системе появляется служебный пользователь. По умолчанию, он без пароля и без терминального доступа, но существуют компьютерные атаки, направленные как раз на существование таких "пустых" учетных записей.</p>
+            <p>Для того чтобы не допустить использование учетных записей пользователей с пустыми паролями в Linux, вам следует выполнить следующие шаги:</p>
+            <ol>
+                <li>Откройте терминал и войдите в систему под учетной записью с правами администратора.</li>
+                <li>Отредактируйте файл /etc/login.defs с помощью текстового редактора. Например, выполните команду:
+                    <pre><code>sudo nano /etc/login.defs</code></pre>
+                </li>
+                <li>Найдите и измените параметр PASSMINLEN на значение 1 или больше. Этот параметр устанавливает минимальную длину пароля.
+                    <pre><code>PASS_MIN_LEN 1</code></pre>
+                </li>
+                <li>Сохраните изменения в файле login.defs и закройте текстовый редактор.</li>
+                <li>Обновите файл /etc/shadow командой:
+                    <pre><code>sudo pwconv</code></pre>
+                </li>
+            </ol>
+            <p>Теперь пользователи не смогут установить пустой пароль. Если вы хотите заблокировать учетную запись пользователя, вы можете использовать команду passwd с опцией -l для блокировки:
+                <pre><code>sudo passwd -l username</code></pre>
+            </p>
+        
+            <h3>2. Обеспечить отключение входа суперпользователя по протоколу SSH.</h3>
+            <p>В файле /etc/ssh/sshd_config</p>
+            <img src="Screen1.png" alt="Картинка">
+        
+            <h3>3. Запретить использование команды sudo и su</h3>
+            <p>Команда "su" в UNIX-подобных операционных системах (как Linux) используется для переключения пользователя на другого, обычно более привилегированного, например, на суперпользователя (root).</p>
+            <p>Для ограничения доступа к команде su используется механизм PAM модуля pam_wheel. По умолчанию данный модуль отключен.</p>
+            <p>Для включения разграничения доступа к команде su по системной группе astra-admin необходимо в файле /etc/pam.d/su изменить строку:
+                <pre><code>#auth       required   pam_wheel.so</code></pre>
+                На
+                <pre><code>auth       required   pam_wheel.so group=astra-admin</code></pre>
+            </p>
+            <p>Если имя группы имеет пробел, например, domain group, то можно использовать синтаксис:
+                <pre><code>auth       required   pam_wheel.so [group=domain group]</code></pre>
+            </p>
+            <p>После этого командой su смогут пользоваться только пользователи группы astra-admin или domain group.</p>
+        
+            <h3>4. Органичить список пользователей, которым разрешен доступ к команде sudo</h3>
+            <p>Команда sudo в UNIX-подобных операционных системах также используется для выполнения команд с повышенными привилегиями, например, от имени суперпользователя (root). Это позволяет пользователям без необходимости входа под суперпользователем выполнять административные задачи.</p>
+            <p>Информацию о том, кто может использовать команду <strong>sudo</strong> операционная система хранит в файле - <strong>/etc/sudoers</strong> и <strong>/etc/sudoers.d</strong>.</p>
+            <p><strong>Редактировать данные файлы напрямую, через различные текстовые редакторы - идея плохая, ведь если вы случайно допустите ошибку или опечатку в них, есть риск потерять административный доступ до операционной системы.</strong></p>
+            <p>Для безопасного редактирования файла используйте команду - <strong>visudo</strong>.</p>
+            <p>Рассмотрим на примере, чем редактирование файла /etc/sudoers без специальной команды может быть опасно.</p>
+            <p>P.S. Не проверять на реальной машине! Это может привести к потере доступа!</p>
+            <pre><code>vim /etc/sudoers</code></pre>
+            <img src="Screen2.png" alt="Картинка">
+            <p>Допустили специальную ошибку, сохраняем и выходим из документа.</p>
+            <img src="Screen3.png" alt="Картинка">
+            <p>И все! Теперь команда sudo недоступна.</p>
+            <p>А если бы мы работали через visudo?</p>
+            <img src="Screen4.png" alt="Картинка">
+            <p>То система бы сразу предупредила нас о проблемах!</p>
+            <p>Ладно, на этом "вредные" советы закончились, что у нас с правилами sudo?</p>
+            <img src="Screen5.png" alt="Картинка">
+            <p>По-умолчанию, пользователь root, члены группы sudo и astra-admin имеют полный доступ до команды <strong>sudo</strong>.</p>
+            <p>Вы можете это поменять по своему усмотрению, например, если планируется выдать доступ для всех членов доменной группы:</p>
+            <pre><code>%domain\ admins ALL=(ALL:ALL) ALL</code></pre>
+            <p>В этом случае, все члены доменной группы Domain Admins получат доступ до этой повышенных привилегий.</p>
+        
+            <h4>А что если мы планируем дать доступ только до определенных команд?</h4>
+            <p>Например,</p>
+            <pre><code>a-admin-domain ALL=NOPASSWD: /bin/tar, /usr/bin/chown</code></pre>
+            <p>И вот так, получится выдать доступ до конкретных команд определенным пользователям и группам.</p>
+        
+            <h3>5. Настройка прав доступа к объектам файловой системы</h3>
+            <p>Установить корректные права доступа к файлам настройки пользователей, а именно к файлам с перечнями пользовательских идентификаторов (/etc/passwd) и групп (/etc/group), либо хранилищам хешей паролей (в операционных системах GNU/Linux, Solaris, HP-UX: /etc/shadow, AIX: /etc/security/passwd), с помощью команд:</p>
+            <pre><code>chmod 644 /etc/passwd;
+        chmod 644 /etc/group;
+        chmod go-rwx /etc/shadow.</code></pre>
+            <p>Установить корректные права доступа к системным файлам заданий (конфигурационным файлам) cron при помощи команд:</p>
+            <pre><code>chmod go-wx /etc/crontab
+        chmod go-wx /etc/cron.d
+        chmod go-wx /etc/cron.hourly
+        chmod go-wx /etc/cron.daily
+        chmod go-wx /etc/cron.weekly
+        chmod go-wx /etc/cron.monthly</code></pre>
+        
+            <h3>6. Настройка механизмов защиты ядра Linux</h3>
+            <p>Файл sysctl.conf в Linux системах представляет собой конфигурационный файл, используемый для настройки параметров ядра операционной системы, управляемых через sysctl (системный вызов). Этот файл содержит параметры, определяющие различные аспекты поведения ядра, такие как сетевые настройки, настройки безопасности, параметры виртуальной памяти и т. д.</p>
+            <p>Изменения в sysctl.conf вступают в силу после перезагрузки системы или после применения изменений с помощью команды sysctl -p.</p>
+            <p>Чтобы внести правки, откройте файл - <strong>/etc/sysctl.conf</strong> и внесите строчку:</p>
+            <pre><code>kernel.dmesg_restrict=1</code></pre>
+            <img src="Screen6.png" alt="Картинка">
+            <p>Убедиться, что правило написано верно можно с помощью команды:</p>
+            <pre><code>sysctl -p</code></pre>
+            <img src="Screen7.png" alt="Картинка">
+            <p>Если в ответ вернется введеная вами строка - вы сделали все правильно. Если была бы ошибка, то вывод команды был следующим:</p>
+            <img src="Screen8.png" alt="Картинка">
+            <p>И стоит сказать, что далее почти весь документ ФСТЭК РФ посвящен именно вопросу настройки файла sysctl.conf.</p>
+            <p>Если подводить итог, зачем данный файл необходим, то можно прийти к следующим выводам:</p>
+            <ol>
+                <li>Настройка параметров ядра: С помощью файлов sysctl.conf можно устанавливать и изменять параметры, которые касаются работы ядра Linux, такие как максимальное количество открытых файлов, размер буфера памяти и другие системные настройки. Конфигурирование этих параметров может помочь оптимизировать работу системы и обеспечить ее более эффективную работу.</li>
+                <li>Контроль сетевых параметров: Sysctl.conf также позволяет настраивать параметры сети, такие как размеры буферов, TTL (время жизни) пакета и другие сетевые настройки. Это позволяет управлять сетевыми ресурсами и обеспечить более безопасную и эффективную работу в сетевой среде.</li>
+                <li>Обеспечение безопасности: Помимо параметров ядра и сети, sysctl.conf также может быть использован для повышения безопасности системы. Настройка различных параметров позволяет усилить защиту операционной системы от возможных угроз и атак. Например, можно изменить параметры, связанные с отслеживанием IP пакетов, настройкой IPv6, включением и отключением различных механизмов безопасности.</li>
+            </ol>
+        
+            <h2>Дополнительная информация:</h2>
+            <ol>
+                <li>ФСТЭК РФ <a href="https://fstec.ru/dokumenty/vse-dokumenty/spetsialnye-normativnye-dokumenty/metodicheskij-dokument-ot-25-dekabrya-2022-g">Ссылка</a></li>
+                <li>SYSCTL Conf - примеры использования <a href="https://www.cyberciti.biz/faq/linux-kernel-etcsysctl-conf-security-hardening/">Ссылка</a></li>
+                <li>PAM в Astra Linux <a href="https://habr.com/ru/companies/aktiv-company/articles/144700/">Ссылка</a></li>
+            </ol>
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="/projects/example1.6" class="divider">Переход к лабораторной работе основного курса №7</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
