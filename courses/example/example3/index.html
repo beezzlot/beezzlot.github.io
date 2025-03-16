@@ -557,9 +557,16 @@
 </ul>
 
 
+
+
 <body>
-  <h1>Тест</h1>
-  <form id="quizForm">
+  <!-- Кнопка для запуска теста -->
+  <button id="startTestButton">Запустить тестирование</button>
+
+  <!-- Контейнер для теста, скрытый по умолчанию -->
+  <div id="quizContainer" style="display: none;">
+    <h1>Тест</h1>
+    <form id="quizForm">
       <div class="question">
           <h3>Вопрос 1: Что такое классификация операционных систем?</h3>
           <input type="radio" name="q1" value="A"> Процесс установки операционной системы <br>
@@ -609,14 +616,19 @@
   <input type="radio" name="q7" value="C">macOS <br>
   <input type="radio" name="q7" value="D">iOS<br>
 </div>
+<button type="button" onclick="calculateScore()">Завершить тест</button>
+</form>
 
+<div id="result"></div>
+</div>
+<script>
+  // Показываем тест при нажатии на кнопку "Запустить тестирование"
+  document.getElementById('startTestButton').addEventListener('click', function() {
+    document.getElementById('quizContainer').style.display = 'block'; // Показываем тест
+    this.style.display = 'none'; // Скрываем кнопку запуска
+  });
 
-      <button type="button" onclick="calculateScore()">Завершить тест</button>
-  </form>
-
-  <div id="result"></div>
-
-  <script>
+  // Функция для подсчета баллов
       const correctAnswers = {
           q1: 'B',
           q2: 'B',
@@ -639,12 +651,12 @@
           }
 
           const resultDiv = document.getElementById('result');
-          if (score < 5) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended">Перейти к дополнительным материалам для усвоения материала.</a></p>';
-          } else if (score == 6) {
-              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
-          } else if (score >= 7) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example4">Перейти на следующий этап</a></p>';
+      if (score < 3) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended/extended1">Перейти к дополнительным материалам для усвоения материала.</a></p>';
+          } else if (score == 7) {
+              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced/advanced1">Усложнить материал</a></p>';
+          } else if (score >= 4) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example3">Перейти на следующий этап</a></p>';
           } else {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
           }
