@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Дополнительные лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №4. Усложнённый материал по итогам видеурока №4.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <ul>
+              <li>познакомиться с настройкой служб хранения данных на базе LVM;</li>
+              <li>обеспечим доступ к созданным массивам данных через Samba (SMB,CIFS) и NFS.</li>
+          </ul>
+          
+          <h2>Оборудование, ПО:</h2>
+          <p>Виртуальная машина под управлением ОС Astra Linux 1.7 в режиме защищенности "Воронеж".</p>
+          
+          <h2>Ход работы:</h2>
+          <p>Мы поговорим о том, как настраивать хранение данных с помощью LVM. Также мы обсудим, как обеспечить доступ к своим файлам через Samba (SMB,CIFS) и NFS.</p>
+          
+          <h2>Начнем с начала, как в Linux в целом работает хранение данных?</h2>
+          <p>Добавляя в систему новый диск (под словом диск, в рамках этой работы мы понимаем любой блочный накопитель - SSD, HDD, NVME), он отображается в системе уникальной буквой.</p>
+          <p>В Linux диски называются sda, sdb, sdc и так далее в соответствии с схемой именования дисков SCSI/SATA/USB. Буква "sd" означает, что это SCSI/SATA/USB устройство, а буква после "d" обозначает порядковый номер устройства в системе. Так, sda обычно относится к первому SCSI/SATA/USB диску, sdb - ко второму, sdc - к третьему, и т.д.</p>
+          <p>Стоит обратить внимание, что наименование может отличаться в зависимости от сервера\компьютера\драйверов и специфики аппаратной части!</p>
+          
+          <h3>А что у нас на стендах?</h3>
+          <p>Команда <code>lsblk</code> укажет информацию о всех доступных блочных устройствах. Обратите внимание на <strong>sdb</strong>, <strong>sdc</strong>, <strong>sdd</strong>.</p>
+          <img src="Screen1.png" alt="Информация о блочных устройствах">
+          
+          <p>На каждой виртуальной машине есть 3 диска по 1Гб - это тренировочные диски, которые очень пригодятся нам для экспериментов с LVM.</p>
+          <p>Сам по себе диск не может хранить информации, если не будет создан раздел и не будет установлена файловая система.</p>
+          <p>Раздел на диске может быть произвольного объема, а также может быть несколько разделов (максимум 4).</p>
+          
+          <h3>Пример разметки диска</h3>
+          <p>Например, разметим <code>/dev/sdb</code> на один единый раздел, объемом на весь диск. Сделать это можно тремя инструментами:</p>
+          <ul>
+              <li>fdisk;</li>
+              <li>cfdisk;</li>
+              <li>gparted.</li>
+          </ul>
+          <p>Как это сделать через <a href="https://losst.pro/komanda-fdisk-v-linux">fdisk</a>, а как через <a href="https://help.ubuntu.ru/wiki/gparted">gparted</a>.</p>
+          <p>А в рамках данной лабораторной работы мы рассмотрим инструмент cfdisk.</p>
+          
+          <h3>Использование cfdisk</h3>
+          <p>Используем команду:</p>
+          <pre><code>cfdisk /dev/sdb</code></pre>
+          <img src="Screen2.png" alt="Интерфейс cfdisk">
+          
+          <p>В качестве метки выбираем GPT.</p>
+          <img src="Screen3.png" alt="Выбор метки GPT">
+          
+          <p>Размер раздела - 1Гб (или 1023Мб, как выбрано, по умолчанию).</p>
+          <img src="Screen4.png" alt="Выбор размера раздела">
+          
+          <p>Далее необходимо выбрать тип раздела - Linux LVM.</p>
+          <img src="Screen5.png" alt="Выбор типа раздела">
+          
+          <p>И в списке доступных разделов и форматов:</p>
+          <img src="Screen6.png" alt="Список доступных разделов">
+          
+          <p>И в конце - "Запись".</p>
+          <img src="Screen7.png" alt="Запись изменений">
+          
+          <p>Подтвердите операцию командой "yes". Проверить, что все работает можно командой:</p>
+          <pre><code>lsblk</code></pre>
+          <img src="Screen8.png" alt="Проверка работы">
+          
+          <p>Повторите создание раздела для всех дисков.</p>
+          <img src="Screen9.png" alt="Создание разделов для всех дисков">
+          
+          <h2>Отлично, теперь у нас три диска с разделами. Пора поговорить о LVM.</h2>
+          <p>Логические тома (Logical Volumes) в LVM - это виртуальные разделы диска, которые создаются на базе физических дисков. Они могут быть изменены без необходимости переноса данных, в отличие от обычных разделов.</p>
+          <p>Группы томов (Volume Groups) в LVM объединяют несколько физических дисков или RAID массивов в одну логическую единицу. Группы томов служат для управления большим объемом дискового пространства и деления его на логические тома для удобства управления и обеспечения отказоустойчивости.</p>
+          <p>Таким образом, логические тома создаются внутри групп томов, что позволяет гибко управлять дисками, изменять их размеры, создавать резервные копии, устанавливать зеркальное отражение данных и многое другое. Использование LVM позволяет эффективно управлять дисками и обеспечивает высокую гибкость и надежность системы хранения данных.</p>
+          <img src="Screen11.png" alt="Архитектура LVM">
+          
+          <h3>Плюсы и минусы LVM</h3>
+          <p>LVM является удобным и мощным инструментом для управления хранилищем данных в Linux. Вот несколько плюсов и минусов использования LVM:</p>
+          <h4>Плюсы:</h4>
+          <ul>
+              <li>Гибкое управление: с помощью LVM вы можете легко изменять размеры логических разделов, создавать снимки файловой системы, объединять различные устройства хранения в один "пул данных" и многое другое без даунтайма вашего сервера.</li>
+              <li>Высокая надежность: использование LVM позволяет создавать резервные копии данных, восстанавливаться после сбоев и улучшить производительность хранилища.</li>
+              <li>Возможность разделения на логические тома: это позволяет изолировать данные и при необходимости управлять ими отдельно.</li>
+          </ul>
+          <h4>Минусы:</h4>
+          <ul>
+              <li>Сложность настройки: для новичков может быть непросто разобраться во всех возможностях LVM и настроить его правильно.</li>
+              <li>Риск потери данных: неправильная конфигурация LVM может привести к потере доступа к данным или их полной потере.</li>
+              <li>Дополнительные нагрузки на систему: использование LVM может повлечь за собой дополнительное потребление ресурсов системы и снижение производительности.</li>
+          </ul>
+          
+          <h2>С теорией понятно, приступим к практике?</h2>
+          <p>Для работы с LVM помните "трёх китов", на которых держится данная технология:</p>
+          <ol>
+              <li>Физические тома (Physical Volume)</li>
+              <li>Группы томов (Volume Group)</li>
+              <li>Логические тома (Logical Volume)</li>
+          </ol>
+          
+          <h3>Установка LVM2</h3>
+          <p>Установите lvm2 - набор утилит для работы с технологией:</p>
+          <pre><code>apt install lvm2</code></pre>
+          
+          <h3>Инициализация физического тома</h3>
+          <p>Инициализация физического тома:</p>
+          <pre><code>pvcreate /dev/sdb1 /dev/sdc1/ /dev/sdd1</code></pre>
+          <img src="Screen12.png" alt="Инициализация физического тома">
+          
+          <p>Проверить состояние физических томов можно командами:</p>
+          <pre><code>pvs</code></pre>
+          <p>или более подробная</p>
+          <pre><code>pvdisplay</code></pre>
+          
+          <h3>Создание группы томов</h3>
+          <p>Создать группу томов <strong>vg-group</strong>:</p>
+          <pre><code>vgcreate vg-group /dev/sdb1 /dev/sdc1 /dev/sdd1</code></pre>
+          <p><strong>Вместо vg-group, конечно, можно написать другое имя желаемой группы томов.</strong></p>
+          <p>Проверить состояние группы томов можно командами:</p>
+          <pre><code>vgs</code></pre>
+          <p>или более подробная</p>
+          <pre><code>vgdisplay</code></pre>
+          
+          <h3>Создание логического тома</h3>
+          <p>Создать логический том можно командами:</p>
+          <p>Но перед началом, давайте посмотрим справку по команде <code>lvcreate</code>:</p>
+          <pre><code>lvcreate --help</code></pre>
+          <p>Справка - огромная! Всю информацию в рамках нашей лабораторной работы изучить будет нереально. Рассмотрим две команды для создания логического тома.</p>
+          <p>Например, команда ниже создаст логический том объемом в 350 Мб:</p>
+          <pre><code>lvcreate -L 350m -n Data vg-group</code></pre>
+          <p>Другая команда, создаст логический том в размере 40% от всего свободного пространства нашей группы томов:</p>
+          <pre><code>lvcreate -l 40%FREE -n Storage vg-group</code></pre>
+          <img src="Screen13.png" alt="Создание логического тома">
+          
+          <p>Посмотреть статус логических томов:</p>
+          <pre><code>lvs</code></pre>
+          <p>Или более подробный</p>
+          <pre><code>lvdisplay</code></pre>
+          
+          <h3>Установка файловой системы</h3>
+          <p>Теперь можно на LVM хранить информацию? Нет! А как же без файловой системы?</p>
+          <p>Команда <code>mkfs</code> в Linux используется для создания файловых систем на различных устройствах хранения данных, таких как жесткие диски, флэш-накопители и т. д. Скрипты <code>mkfs</code> позволяют автоматизировать этот процесс, делая его более удобным и эффективным.</p>
+          <p>Многие администраторы систем используют скрипты <code>mkfs</code> для создания файловых систем с определенными параметрами и настройками. Например, скрипт <code>mkfs.ext4</code> создаст файловую систему ext4 с выбранными опциями, такими как размер индексов, дополнительные параметры целостности данных и т. д.</p>
+          <p>Для установки ФС на логический том Data, команда будет:</p>
+          <pre><code>mkfs.ext4 /dev/mapper/vg--group-Data</code></pre>
+          <p>Для Storage аналогичная. Теперь разделы готовы к работе!</p>
+          <p>Создайте каталоги <code>/storage</code> и <code>/data</code>, примонтируйте логические LVM-тома в созданные директории.</p>
+          <img src="Screen14.png" alt="Монтирование логических томов">
+          
+          <h2>А теперь поговорим о создании доступа до этих каталогов?</h2>
+          <p>Samba и NFS - это два популярных протокола для совместного использования файлов и ресурсов в сетях с использованием Linux.</p>
+          
+          <h3>Samba:</h3>
+          <ol>
+              <li>Samba - это протокол для обмена файлами и ресурсами между устройствами в сети, поддерживающий работу с Windows и Linux.</li>
+              <li>С помощью Samba вы можете создавать общие папки и принтеры, управлять пользователями и группами доступа, а также обеспечивать доступ к файлам и папкам по сети через протоколы SMB/CIFS.</li>
+              <li>Samba позволяет взаимодействовать между компьютерами с различными операционными системами, обеспечивая совместимость и удобство использования общих ресурсов.</li>
+          </ol>
+          
+          <h3>NFS:</h3>
+          <ol>
+              <li>NFS (Network File System) - это протокол для удаленного доступа к файловой системе через сеть, который широко используется в UNIX-подобных системах, включая Linux.</li>
+              <li>С помощью NFS вы можете монтировать удаленные каталоги как локальные на своем компьютере, обеспечивая доступ к файлам и данным на удаленных серверах.</li>
+              <li>NFS обладает высокой производительностью и эффективностью, и интегрируется непосредственно в файловую систему операционной системы, что упрощает работу с удаленными данными.</li>
+          </ol>
+          
+          <p>Кратко говоря, Samba обеспечивает совместимость с Windows и Linux, позволяя обмениваться файлами и ресурсами между ними, в то время как NFS предоставляет удаленный доступ к файлам на сервере по сети в UNIX-подобных системах. Оба протокола могут быть полезны в среде Linux для обеспечения совместного доступа к данным и ресурсам.</p>
+          
+          <h2>Начнем с Samba.</h2>
+          <ol>
+              <li>Установите пакет samba на вашем сервере (если он еще не установлен):</li>
+              <pre><code>sudo apt install samba</code></pre>
+              
+              <li>Отредактируйте файл конфигурации smb.conf. Добавьте в него настройки для создания общей папки:</li>
+              <pre><code>/etc/samba/smb.conf</code></pre>
+              
+              <li>Внутри файла smb.conf добавьте следующий блок конфигурации (достаточно указать его в конце файла) для создания общей папки:</li>
+              <pre><code>
+      [shared_folder]
+         path = /storage
+         writable = yes
+         guest ok = yes
+              </code></pre>
+              <p>Где:</p>
+              <ul>
+                  <li><code>[shared_folder]</code> - это имя общей папки, которое будет отображаться для пользователей.</li>
+                  <li><code>path</code> - это путь к каталогу на сервере, который будет общим, укажите LVM-массив "Storage".</li>
+                  <li><code>writable = yes</code> - разрешает пользователям запись в общую папку.</li>
+                  <li><code>guest ok = yes</code> - разрешает гостевой доступ, без необходимости аутентификации.</li>
+              </ul>
+              
+              <li>Да, начнем с простой общей папки без авторизации. После выполнения настроек выше, не забудьте перезагрузить службу Samba:</li>
+              <pre><code>sudo systemctl restart smbd</code></pre>
+          </ol>
+          
+          <h3>А как проверить?</h3>
+          <p>Откройте проводник FLY, в адресной строке укажите <code>smb://127.0.0.1</code>.</p>
+          <img src="Screen16.png" alt="Проверка доступа к Samba">
+          <p>Ваша папка готова к работе.</p>
+          
+          <h3>Хочу авторизацию, чтобы безопасно было!</h3>
+          <p>Для этого надо создать локального пользователя, а затем добавить его в Samba.</p>
+          <ol>
+              <li>Создаем локально:</li>
+              <pre><code>adduser samba-user</code></pre>
+              
+              <li>Добавляем в Samba:</li>
+              <img src="Screen17.png" alt="Добавление пользователя в Samba">
+              <p>Кстати, пароль для пользователя в самой ОС и его пароль в Samba может отличаться.</p>
+              
+              <li>В конфигурационный файл <code>/etc/samba/smb.conf</code> добавьте:</li>
+              <pre><code>
+      [sambashare]
+         path = /data
+         valid users = samba-user
+         writeable = yes
+         browseable = yes
+         create mask = 0777
+         directory mask = 0777
+              </code></pre>
+              
+              <li>Перезагрузите Samba:</li>
+              <pre><code>sudo systemctl restart smbd</code></pre>
+          </ol>
+          
+          <h3>Проверить получится через командную строку</h3>
+          <pre><code>smbclient \\\\127.0.0.1\\sambashare -U samba-user</code></pre>
+          <img src="Screen18.png" alt="Проверка доступа через командную строку">
+          <p>Для анонимного доступа команда была бы:</p>
+          <pre><code>smbclient -N \\\\hostname\\share</code></pre>
+          
+          <h2>А что там про NFS?</h2>
+          <ol>
+              <li>Для начала установим:</li>
+              <pre><code>sudo apt-get install nfs-server nfs-common</code></pre>
+              
+              <li>Далее создайте каталог, который планируется к публикации в NFS.</li>
+              <p>С целью закрепления материала по LVM, создайте логический том объемом в 100 Мб и смонтируйте его в каталог <code>/nfs</code>.</p>
+              <img src="Screen19.png" alt="Создание логического тома для NFS">
+              
+              <li>Перейдем в основной конфигурационный файл настроек NFS - <code>/etc/exports</code>. Добавьте там строку:</li>
+              <pre><code>/nfs *(rw,sync,no_subtree_check)</code></pre>
+              <p>Эти строки в файле конфигурации <code>/etc/exports</code> определяют правила доступа к общей папке NFS (Network File System) на сервере. Давайте рассмотрим каждый флаг:</p>
+              <ul>
+                  <li><code>/nfs</code>: Это путь к общей папке на сервере, к которой будет осуществляться доступ по протоколу NFS.</li>
+                  <li><code>*</code>: Это определяет список IP-адресов или доменов, которые имеют доступ к общей папке. Символ <code>*</code> означает, что доступ разрешен для всех IP-адресов (любого клиента).</li>
+                  <li><code>rw</code>: Этот флаг обозначает, что общая папка доступна для чтения и записи (read-write).</li>
+                  <li><code>sync</code>: Этот флаг указывает, что изменения данных должны быть синхронизированы на диск немедленно. Это повышает надежность, но может замедлить работу системы.</li>
+                  <li><code>no_subtree_check</code>: Этот флаг отключает проверку поддерева (subtree check), что позволяет упростить настройку и снизить нагрузку на сервер.</li>
+              </ul>
+              
+              <li>После внесения изменений в файл <code>/etc/exports</code>, необходимо перезапустить службу NFS, чтобы изменения вступили в силу:</li>
+              <pre><code>systemctl restart nfs-server</code></pre>
+              
+              <li>Пора проверить!</li>
+              <p>Для начала создадим точку монтирования удаленной общей папки:</p>
+              <pre><code>mkdir /mnt/nfs</code></pre>
+              <p>А затем примонтируем удаленный ресурс:</p>
+              <pre><code>sudo mount -t nfs 127.0.0.1:/nfs /mnt/nfs</code></pre>
+              <p>Общая папка успешно смонтирована:</p>
+              <img src="Screen20.png" alt="Проверка монтирования NFS">
+          </ol>
+          
+          <h2>Практическая работа</h2>
+          <ol>
+              <li>На созданном LVM-массиве создайте логический том:</li>
+              <ul>
+                  <li><code>ShareFolder</code>, объемом в 20% от всего доступного пространства;</li>
+                  <li>В качестве файловой системы используйте XFS;</li>
+                  <li>В качестве точки монтирования - <code>/mnt/share</code>.</li>
+              </ul>
+              
+              <li>Создайте Samba папку:</li>
+              <ul>
+                  <li>Скройте папку из Browseable;</li>
+                  <li>На рабочем столе пользователя Lihanov создайте ярлык для доступа к этому общему ресурсу.</li>
+              </ul>
+          </ol>
+          
+          <h2>Дополнительная информация:</h2>
+          <ul>
+              <li>Samba в Astra Linux <a href="https://wiki.astralinux.ru/display/doc/Samba">Ссылка</a></li>
+              <li>NFS в Astra Linux <a href="https://wiki.astralinux.ru/pages/viewpage.action?pageId=27362314">Ссылка</a></li>
+              <li>NFS с аутентификацией в домене FreeIPA <a href="https://wiki.astralinux.ru/pages/viewpage.action?pageId=105976211">Ссылка</a></li>
+              <li>LVM - это просто! <a href="https://habr.com/ru/articles/67283/">Ссылка</a></li>
+          </ul>
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="/projects/example1.4" class="divider">Переход к лабораторной работе основного курса №5</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
