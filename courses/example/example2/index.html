@@ -592,17 +592,46 @@
       }
 
       const resultDiv = document.getElementById('result');
-      if (score < 5) {
-        resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended">Перейти к дополнительным материалам для усвоения материала.</a></p>';
-      } else if (score == 6) {
-        resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
-      } else if (score >= 7) {
-        resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example3">Перейти на следующий этап</a></p>';
-      } else {
-        resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
-      }
-    }
+      if (score < 3) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended">Перейти к дополнительным материалам для усвоения материала.</a></p>';
+          } else if (score == 7) {
+              resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced">Усложнить материал</a></p>';
+          } else if (score >= 4) {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example3">Перейти на следующий этап</a></p>';
+          } else {
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
+          }
+        }
   </script>
+    <style>
+      .divider {
+        background-color: #f0f0f0; /* Серый фон */
+        padding: 15px;
+        text-align: center;
+        margin: 20px 0;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #333; /* Цвет текста */
+        display: block; /* Чтобы ссылка занимала всю ширину */
+        text-decoration: none; /* Убираем подчеркивание */
+    }
+    .divider:hover {
+        background-color: #e0e0e0; /* Изменение фона при наведении */
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    
+    .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+    </style>
+
+  <div class="navigation-buttons">
+    <a href="/courses/example/" class="divider">Назад</a>
+  </div>
 </body>
 
         <div class="body-footer">
