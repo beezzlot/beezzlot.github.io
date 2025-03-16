@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Дополнительные лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №1. Дополнительный материал по итогам видеурока №1.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <ul>
+              <li>Первичное знакомство с командным интерпретатором. Изучение базовых команд операционной системы Linux</li>
+           </ul>
+    
+          <h2>Оборудование, ПО:</h2>
+          <p>Виртуальная машина или компьютер под управлением ОС AstraLinux 1.7 в режиме защищенности "Воронеж" или выше.</p>
+      
+    
+            <h2 id="first-step">Ход работы</h2>
+            p>Среди всех элементов операционной системы Linux самым важным, является командная строка (Терминал). Оболочка во многом определяет богатые возможности и гибкость операционной системы Linux. С помощью командной строки можно выполнять действия, которые были бы немыслимы при работе с графическим пользовательским интерфейсом. Независимо от того, KDE или GNOME, оказывается, что многие действия гораздо быстрее и эффективнее выполнить, пользуясь только командной строкой. Освоение Linux стоит начинать с изучения средств командной оболочки.</p>
+            <p><strong>Файлы и ничего кроме файлов</strong></p>
+            <p>Все, с чем Вы встретитесь в операционной системе Linux, - это файлы. Абсолютно все! Очевидно, что текстовый документ - это файл. Изображения, аудиоданные в формате МР3 и видеофрагменты - это несомненно файлы. Каталоги - это тоже файлы, содержащие информацию о других файлах. Дисковые устройства - это большие файлы. Сетевые соединения тоже файлы. Даже исполняемый процесс - это файл. С точки зрения операционной системы Linux файл представляет собой поток битов или байтов. Система не интересуется тем, что означает каждый байт.  Это забота конкретных программ, выполняющихся в операционной системе Linux. Для операционной системы Linux и документ, и сетевое соединение всего лишь файлы. Как обрабатывать текстовый документ, знает редактор, а сетевое приложение умеет работать с сетевым соединением.</p>
+            <p>В отличие от Windows и МасOS в операционной системе Linux имена файлов чувствительны к регистру символов. В частности, Вы можете встретить в одном каталоге все три файла которые приведены ниже в качестве примера:</p>
+            <blockquote>
+              <blockquote>
+                <div><ul>
+                <li>Sit.txt</li>
+                <li>sIt.txt</li>
+                <li>SIT.txt</li>
+                </ul>
+                </div></blockquote>
+                <p>С точки зрения файловой операционной системы Linux - это различные имена файлов. Если вы попытаетесь создать файлы с этими же именами в Windows или МасOS, то вероятнее всего попытка увенчается провалом, и система предложит Вам выбрать другое имя для файла.</p>
+                <p>Чувствительность к регистру символов также означает, что при вводе команд они должны в точности совпадать с именами файлов, поддерживающих их. Так, например, удаляя файл с помощью команды rm, нельзя вводить RM, Rm или rM. Надо также следить за написанием имен, задаваемых в качестве параметров. Если вы захотите удалить файл «SIT.txt», а укажете имя Sit.txt, вы лишитесь совсем не того файла, с которым предполагали расстаться.</p>
+                
+                <p><strong>Групповые операции:</strong></p>
+<p>Предположим, что в одном из каталогов на вашем компьютере содержатся сто файлов с изображениями и два текстовых файла. Ваша задача удалить все файлы с изображениями за исключением двух текстовых файлов. Удалять файлы по одному - это утомительное занятие. В операционных системах Linux для автоматизации данного процесса можно применять символы групповых операций.
+Групповые операции задаются посредством звездочки (*), знака вопроса (?) и квадратных скобок ( [ ] ).</p>
+<p><strong>Пример использования групповых операций:</strong></p>
+<p>Групповая операция с применение » * » - отмечает любое (в том числе нулевое) количество любых символов.</p>
+
+<p><strong>Основные консольные команды:</strong></p>
+<blockquote>
+<div><ul>
+<li>$ pwd - определить текущий каталог.</li>
+<li>$ cd [имя каталога] — осуществить переход в заданный каталог.</li>
+<li>$ ls [имя каталога] - просмотреть список файлов и подкаталогов.</li>
+<li>$ mkdir [имя каталога] — создать каталог с заданным именем.</li>
+<li>$ cp &lt;имя файла 1&gt; &lt;имя файла 2&gt; - скопировать файл «имя файла 1» в файл «имя файла 2», например: cp first.txt copy1.txt.</li>
+<li>$ mv &lt;имя файла 1&gt; &lt;имя файла 2&gt; - переименовать файл «имя файла 1» в файл «имя файла 2», например: mv first.txt orig.txt.</li>
+<li>$ ln «имя файла» «имя ссылки» - создать жёсткую ссылку «имя ссылки» на файл «имя файла». Пример: ln orig.txt copy2.txt.</li>
+<li>$ ln -s «имя файла» «имя ссылки» - создать символическую ссылку «имя ссылки» на файл «имя файла». Пример: ln -s orig.txt copy2.txt.</li>
+<li>$ rm &lt;имя файла&gt; - удалить файл.</li>
+<li>$ touch &lt;имя файла&gt; - создание файла.</li>
+<li>$ man &lt;название команды&gt; - получение справочной документации о выбранной команде.</li>
+</ul>
+</div></blockquote>
+
+<body>
+  <h1>Решение задач лабораторной работы</h1>
+
+  <h2>1. Откройте терминал</h2>
+  <p>Для выполнения всех задач вам необходимо открыть терминал. В Linux это можно сделать через меню приложений или с помощью сочетания клавиш <code>Ctrl + Alt + T</code>.</p>
+
+  <h2>2. Ознакомьтесь с возможностями команды <code>pwd</code></h2>
+  <p>Для получения справки по команде <code>pwd</code> выполните команду:</p>
+  <pre><code>man pwd</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>pwd</code>.</p>
+
+  <h2>3. Определите текущий каталог</h2>
+  <p>Чтобы узнать текущий каталог, в котором вы находитесь, выполните команду:</p>
+  <pre><code>pwd</code></pre>
+  <p>Команда выведет полный путь к текущему каталогу.</p>
+
+  <h2>4. Ознакомьтесь с возможностями команды <code>cd</code></h2>
+  <p>Для получения справки по команде <code>cd</code> выполните команду:</p>
+  <pre><code>man cd</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>cd</code>.</p>
+
+  <h2>5. Перейдите в корневой каталог</h2>
+  <p>Чтобы перейти в корневой каталог, выполните команду:</p>
+  <pre><code>cd /</code></pre>
+  <p>Теперь вы находитесь в корневом каталоге.</p>
+
+  <h2>6. Ознакомьтесь с возможностями команды <code>ls</code></h2>
+  <p>Для получения справки по команде <code>ls</code> выполните команду:</p>
+  <pre><code>man ls</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>ls</code>.</p>
+
+  <h2>7. Просмотрите содержимое корневого каталога</h2>
+  <p>Чтобы просмотреть содержимое корневого каталога, выполните команду:</p>
+  <pre><code>ls</code></pre>
+  <p>Эта команда выведет список файлов и каталогов в корневом каталоге.</p>
+
+  <h2>8. Сделайте копию экрана</h2>
+  <p>Сделайте скриншот экрана для использования в отчете. В Linux это можно сделать с помощью инструментов, таких как <code>gnome-screenshot</code> или <code>Shift + PrintScreen</code>.</p>
+
+  <h2>9. Вернитесь в домашний каталог</h2>
+  <p>Чтобы вернуться в домашний каталог, выполните команду:</p>
+  <pre><code>cd</code></pre>
+  <p>Эта команда без параметров вернет вас в домашний каталог.</p>
+
+  <h2>10. Ознакомьтесь с возможностями команды <code>mkdir</code></h2>
+  <p>Для получения справки по команде <code>mkdir</code> выполните команду:</p>
+  <pre><code>man mkdir</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>mkdir</code>.</p>
+
+  <h2>11. Создайте каталог «test»</h2>
+  <p>Чтобы создать каталог с именем «test», выполните команду:</p>
+  <pre><code>mkdir test</code></pre>
+  <p>Каталог будет создан в текущем каталоге.</p>
+
+  <h2>12. Перейдите в каталог «test»</h2>
+  <p>Чтобы перейти в каталог «test», выполните команду:</p>
+  <pre><code>cd test</code></pre>
+  <p>Теперь вы находитесь в каталоге «test».</p>
+
+  <h2>13. Просмотрите содержимое каталога</h2>
+  <p>Чтобы просмотреть содержимое каталога «test», выполните команду:</p>
+  <pre><code>ls</code></pre>
+  <p>Эта команда выведет список файлов и каталогов в каталоге «test».</p>
+
+  <h2>14. Создайте каталог «test2»</h2>
+  <p>Чтобы создать каталог с именем «test2», выполните команду:</p>
+  <pre><code>mkdir test2</code></pre>
+  <p>Каталог будет создан в текущем каталоге.</p>
+
+  <h2>15. Ознакомьтесь с возможностями команды <code>touch</code></h2>
+  <p>Для получения справки по команде <code>touch</code> выполните команду:</p>
+  <pre><code>man touch</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>touch</code>.</p>
+
+  <h2>16. Создайте файл «text» в каталоге «test2»</h2>
+  <p>Чтобы создать файл с именем «text» в каталоге «test2», выполните команду:</p>
+  <pre><code>touch test2/text</code></pre>
+  <p>Файл будет создан в каталоге «test2».</p>
+
+  <h2>17. Ознакомьтесь с возможностями команды <code>mv</code></h2>
+  <p>Для получения справки по команде <code>mv</code> выполните команду:</p>
+  <pre><code>man mv</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>mv</code>.</p>
+
+  <h2>18. Переименуйте файл «text» в «textSIT»</h2>
+  <p>Чтобы переименовать файл «text» в «textSIT», выполните команду:</p>
+  <pre><code>mv test2/text test2/textSIT</code></pre>
+  <p>Файл будет переименован.</p>
+
+  <h2>19. Ознакомьтесь с возможностями команды <code>cp</code></h2>
+  <p>Для получения справки по команде <code>cp</code> выполните команду:</p>
+  <pre><code>man cp</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>cp</code>.</p>
+
+  <h2>20. Скопируйте файл «textSIT» в каталог «test2» под именем «copy.txt»</h2>
+  <p>Чтобы скопировать файл «textSIT» в каталог «test2» под именем «copy.txt», выполните команду:</p>
+  <pre><code>cp test2/textSIT test2/copy.txt</code></pre>
+  <p>Файл будет скопирован.</p>
+
+  <h2>21. Ознакомьтесь с возможностями команды <code>ln</code></h2>
+  <p>Для получения справки по команде <code>ln</code> выполните команду:</p>
+  <pre><code>man ln</code></pre>
+  <p>Эта команда откроет руководство по использованию <code>ln</code>.</p>
+
+  <h2>22. Создайте жесткую ссылку «link» на файл «copy.txt»</h2>
+  <p>Чтобы создать жесткую ссылку «link» на файл «copy.txt», выполните команду:</p>
+  <pre><code>ln test2/copy.txt test2/link</code></pre>
+  <p>Жесткая ссылка будет создана.</p>
+
+  <h2>23. Создайте символическую ссылку «simlink» на файл «copy.txt»</h2>
+  <p>Чтобы создать символическую ссылку «simlink» на файл «copy.txt», выполните команду:</p>
+  <pre><code>ln -s test2/copy.txt test2/simlink</code></pre>
+  <p>Символическая ссылка будет создана.</p>
+
+  <h2>24. Просмотрите результаты в текущем каталоге</h2>
+  <p>Чтобы просмотреть содержимое текущего каталога с подробной информацией, выполните команду:</p>
+  <pre><code>ls -la</code></pre>
+  <p>Эта команда выведет список всех файлов и каталогов, включая скрытые, с подробной информацией.</p>
+
+   <h2>Заключение</h2>
+  <p>Все задачи лабораторной работы выполнены. Вам необходимо отправить отчет о выполненной работе на почту - <strong>mokshantsev-ma@rosenergoatom.ru</strong></p>
+  <body>
+    <h1>Примерный план "Отчет по лабораторной работе: Работа с терминалом и файловой системой"</h1>
+
+    <h2>Цель работы</h2>
+    <p>Ознакомление с основными командами терминала для работы с файловой системой: <code>pwd</code>, <code>cd</code>, <code>ls</code>, <code>mkdir</code>, <code>touch</code>, <code>mv</code>, <code>cp</code>, <code>ln</code>, <code>rm</code>.</p>
+
+    <h2>Задачи и их выполнение</h2>
+
+    <h3>1. Открытие терминала</h3>
+    <p>Терминал был открыт с помощью сочетания клавиш <code>Ctrl + Alt + T</code>.</p>
+
+    <h3>2. Ознакомление с командой <code>pwd</code></h3>
+    <p>Для получения справки по команде <code>pwd</code> была выполнена команда:</p>
+    <pre><code>man pwd</code></pre>
+
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="/courses/example/example2/" class="divider">Назад к тестированию</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

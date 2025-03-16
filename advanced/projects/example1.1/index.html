@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Дополнительные лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Лабораторная работа №1. Дополнительный материал по итогам видеурока №1.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h2 id="flexibility">Цель работы</h2>
+            <p>Познакомиться с основными инструментами базового администрирования Astra Linux.</p>
+    
+            <h2>Оборудование, ПО:</h2>
+            <p>Виртуальная машина под управлением ОС Astra Linux 1.7 в режиме защищенности "Воронеж".</p>
+            
+            <h2>Ход работы:</h2>
+            <p>В этой теме мы обсудим основные конфигурации, которые требуется настроить перед работой с Astra Linux.</p>
+            
+            <h2>На что данный курс опирается?</h2>
+            <p>В данном курсе мы будем опираться на задания чемпионатов профессионального мастерства по компетенции "Сетевое и системное администрирование" разных лет.</p>
+            
+            <h2>Настройте имена хостов</h2>
+            <p>Зачастую, любое задание с данных чемпионатов начинается именно с этой строки. Неужели это так важно?</p>
+            <p>Настройка корректных имен компьютеров в сети имеет несколько преимуществ:</p>
+            <ol>
+                <li>Удобство и легкость идентификации: Использование описательных и понятных имен компьютеров помогает администраторам быстро и легко идентифицировать нужное устройство в сети.</li>
+                <li>Упрощение администрирования: Правильно настроенные имена компьютеров облегчают управление сетью, помогают быстрее находить и устранять проблемы и проводить необходимые изменения.</li>
+            </ol>
+            
+            <h3>Перейдем к настройке</h3>
+            <p>Казалось бы, что может быть проще установки имени на компьютер? Но вариантов через какие инструменты и команды это можно сделать - довольно много. Рассмотрим некоторые.</p>
+            
+            <h4>1. Редактирование файла <code>/etc/hostname</code></h4>
+            <p>В этом файле достаточно внести в одну строчку название вашего компьютера.</p>
+            <img src="Screen1.png" alt="Картинка">
+            <p>Но зачем мы еще указали доменное имя? Сочетания короткого имени "my-pc" с приставкой его домена называется FQDN.</p>
+            <p>FQDN (Fully Qualified Domain Name) - это полностью определенное доменное имя. Это адрес, который полностью идентифицирует конкретное устройство в компьютерной сети. FQDN состоит из нескольких частей, разделенных точками. Например, для имени my-pc.domain.local, "my-pc" является коротким именем компьютера, "domain" - доменом второго уровня, а ".local" - доменом верхнего уровня.</p>
+            <p>Использование FQDN важно для точного идентифицирования устройства в сети. Также, это упрощает администрирование и ввод компьютера в доменную инфраструктуру ALD(OpenLDAP) или Microsoft Active Directory.</p>
+            
+            <h4>2. Использование команды <code>hostnamectl</code></h4>
+            <p>Введите команду:</p>
+            <pre><code>sudo hostnamectl set-hostname my-pc.domain.local</code></pre>
+            <p>И в этом случае имя вашего компьютера будет изменено.</p>
+            
+            <h4>3. Использование <code>nmtui</code></h4>
+            <p>NMTUI - это аббревиатура (<strong>N</strong>etwork <strong>M</strong>anager <strong>T</strong>ext <strong>U</strong>ser-<strong>I</strong>nterface). Консольная утилита устанавливается в Astra Linux по умолчанию, если вы используете графический интерфейс или установили пакет NetworkManager. Данная программа используется для настройки IP-адресации на компьютере, но также имеет функционал настройки имени компьютера (хостнейма).</p>
+            <img src="Screen2.png" alt="Картинка">
+            <p>Пожалуй, три варианта хватит, но что лучше выбрать? В случае с настройкой имени компьютера - выбирайте что удобнее для вас, в первую очередь.</p>
+            
+            <h3>Я настроил имя, и теперь компьютер медленнее выполняет команды!!</h3>
+            <p>Частая особенность, что после настройки имени устройства команды <code>sudo</code> выполняются с существенной задержкой.</p>
+            <img src="Screen3.png" alt="Картинка">
+            <p>Это связано с тем, что команда <code>sudo</code> пытается выполнить поиск нового имени. Для этого необходимо или создать DNS-запись в вашем домене, которая бы указывала на этот компьютер. Или создать её вручную в файле <code>/etc/hosts</code>.</p>
+            <p>Файл <code>/etc/hosts</code> - это текстовый файл в операционной системе Unix/Linux, который используется для соответствия IP-адресов именам хостов. Когда устройство пытается подключиться к другому устройству по имени (например, веб-сайту), оно сначала обращается к файлу <code>/etc/hosts</code>, чтобы узнать соответствующий IP-адрес этому имени.</p>
+            <p>В файле <code>/etc/hosts</code> обычно указывается разрешение имен хостов на их соответствующие IP-адреса в локальной сети. В нем можно добавлять собственные записи, чтобы перенаправлять запросы на специфические имена хостов на конкретные IP-адреса.</p>
+            <p>Формат файла следующий:</p>
+            <img src="Screen4.png" alt="Картинка">
+            <p>Любую запись можно добавить по формуле:</p>
+            <pre><code>IP-адрес доменное_имя</code></pre>
+            
+            <h3>А если я настроил DNS-сервер и у меня есть запись в зоне domain.local, но все равно не работает?</h3>
+            <p>Тогда нужно проверить, какой DNS-сервер у вас указан для работы. Файл с такими сведениями находится по пути - <code>/etc/resolv.conf</code> (при условии, если используете NMTUI или графический интерфейс Fly для настройки IP-адреса).</p>
+            <p>Если работает на сервере, где отсутствует графический интерфейс и не установлен пакет NetworkManager, тогда сведения о DNS-сервере будут в файле <code>/etc/network/interfaces</code>.</p>
+            <p>Для проверки корректной работы DNS удобно использовать команду <code>host</code>, например:</p>
+            <pre><code>host ya.ru</code></pre>
+            <p>В указанной команде выше обращение происходит к тому серверу, что указан в конфигурационных файлах DNS (<code>/etc/resolv.conf</code> и <code>/etc/network/interfaces</code>).</p>
+            <p>Если вам необходимо проверить работоспособность конкретного DNS-сервера, команда может быть:</p>
+            <pre><code>host ya.ru 8.8.8.8</code></pre>
+            <img src="Screen5.png" alt="Картинка">
+            <p>В этом случае запрос будет сформирован на адрес, указанный в команде.</p>
+            <p>Узнать подробнее о команде <code>host</code> можно через встроенную справку.</p>
+            <pre><code>man host</code></pre>
+            <p>Или</p>
+            <pre><code>host --help</code></pre>
+            
+            <h2>Настройте IP-адресацию на ВСЕХ хостах</h2>
+            <p>Имя настроили, теперь необходимо выйти в компьютерную сеть. Для этого нам предстоит настроить IP-адресацию на сетевых интерфейсах нашего компьютера.</p>
+            <p>Посмотрим, какие сетевые интерфейсы существуют на нашей виртуальной машине:</p>
+            <pre><code>ip --br a</code></pre>
+            <img src="Screen6.png" alt="Картинка">
+            <p>Первый интерфейс "lo", с ним все понятно.</p>
+            
+            <h3>Зачем Loopback нужен</h3>
+            <p>Интерфейс loopback (или lo) является виртуальным интерфейсом, который используется для тестирования сетевого соединения на уровне сетевого протокола. Он позволяет установить локальное соединение между устройством и самим собой, что полезно для диагностики и отладки сетевых проблем.</p>
+            <p>Этот интерфейс также используется для тестирования и настройки различных сетевых сервисов, например, для проверки работоспособности сетевых приложений, настроенных на слушание определенного IP-адреса.</p>
+            
+            <p>Второй - eth0. Он служебный и используется в инфраструктуре системы виртуализации, его точно не будем трогать.</p>
+            <p>Третий - eth1. Интерфейс включен (на что нам указывает строчка <strong>UP</strong>). Но имеет только IPv6-Local адрес. Настроим его.</p>
+            
+            <h3>Инструменты настройки сети</h3>
+            <p>Вероятно, если вы опытный пользователь Linux и уже испробовали множество разных дистрибутивов, то знаете - что вариантов как настроить сеть множество.</p>
+            <p>Можно пользоваться инструментом <code>nmcli</code>, <code>nmtui</code>, настройкой в файле <code>/etc/network/interfaces</code> или утилита <code>ip</code>. Все эти инструменты достойны внимание, но стоит помнить одну истину:</p>
+            <p><strong>Ни в коем случае нельзя использовать несколько инструментов настройки сетевых реквизитов одновременно</strong>.</p>
+            <p>Проверим эту истину на практике. Сконфигурируем наш eth1 интерфейс через файл <code>/etc/network/interfaces</code>.</p>
+            
+            <h4>1. Откройте указанный выше файл и внесите следующие значения:</h4>
+            <pre><code>auto eth1
+        iface eth1 inet static
+        address 172.16.1.1/24</code></pre>
+            <img src="Screen7.png" alt="Картинка">
+            <p>Описание выше является стандартной формой описания интерфейса. Прокомментируем описанные параметры:</p>
+            <ol>
+                <li><strong>auto</strong> - добавить интерфейс в автозагрузку</li>
+                <li><strong>iface</strong> - указываем обращение к конкретному интерфейсу</li>
+                <li><strong>inet</strong> - для настройки IPv4-адреса, если бы указали <strong>inet6</strong> - был бы IPv6</li>
+                <li><strong>static</strong> - для настройки статического адреса.</li>
+                <li><strong>address</strong> - IPv4 адрес с маской подсети.</li>
+            </ol>
+            <p>После выполненных настроек необходимо перезагрузить службу сети командой:</p>
+            <pre><code>systemctl restart networking</code></pre>
+            <p>При этом соединение по RDP пропасть не должно!</p>
+            <p>И через команду <code>ip a</code> проверьте адрес:</p>
+            <img src="Screen8.png" alt="Картинка">
+            <p>Адреса нет! Хотя вроде бы все настроили правильно, но что случилось?</p>
+            <p>Откроем <code>nmtui</code>.</p>
+            <p>Перейдите в "Изменить соединения":</p>
+            <img src="Screen9.png" alt="Картинка">
+            <p>И здесь, обратите внимание, несколько разных соединений - в одном из них прячется наш eth1! В нашем случае - "Проводное соединение 3".</p>
+            <p><strong>Обратите внимание, что на вашем рабочем месте номер соединения может отличаться от представленного на скриншотах ниже!</strong></p>
+            <p>Это значит, что NetworkManager (nmtui) автоматически подключил данный сетевой интерфейс в управление и выполненные вами настройки в файле <code>/etc/network/interfaces</code> не применились. Чтобы исправить это, необходимо удалить данное соединение.</p>
+            <img src="Screen10.png" alt="Картинка">
+            <p>После удаления соединения перезагрузите службу networking, и убедитесь в корректных настройках eth1:</p>
+            <img src="Screen11.png" alt="Картинка">
+            
+            <h4>А если я хочу наоборот, переехать с network/interfaces на nmtui?</h4>
+            <p>Тогда операция выполняется в обратном порядке, удалите все упоминание интерфейсов из <code>/etc/network/interfaces</code>, перезапустите службу <code>networking</code>, а затем выполните новые настройки в <code>nmtui</code>.</p>
+            
+            <h4>Неужели в /etc/network/interfaces можно только адрес указать? А как же шлюз или DNS?</h4>
+            <p>Конечно можно, просто в нашей инфраструктуре, с учетом подключения по RDP это может стать причиной потери соединения до виртуальной машины.</p>
+            <p>Примеры как еще можно настроить <code>/etc/network/interfaces</code> ниже:</p>
+            
+            <h5>1. Пример настройки для статического IP адреса:</h5>
+            <pre><code>auto eth0
+        iface eth0 inet static
+            address 192.168.1.100
+            netmask 255.255.255.0
+            gateway 192.168.1.1</code></pre>
+            
+            <h5>2. Пример настройки для DHCP:</h5>
+            <pre><code>auto eth0
+        iface eth0 inet dhcp</code></pre>
+            
+            <h5>3. Пример настройки для VLAN-tag:</h5>
+            <pre><code>auto eth0.100
+        iface eth0.100 inet static
+            address 192.168.1.100
+            netmask 255.255.255.0
+            vlan-raw-device eth0</code></pre>
+            
+            <h5>4. Пример настройки для сетевого моста:</h5>
+            <pre><code>auto br0
+        iface br0 inet static
+            address 192.168.1.100
+            netmask 255.255.255.0
+            gateway 192.168.1.1
+            bridge_ports eth0
+            bridge_stp off</code></pre>
+            
+            <h5>5. Пример настройки с post-up скриптом, который выполняется после поднятия интерфейса:</h5>
+            <pre><code>auto eth0
+        iface eth0 inet static
+            address 192.168.1.100
+            netmask 255.255.255.0
+            gateway 192.168.1.1
+            post-up /path/to/script.sh</code></pre>
+            
+            <h5>6. Пример настройки с post-down скриптом, который выполняется после выключения интерфейса:</h5>
+            <pre><code>auto eth0
+        iface eth0 inet static
+            address 192.168.1.100
+            netmask 255.255.255.0
+            gateway 192.168.1.1
+            post-down /path/to/script.sh</code></pre>
+            
+            <h2>Вернемся в имена. Как выяснить, в каком порядке Linux обрабатывает имена, которые так часто встречаются в ежедневной работе?</h2>
+            <p>Файл <code>/etc/nsswitch.conf</code> (Name Service Switch configuration file) используется в операционных системах Unix и Unix-подобных системах для настройки порядка разрешения имён иследования служб для поиска информации о пользователе (например, пароли, uid, gid) и группах, хостах, сетях и других служб.</p>
+            <p>Основной задачей файла <code>/etc/nsswitch.conf</code> является указание системе, в какой последовательности она должна обращаться к различным службам для разрещения имен. Например, файл может содержать информацию о том, что сначала необходимо искать информацию в локальной базе данных, а затем в файле <code>/etc/hosts</code>.</p>
+            <p>В <code>/etc/nsswitch.conf</code> можно настроить различные службы, такие как passwd (пользовательская информация), group (информация о группе), hosts (информация об IP адресах), networks (информация о сети) и другие.</p>
+            <p>Пример содержимого файла <code>/etc/nsswitch.conf</code>:</p>
+            <pre><code>passwd:     files ldap
+        group:      files ldap
+        shadow:     files ldap
+        hosts:      files dns
+        networks:   files
+        services:   db files
+        protocols:  db files
+        rpc:        db files
+        ethers:     db files
+        netgroup:   files</code></pre>
+            <p>Этот пример указывает системе обращаться сначала к локальным файлам (files), а затем к службам LDAP для разрешения пользовательской информации, информации о группах и других службах.</p>
+            <p>А вот строка:</p>
+            <pre><code>hosts:      files dns</code></pre>
+            <p>Указывает на то, что для разрешения доменных имен сначала используется файл <code>/etc/hosts</code>, а затем настроенный DNS-сервер на стороне клиента. Если планируется сменить данную настройку, то это можно сделать так:</p>
+            <pre><code>hosts:      dns files</code></pre>
+            <p>Просто смените порядок в файле - и настройка выполнена.</p>
+            
+            <h2>Параметры ядра.</h2>
+            <p>Файл <code>/etc/sysctl.conf</code> — это конфигурационный файл в операционной системе Linux, который используется для настройки параметров ядра системы через интерфейс sysctl. Этот файл позволяет администратору системы изменять различные параметры ядра, такие как сетевые настройки, безопасность, производительность и другие.</p>
+            <p>Параметры, определяемые в файле <code>/etc/sysctl.conf</code>, применяются при загрузке системы. Многие настройки по умолчанию задаются в файлах, расположенных в директории - <code>/etc/sysctl.d/</code>, но администратор может добавлять свои собственные параметры в <code>/etc/sysctl.conf</code>.</p>
+            <p>Примеры параметров, которые можно настроить в <code>/etc/sysctl.conf</code>, включают:</p>
+            <ul>
+                <li>Включение или отключение IP Forwarding</li>
+                <li>Увеличение максимального количества открытых файлов</li>
+                <li>Настройка TCP/IP стека</li>
+                <li>Управление сетевыми буферами</li>
+                <li>Настройки безопасности, такие как защита от определенных атак</li>
+            </ul>
+            <p>Пример настройки параметров в файле <code>/etc/sysctl.conf</code>:</p>
+            <pre><code># Запретить IP Forwarding
+        net.ipv4.ip_forward = 0
+        
+        # Увеличение максимального количества открытых файлов
+        fs.file-max = 100000
+        
+        # Настройка TCP/IP стека
+        net.ipv4.tcp_syncookies = 1
+        net.ipv4.tcp_fin_timeout = 30
+        
+        # Настройка сетевых буферов
+        net.core.rmem_max = 16777216
+        net.core.wmem_max = 16777216</code></pre>
+            <p>Чтобы применить изменения, внесенные в файл <code>/etc/sysctl.conf</code>, после его редактирования можно выполнить команду <code>sysctl -p</code>, которая перечитает файл и применит новые параметры к текущему состоянию ядра системы.</p>
+            
+            <h3>Примеры "тюнинга" файла /etc/sysctl.conf</h3>
+            <h4>1. Игнорировать все запросы ICMP ECHO и TIMESTAMP, отправленные на компьютер через широковещательную/многоадресную рассылку.</h4>
+            <pre><code>net.ipv4.icmp_echo_ignore_broadcasts = 1</code></pre>
+            
+            <h4>2. Предотвратить распространенную атаку Syn Flood <a href="https://ru.wikipedia.org/wiki/SYN-%D1%84%D0%BB%D1%83%D0%B4">Подробнее тут</a>.</h4>
+            <pre><code>net.ipv4.tcp_syncookies = 1</code></pre>
+            
+            <h4>3. Применить исправление RFC 1337</h4>
+            <pre><code>net.ipv4.tcp_rfc1337= 1</code></pre>
+            
+            <h4>4. Увеличить лимит дескрипторов системных файлов = 65535</h4>
+            <pre><code>fs.file-max = 65535</code></pre>
+            
+            <h3>А это зачем?</h3>
+            <p>Увеличение лимита на количество дескрипторов файлов (file descriptors) в системе может быть необходимо по нескольким причинам:</p>
+            <ol>
+                <li>Управление большим количеством открытых файлов: Приложения и сервисы могут требовать большое количество открытых файлов для обработки больших объемов данных. Увеличение лимита на количество дескрипторов файлов позволяет обеспечить нормальную работу таким приложениям.</li>
+                <li>Повышение производительности: Увеличение лимита на количество дескрипторов файлов может улучшить производительность системы при обработке большого количества одновременных соединений или операций ввода-вывода.</li>
+                <li>Предотвращение ошибок из-за исчерпания ресурсов: При достижении лимита на количество дескрипторов файлов система может начать отклонять запросы на открытие новых файлов, что может привести к ошибкам в работе приложения или сервиса.</li>
+            </ol>
+            
+            <h2>Практическая работа</h2>
+            <ol>
+                <li>На полученной виртуальной машине установите имя по формуле: "вашеимя-любоечисло-pc". Например, ivan-9-pc;</li>
+                <li>Настройте файл <code>/etc/nsswitch.conf</code> так, чтобы сначала информация запрашивалась на DNS сервер, а затем в файл hosts;</li>
+                <li>Примените исправление RFC 1337 на вашей виртуальной машине;</li>
+                <li>Исправьте ошибку "Unable to resolve" при обращении к sudo после смены имени компьютера самостоятельно.</li>
+            </ol>
+            
+            <h2>Дополнительная информация:</h2>
+            <ol>
+                <li>Малоизвестные настройки sysctl <a href="https://www.opennet.ru/docs/RUS/LARTC/x1727.html">Ссылка</a></li>
+                <li>Что такое nsswich? <a href="https://itisgood.ru/2022/06/29/chto-takoe-fajl-etc-nsswitch-conf-v-sistemah-linux/">Ссылка</a></li>
+                <li>Как так Linux выдумывает имена сетевым интерфейсам? <a href="https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/">Ссылка</a></li>
+            </ol>
+        </body>
+
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="projects/example/" class="divider">Переход к лабораторной работе по итогам изучения раздела "Функции ОС"</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
