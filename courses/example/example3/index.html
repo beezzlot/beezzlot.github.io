@@ -651,12 +651,12 @@
           }
 
           const resultDiv = document.getElementById('result');
-      if (score < 3) {
+      if (score <= 3) {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Остались сложности по материалу? Давайте повторим в новом формате<a href="/extended/extended1">Перейти к дополнительным материалам для усвоения материала.</a></p>';
           } else if (score == 7) {
               resultDiv.innerHTML = '<p>Вы правильно ответили на все вопросы! <a href="/advanced/advanced1">Усложнить материал</a></p>';
           } else if (score >= 4) {
-              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/example/example3">Перейти на следующий этап</a></p>';
+              resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. <a href="/projects/example1.2">Перейти к лабораторной работе №3</a></p>';
           } else {
               resultDiv.innerHTML = '<p>Вы набрали ' + score + ' баллов. Спасибо за участие!</p>';
           }
