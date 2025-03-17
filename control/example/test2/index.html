@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .docs-article-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .text-container {
+      flex: 1;  /* Занимает половину экрана */
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    .link-container {
+      flex: 1;  /* Занимает вторую половину экрана */
+      background-color: #e9e9e9;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-container h2 {
+      padding: 20px;
+      margin: 0;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .link-container iframe {
+      flex: 1;
+      border: none;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<meta name="author" content="Администрирование Astra Linux">
+<meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<link rel="alternate" hreflang="en-us" href="/projects/example/">
+<meta name="theme-color" content="#2962ff">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel="stylesheet" href="/css/academic.css">
+
+<link rel="alternate" href="/projects/example/index.xml" type="application/rss+xml" title="Администрирование Astra Linux">
+<link rel="manifest" href="/index.webmanifest">
+<link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+<link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
+<link rel="canonical" href="/projects/example/">
+
+
+
+  <title>Финальная работа | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@timofeysamsonov">
+<meta property="twitter:creator" content="@timofeysamsonov">
+<meta property="og:site_name" content="Администрирование Astra Linux">
+<meta property="og:url" content="/projects/example/">
+<meta property="og:title" content="Лабораторная работа #1 | Введение в ОС Astra Linux 1.7. Использование справочных ресурсов.">
+<meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+<meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="og:locale" content="en-us">
+<meta property="og:updated_time" content="2018-09-09T00:00:00+00:00">
+
+<title>Лабораторные работы | Администрирование Astra Linux</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents">
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div id="search-box">
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+      </div>
+    </section>
+    <section class="section-search-results">
+      <div id="search-hits"></div>
+    </section>
+  </div>
+</aside>
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Администрирование Astra Linux</a>
+    </div>
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Теоретический материал</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Лабораторные работы</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about/"><span>Информационный блок</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/control/"><span>Итоговый контроль</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/ai/"><span>Побеседовать с виртуальным учителем</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ 
+   
+  
+</nav>
+
+    </div>
+    <div class="link-container">
+      <h2>
+
+        Консоль сервера
+
+      </h2>
+      <iframe 
+        src="https://rsvpu.hackatom.ru:3000/" 
+        style="border:0px; width:100%; height:100%;">
+      </iframe>
+    </div>
+
+    </script>
+
+
+    <article class="article">
+      <div class="docs-article-container">
+        <h1>
+ 
+        </h1>
+        <div class="text-container">
+            <div class="article-style">
+            <h2 id="flexibility">Финальная работа.</h2>
+
+            <strong><p><---- Обратите внимание на консольный сервер в левой части экрана, вам следует использовать этот сервер для выполнения лабораторной работы</p></strong>
+    
+            <h1>Практическое задание №1</h1>
+
+            <h2>1) Работа с командной строкой</h2>
+            <ol type="a">
+                <li>Создайте в домашнем каталоге пользователя папку с именем «Examen» и в ней вложенную папку с именем «Docs».</li>
+                <li>Создайте в папке “Docs” 3 текстовых файла с произвольной, но не одинаковой информацией: <code>File1.txt</code>, <code>File11.txt</code>, <code>File111.txt</code>.</li>
+            </ol>
+        
+            <h2>2) Работа с скриптами</h2>
+            <ol type="a">
+                <li>
+                    Создайте в домашней папке <code>Examen</code> скрипт <code>script.sh</code>. Скрипт должен выполнять:
+                    <ol type="i">
+                        <li>Создание папки <code>/opt/SuperRabota</code>.</li>
+                        <li>Наполнение папки 150 файлами по форме - <code>VeryNeededDocsX.txt</code>, где <code>X</code> - порядковый номер файла.</li>
+                        <li>Архивацию папки <code>/opt/SuperRabota</code> с именем <code>ArchiveDocsX+1</code>, где номер должен быть на 1 больше чем количество файлов в ней. Архив разместите в папке <code>/home/user/Examen</code> в формате <code>tar.gz</code>.</li>
+                    </ol>
+                </li>
+                <li>
+                    Создайте скрипт в <code>/etc/profile.d/customizations.sh</code>, который выполняет функцию копирования ярлыка <code>vlc.desktop</code>, <code>okular.desktop</code> на рабочий стол каждого нового и старого пользователя. Убедитесь, что для пользователя <code>root</code> данный скрипт не выполняется.
+                </li>
+                <li>
+                    Создайте скрипт, который бы показывал счет файлов в директории <code>/opt/SuperRabota</code>. Скрипт расположите в домашней папке <code>user</code> с названием <code>counter.sh</code>.
+                </li>
+            </ol>
+        
+            <h2>3) Работа с файловыми архиваторами</h2>
+            <ol type="a">
+                <li>Создайте в домашней папке пользователя <code>user</code> каталог <code>Archive</code> и наполните его двумя файлами объемом по 1МБ.</li>
+                <li>Поместите все файлы в архив, запакованный с помощью сжатия GZIP. Архив должен быть в домашней папке пользователя <code>user</code>.</li>
+                <li>Разбейте архив на части по 50 байт. Блоки должны быть сохранены в <code>/home/user/Archive</code>.</li>
+            </ol>
+        
+            <h2>4) Работа с пользователями</h2>
+            <ol type="a">
+                <li>
+                    Создать организационную структуру пользователей:
+                    <table border="1">
+                        <tr>
+                            <th>Логин</th>
+                            <th>Пароль</th>
+                            <th>Группа</th>
+                        </tr>
+                        <tr>
+                            <td>Petrov (uid=1111)</td>
+                            <td>111</td>
+                            <td>IT, Production</td>
+                        </tr>
+                        <tr>
+                            <td>Sidorov (uid=1112)</td>
+                            <td>222</td>
+                            <td>IT, Director</td>
+                        </tr>
+                        <tr>
+                            <td>Pupkin (uid=1113)</td>
+                            <td>333</td>
+                            <td>Boss, IT</td>
+                        </tr>
+                        <tr>
+                            <td>Lenochka (uid=1114)</td>
+                            <td>444</td>
+                            <td>Secretary, Boss</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    Создайте папки и разграничьте права доступа, в соответствии с таблицей:
+                    <table border="1">
+                        <tr>
+                            <th>Папки</th>
+                            <th>Пользователи</th>
+                            <th>Права (указано то, что разрешено)</th>
+                        </tr>
+                        <tr>
+                            <td>/opt/Docs</td>
+                            <td>Sidorov</td>
+                            <td>Только чтение</td>
+                        </tr>
+                        <tr>
+                            <td>/opt/Docs</td>
+                            <td>Petrov</td>
+                            <td>Полный</td>
+                        </tr>
+                        <tr>
+                            <td>/opt/Zarplata</td>
+                            <td>Lenochka</td>
+                            <td>Создание и сохранение без удаления</td>
+                        </tr>
+                        <tr>
+                            <td>/opt/Zarplata</td>
+                            <td>Pupkin</td>
+                            <td>Чтение и запуск программ</td>
+                        </tr>
+                        <tr>
+                            <td>/opt/Boss_Docs</td>
+                            <td>Secretary</td>
+                            <td>Чтение</td>
+                        </tr>
+                        <tr>
+                            <td>/opt/Boss_Docs</td>
+                            <td>Boss</td>
+                            <td>Полный</td>
+                        </tr>
+                        <tr>
+                            <td>/opt/Share</td>
+                            <td>Доступ всем пользователям</td>
+                            <td>Реализуйте полный доступ всех пользователей к каталогу, но запретите удаление файлов, если пользователь не является владельцем.</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>Создайте файл <code>/opt/Share/Project.txt</code> настройте его в режиме только на добавление всех пользователям.</li>
+            </ol>
+        
+            <h2>5) Работа с репозиториями</h2>
+            <ol type="a">
+                <li>Установите программное обеспечение:
+                    <ol type="i">
+                        <li>DoubleCMD-qt</li>
+                        <li>CherryTree</li>
+                        <li>krdc</li>
+                        <li>xrdp</li>
+                        <li>openssh-server</li>
+                    </ol>
+                </li>
+            </ol>
+        
+            <h2>6) Настройка SSH и RDP</h2>
+            <ol type="a">
+                <li>Настройте RDP по порту 1337.</li>
+                <li>Настройте SSH для подключения пользователю <code>root</code> и <code>petrov</code>.</li>
+            </ol>
+            <h1>1. Настройка пользовательских политик</h1>
+            <ol type="a">
+                <li>Настройте систему таким образом, чтобы авторизацию к учетным записям блокировали при 2 неудачных попытках в течение 10 секунд, блокировка срабатывала на 900 секунд.</li>
+                <li>Для пароля реализуйте следующие требования:
+                    <ol type="i">
+                        <li>Проверка имени пользователя в пароле.</li>
+                        <li>Проверка, что пользователь в пароле не использует свой номер телефона и номер рабочего кабинета.</li>
+                        <li>Длина пароля не менее 9 символов.</li>
+                        <li>Минимум 3 строчных буквы, минимум 3 заглавных, 1 цифра и 2 спецсимвола.</li>
+                    </ol>
+                </li>
+                <li>Создайте учетную запись <code>FranzLiszt</code> (допускается имя без заглавных букв), настройте её таким образом, чтобы максимальное количество неудачных попыток входа было 6.</li>
+                <li>Разрешите указанному выше пользователю доступ до команды <code>sudo</code>, с обязательным запросом пароля.</li>
+            </ol>
+        
+            <h1>2. Настройка межсетевого экрана</h1>
+            <ol type="a">
+                <li>Разрешите в UFW следующие порты:
+                    <ol type="i">
+                        <li>С 9000-9100 по протоколу UDP.</li>
+                        <li>Создайте профиль под названием <code>MyApp</code>, он должен открывать следующие порты:
+                            <ol>
+                                <li>Порт 8080 и 4799 для UDP и TCP.</li>
+                                <li>В кратком описании к профилю укажите вашу фамилию и имя.</li>
+                            </ol>
+                        </li>
+                        <li>Явно запретите использование порта 2333.</li>
+                    </ol>
+                </li>
+            </ol>
+        
+            <h1>3. Работа с пользователями</h1>
+            <ol type="a">
+                <li>Создайте пользователя <code>testuser</code>.
+                    <ol type="i">
+                        <li>Настройте для этого пользователя максимальный уровень целостности.</li>
+                        <li>Добавьте его в группу <code>astra-admin</code>.</li>
+                        <li>Разрешите доступ до команды <code>sudo</code> без пароля, но доступ разрешите только для команды <code>journalctl</code>.</li>
+                    </ol>
+                </li>
+            </ol>
+        
+            <h1>4. Работа по предотвращению компьютерных атак</h1>
+            <ol type="a">
+                <li>Ваше рабочее место для выполнения задания имеет уязвимости, перечислите не менее трех угроз информационной безопасности в рамках используемого ПО на рабочем месте. Укажите ПО, номер уязвимости из реестра ФСТЭК РФ и ваши предложения о улучшении работы.</li>
+                <li>Заполненный документ в свободной форме разместите на рабочем столе вашего пользователя <code>user</code> под названием <code>Docs.odt</code>.</li>
+            </ol>
+</body>
+<style>
+  .divider {
+    background-color: #f0f0f0; /* Серый фон */
+    padding: 15px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333; /* Цвет текста */
+    display: block; /* Чтобы ссылка занимала всю ширину */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.divider:hover {
+    background-color: #e0e0e0; /* Изменение фона при наведении */
+}
+p {
+    margin-bottom: 20px;
+}
+
+.navigation-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+</style>
+<div class="navigation-buttons">
+  <a href="/courses/theme4" class="divider">Завершение курса</a>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+ 
+
+
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
