@@ -521,7 +521,7 @@
                 <li>Заблокируйте PostgreSQL-Server от удаления.</li>
                 <li>Включите режим защищенности "Воронеж".</li>
 
-                <p>После завершения работы - выполните команду  <pre>checker_system</pre>.</p>
+                <p>После завершения работы - выполните команду  <pre>checker_system</pre></p>
             </ol>
 
             <h2>Дополнительная информация:</h2>
@@ -544,20 +544,42 @@
     color: #333; /* Цвет текста */
     display: block; /* Чтобы ссылка занимала всю ширину */
     text-decoration: none; /* Убираем подчеркивание */
+    width: 100%; /* Занимает всю ширину контейнера */
+    box-sizing: border-box; /* Учитываем padding в ширине */
 }
+
 .divider:hover {
     background-color: #e0e0e0; /* Изменение фона при наведении */
 }
+
 p {
     margin-bottom: 20px;
 }
 
 .navigation-buttons {
-display: flex;
-justify-content: space-between;
-margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Позволяет кнопкам переноситься на новую строку */
+}
+
+/* Медиа-запросы для адаптации под разные экраны */
+@media (max-width: 768px) {
+    .divider {
+        font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .navigation-buttons {
+        flex-direction: column; /* Кнопки располагаются вертикально */
+    }
+
+    .navigation-buttons a {
+        margin-bottom: 10px; /* Отступ между кнопками */
+    }
 }
 </style>
+
 <div class="navigation-buttons">
   <a href="/courses/example/example2/" class="divider">Продолжение учебного процесса - Переход к учебной статье "Функции ОС"</a>
 </div>
