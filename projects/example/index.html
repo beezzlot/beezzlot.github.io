@@ -65,6 +65,43 @@
       max-width: 100%;
       height: auto;
     }
+
+    /* Стили для кнопки навигации */
+    .navigation-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .divider {
+      background-color: #f0f0f0;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      width: 100%;
+      max-width: 600px; /* Ограничиваем максимальную ширину кнопки */
+      box-sizing: border-box;
+    }
+
+    .divider:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+      .divider {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .navigation-buttons {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <meta name="author" content="Администрирование Astra Linux">
