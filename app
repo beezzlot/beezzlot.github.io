@@ -1,9 +1,3 @@
-Чтобы реализовать переход пользователя в личный кабинет после регистрации, мы внесем изменения в приложение. Помимо этого, добавим пользователя admin с заранее заданным ID 247 в базу данных. Вот что нужно изменить:
-
----
-
-### Измененный код приложения (app.py)
-
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -52,8 +46,6 @@ def dashboard(user_id):
     user = User.query.get_or_404(user_id)
     return render_template('dashboard.html', user=user)
 
-# Добавление пользователя admin с ID 247, если его еще нет
-@app.before_first_request
 def create_admin():
     db.create_all()  # Создание таблиц в базе данных
     admin = User.query.get(247)
@@ -63,90 +55,5 @@ def create_admin():
         db.session.commit()
 
 if __name__ == '__main__':
+    create_admin()  # Создание администратора и таблиц перед запуском приложения
     app.run(debug=True)
-
-
----
-
-### Измененные шаблоны
-
-index.html
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
-</head>
-<body>
-    <header>
-        <h1>Добро пожаловать!</h1>
-    </header>
-    <main>
-        <a href="{{ url_for('register') }}">Регистрация</a>
-        <p>Пользователь admin уже существует. Его ID: <strong>247</strong></p>
-        <a href="{{ url_for('dashboard', user_id=247) }}">Войти в личный кабинет admin</a>
-    </main>
-</body>
-</html>
-
-
----
-
-register.html
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-</head>
-<body>
-    <header>
-        <h1>Регистрация</h1>
-    </header>
-    <main>
-        <form method="POST">
-            <label for="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">Эл. почта:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Зарегистрироваться</button>
-        </form>
-    </main>
-</body>
-</html>
-
-
----
-
-dashboard.html (новый файл для личного кабинета)
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет</title>
-</head>
-<body>
-    <header>
-        <h1>Личный кабинет</h1>
-    </header>
-    <main>
-
-        <p>Добро пожаловать, {{ user.username }}!</p>
-        <p>Ваш ID: {{ user.id }}</p>
-        <p>Ваша почта: {{ user.email }}</p>
-        <a href="{{ url_for('index') }}">На главную</a>
-    </main>
-</body>
-</html>
-
