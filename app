@@ -1,11 +1,22 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
+import random
+from faker import Faker  # Генератор случайных данных
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'your-secret-key-here'  # Обязательно замените на реальный секретный ключ!
+app.secret_key = 'your-secret-key'
+
+db = SQLAlchemy(app)
+fake = Faker()  # Инициализируем генератор
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(150), nullable=False, unique=True)
+    email = db.Column(db.String(150), nullable=False, unique=True)
+    password = db.Column(db.String(150), nullable=False)
 
 db = SQLAlchemy(app)
 
@@ -59,19 +70,40 @@ def dashboard(user_id):
     user = User.query.get_or_404(user_id)
     return render_template('dashboard.html', user=user)
 
+def generate_random_users(count=20):
+    """Генерирует случайных пользователей"""
+    users = []
+    for _ in range(count):
+        username = fake.user_name()
+        email = fake.email()
+        password = generate_password_hash(fake.password())
+        users.append(User(
+            username=username,
+            email=email,
+            password=password
+        ))
+    return users
+
 def setup_database():
     with app.app_context():
         db.create_all()
-        # Создаём администратора, если его нет
-        if not User.query.get(247):
+        
+        # Создаём администратора с ID 1200
+        if not User.query.get(1200):
             admin = User(
-                id=247,
-                username='admin',
-                email='admin@example.com',
-                password=generate_password_hash('admin123')
+                id=1200,
+                username='admin_goldpeak',
+                email='admin@goldpeak-mining.com',
+                password=generate_password_hash('secure_admin_password_123')
             )
             db.session.add(admin)
-            db.session.commit()
+        
+        # Добавляем 20 случайных пользователей, если их нет
+        if User.query.count() <= 1:  # Проверяем, что только админ существует
+            random_users = generate_random_users()
+            db.session.add_all(random_users)
+        
+        db.session.commit()
 
 if __name__ == '__main__':
     setup_database()
