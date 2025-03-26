@@ -34,8 +34,8 @@ def register():
             db.session.commit()
             # Перенаправление в личный кабинет после регистрации
             return redirect(url_for('dashboard', user_id=new_user.id))
-        except:
-            return "Ошибка: Этот пользователь уже существует."
+        except Exception as e:
+            return f"Ошибка: {e}"
 
     return render_template('register.html')
 
@@ -46,8 +46,9 @@ def dashboard(user_id):
     user = User.query.get_or_404(user_id)
     return render_template('dashboard.html', user=user)
 
-def create_admin():
-    db.create_all()  # Создание таблиц в базе данных
+# Инициализация таблиц и создание администратора
+def setup_database():
+    db.create_all()  # Создание всех таблиц на основе зарегистрированных моделей
     admin = User.query.get(247)
     if not admin:
         admin = User(id=247, username='admin', email='admin@example.com', password='admin123')
@@ -55,5 +56,5 @@ def create_admin():
         db.session.commit()
 
 if __name__ == '__main__':
-    create_admin()  # Создание администратора и таблиц перед запуском приложения
-    app.run(debug=True)
+    setup_database()  # Создаем таблицы в базе данных перед запуском приложения
+    app.run(host='0.0.0.0', port=5000, debug=True)  # Слушать на 0.0.0.0 на порту 5000
