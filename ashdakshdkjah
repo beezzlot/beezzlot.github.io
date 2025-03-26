@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Минералы Урала</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Минералы Урала</h1>
+</header>
+
+<main>
+    <section>
+        <h2>О компании</h2>
+        <p>"Минералы Урала" - это компания с многолетним опытом работы, которая занимается добычей и переработкой минералов, таких как кварц, медь и золото. Наша команда гордится высоким уровнем экологической ответственности и инновационными подходами в добыче ресурсов.</p>
+    </section>
+
+    <section>
+        <h2>Услуги</h2>
+        <ul>
+            <li>Добыча и переработка минералов</li>
+            <li>Продажа ценных горных пород</li>
+            <li>Консалтинг в области устойчивого развития</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Регистрация</h2>
+        <form>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Эл. почта:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Регистрация</button>
+        </form>
+        <p><strong>Примечание:</strong> У нас уже зарегистрирован пользователь <strong>admin</strong> с ID = 1002. Все новые пользователи получают ID, начиная с 10000.</p>
+    </section>
+</main>
+
+<footer>
+    <p>Адрес: г. Екатеринбург, ул. Горная, 5</p>
+    <p>Телефон: +7 (343) 123-45-67</p>
+    <p>Эл. почта: info@mineraly-urala.ru</p>
+</footer>
+
+</body>
+</html>
