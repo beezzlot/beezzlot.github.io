@@ -141,3 +141,12 @@ dashboard.html (новый файл для личного кабинета)
         <h1>Личный кабинет</h1>
     </header>
     <main>
+
+        <p>Добро пожаловать, {{ user.username }}!</p>
+        <p>Ваш ID: {{ user.id }}</p>
+        <p>Ваша почта: {{ user.email }}</p>
+        <a href="{{ url_for('index') }}">На главную</a>
+    </main>
+</body>
+</html>
+
